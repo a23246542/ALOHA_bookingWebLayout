@@ -41,12 +41,13 @@ function sass() {
   const plugins = [
     autoprefixer(),
   ];
-  return gulp.src(envOptions.style.src) 
+  return gulp.src(envOptions.style.src)
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-        outputStyle: 'nested',
+        outputStyle: envOptions.style.outputStyle,
+        includePaths: envOptions.style.includePaths,
         // includePaths: ['../node_modules/bootstrap/scss']
-        includePaths: ['../node_modules/']
+        // includePaths: ['../node_modules/']
     }).on('error', $.sass.logError))
     .pipe($.postcss(plugins))
     .pipe($.sourcemaps.write('.'))
@@ -61,9 +62,10 @@ function sass() {
 function babel() {
   return gulp.src(envOptions.javascript.src)
     .pipe($.sourcemaps.init())
-    // .pipe($.babel({
-    //   presets: ['@babel/env'],
-    // }))
+    .pipe($.babel({
+      presets: ['@babel/env'],
+    }))
+    .pipe($.uglify())
     .pipe($.concat(envOptions.javascript.concat))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(envOptions.javascript.path))
