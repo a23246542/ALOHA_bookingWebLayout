@@ -11,7 +11,7 @@
         top: 30%;
         transform: translateX(25%);//## translate百分比 &超出會被蓋掉
         // z-index: 100;//無效
-        background-color: $brand-secondary;
+        background-color: $color-primary-light;
         &::after {
             font-size: 16px;
             font-weight: bold;
@@ -29,7 +29,7 @@
     //         font-weight: bold;
     //     }
     // }
-    
+
     /*range 按鈕*/
     // ## todo range更好的方式
     // ## todo bs4的下去改
@@ -115,7 +115,7 @@
         border: 2px solid map-get($theme-colors , dark );
         border-radius: 10%;
         display: inline-block;
-      
+
         width: 24px;
         height: 10px;
         flex-shrink:0;//##
@@ -125,7 +125,7 @@
         color:transparent;//##先隱藏
       }
     }
-    
+
     &:checked {
       + .l_checkbox__label::before {
         border: 2px solid  map-get($theme-colors , primary );
@@ -134,12 +134,12 @@
       }
     }
   }
-  
-  
+
+
   // todo BS4版本(跨瀏覽器)
   // .custom-checkbox{
   //   .custom-control-input:checked ~ .custom-control-label{
-  
+
   //     &::before{
   //       width: 24px;
   //       height: 10px;
@@ -148,14 +148,14 @@
   //       transform: translateY(0px);
   //       padding: 0px 0 20px 4px;
   //       margin-right: 4px;
-  
+
   //     }
   //     &::after{
   //       content: "\2714";
   //       border: 2px solid map-get($theme-colors , dark );
   //       border-radius: 10%;
   //       display: inline-block;
-      
+
   //       width: 24px;
   //       height: 10px;
   //       transform: translateY(0px);
@@ -163,7 +163,6 @@
   //       margin-right: 4px;
   //       color:transparent;//##先隱藏
   //     }
-      
+
   //   }
   // }
-  

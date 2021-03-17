@@ -15,7 +15,7 @@ h4 {
 
 @each $key,$val in $fontSize {
 #{$key},.#{$key}{
-  font-size: $val;
+  font-size: #{$val}px;
 }
 }
 

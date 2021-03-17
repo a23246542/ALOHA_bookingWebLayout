@@ -1,15 +1,23 @@
 /* project variables*/
 
-$brand-primary:#6C51E2;
-$brand-secondary:#F1F0F8;
-$brand-info:#000000DE;
+// $brand-primary:#6C51E2;
+// $brand-secondary:#F1F0F8;
+// $brand-info:#000000DE;
+
+$color-primary:#6C51E2;
+$color-primary-light:#F1F0F8;//代替color info
+$color-secondary:#00000099;
+$color-secondary-light:#00000061; //代替color light
+$color-secondary-dark:#000000DE; //代替color dark
 
 
 $fontSize:(
   h1:48,
   h2:32,
   h3:24,
-  h4:16
+  h4:20,
+  h5:16,
+  h6:14,
 );
 
 $body-color: #00000099;
@@ -83,14 +91,17 @@ $colors: map-merge(("blue": $blue,
         "gray-dark": $gray-800),
     $colors);
 
-$primary: $brand-primary;//$blue !default;
-$secondary: $brand-secondary;//$gray-600 !default;
+// $primary: $brand-primary;//$blue !default;
+// $secondary: $brand-secondary;//$gray-600 !default;
+$primary: $color-primary;//$blue !default;
+$secondary: $color-secondary;//$gray-600 !default;
 $success: $green !default;
-$info: $brand-info;//$cyan !default;
+// $info: $brand-info;//$cyan !default;
+$info:  $color-primary-light;//$cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
+$light: $color-secondary-light;//$gray-100 !default;
+$dark: $color-secondary-dark;//$gray-800 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
