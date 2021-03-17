@@ -10,6 +10,13 @@ $color-secondary:#00000099;
 $color-secondary-light:#00000061; //代替color light
 $color-secondary-dark:#000000DE; //代替color dark
 
+$colorClassMap:(
+  primary:$color-primary,
+  primary-light:$color-primary-light,
+  secondary:$color-secondary,
+  secondary-light:$color-secondary-light,
+  secondary-dark:$color-secondary-dark
+);
 
 $fontSize:(
   h1:48,

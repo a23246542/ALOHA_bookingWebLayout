@@ -2,6 +2,116 @@
 
 /* 區塊命名 */
 // @@裡面客製修改元件該如何命
+.c-search{
+  // transform: translateY 會影響 BS元件圖層 ?!
+  // transform: translateY(-25%);
+  // @include media-breakpoint-up(lg) {
+  //   transform: translateY(-50%);
+  // }
+  margin-top: -52px;
+  // ###
+  position: relative;
+  z-index: 100;
+}
+.c-topChoices{
+
+  // ## todo換改nav作法
+  .list-group-item {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: #f1f0f8;
+    }
+  }
+  .list-group-item.active {
+      background-color: white;
+      color: map-get($theme-colors, primary);
+      transition: all 0.35s;
+      &::after {
+          background: map-get($theme-colors, primary);
+      }
+  }
+
+  &__img{
+    width: 255px;
+    height: 164px;
+
+    @include media-breakpoint-up(md) {
+        height: 185px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: 175px;
+    }
+
+  }
+  //&.&__card--textRight{ @@//純修飾是否需要改這樣
+  //@@沒有建立元素就--修飾
+  &__card{
+      text-align: left;
+  }
+}
+.c-destinations{
+  ._inner {
+    &__img {
+        position: relative;
+        // todo改_inner__img--shadow
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            // border-radius: 8px;
+            // ##右邊色號在上方 & 透明色號
+            background: linear-gradient(-90deg, #0000 0%, #000 100%);
+        }
+
+        // TODO:圖片或許可以獨立出來使用
+        &--Osaka {
+            background-image: url("../images/Osaka.jpg");
+        }
+
+        &--Kyoto {
+            background-image: url("../images/Kyoto.jpg");
+        }
+
+        &--Reykjavic {
+            background-image: url("../images/Reykjavic.jpg");
+        }
+
+        &--Paris {
+            background-image: url("../images/Paris.jpg");
+        }
+
+        &--Roma {
+            background-image: url("../images/Roman.jpg");
+        }
+
+        &--Bangkok {
+            background-image: url("../images/Bangkok.jpg");
+        }
+    }
+
+    &__text {
+        z-index: 9;
+    }
+  }
+
+  .btn {
+      &:focus {
+          box-shadow: none;
+      }
+  }
+}
+.c-inspiration{}
+.c-subscribe{}
 .section {
     &__banner {
         margin-top: 58px;

@@ -6,7 +6,7 @@
 // import '../../../../node_modules/swiper/js/swiper'
 
 $(document).ready(function () {
-    var swiper_Choices = new Swiper('.section__topChoices .swiper-container', {
+    var swiper_Choices = new Swiper('.js-topChoices .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,

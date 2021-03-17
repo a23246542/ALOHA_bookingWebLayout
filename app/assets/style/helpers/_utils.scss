@@ -74,3 +74,11 @@
   right: 0;
   left: 0;
 }
+
+
+@each $key,$val in $colorClassMap {
+  .bg-#{$key}{
+    background-color: $val;
+    font-size: 777px;
+  }
+}
