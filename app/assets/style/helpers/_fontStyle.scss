@@ -13,36 +13,22 @@ h4 {
     color: #000000DE;
 }
 
-h1,
-.h1 {
-    font-size: 48px;
+@each $key,$val in $fontSize {
+#{$key},.#{$key}{
+  font-size: $val;
+}
 }
 
-h2,
-.h2 {
-    font-size: 32px;
-}
-
-h3,
-.h3 {
-    font-size: 24px;
-}
-
-h4,
-.h4 {
-    font-size: 16px;
-}
-
-small {
-    font-size: 12px;
+small{
+  font-size: 12px;
 }
 
 // BS4帶有顏色變淺效果
 .text-muted {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 // 為了 14px
 .text--muted {
-    font-size: 14px;
+  font-size: 14px;
 }

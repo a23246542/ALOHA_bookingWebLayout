@@ -1,23 +1,17 @@
-
-
 @import 'functions';
 @import "./helpers/variables";
 @import "bootstrap";
-
 
 /*plugin or vendors*/
 @import "swiper";
 // @import "navigation";
 // @import "aos/src/sass/aos.scss";
 
-
 /*初始化.全站設定.工具類*/
-// @import "reset";//不用reset
-@import "./base/base";
-@import "./base/fontStyle";
+@import "./helpers/base";
+@import "./helpers/fontStyle";
+@import "./helpers/utils";
 @import "./helpers/mixin";
-@import "./helpers/util";
-
 
 /*components*/
 @import "./helpers/custom";  // Bootstrap 4 調整
