@@ -1,0 +1,35 @@
+/*90% 全站設定*/
+
+html{
+    font-size: 16px;
+}
+body{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    // font-size: 14px;
+    // color:#000;
+}
+
+.main{
+    min-height: calc(100vh - 260px);//header+footer
+}
+
+img{
+    display: block;
+}
+
+a.nav-link {
+    color: map-get($theme-colors, info);
+
+    &.active {
+        color: map-get($theme-colors, primary);
+    }
+}
+
+th,td{
+    text-align: center;
+}
