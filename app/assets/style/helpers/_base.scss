@@ -13,6 +13,12 @@ body{
     min-height: calc(100vh - 260px);//header+footer
 }
 
+.container{
+  position: relative;
+  max-width: 1112px;
+  margin: 0 auto;
+}
+
 ul{
   list-style: none;
 }

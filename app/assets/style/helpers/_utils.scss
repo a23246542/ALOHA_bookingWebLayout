@@ -4,22 +4,23 @@
 //   overflow-x: auto;
 // }
 
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .overflow--Xscroll {
     @media screen and (max-width:1199px) {
         overflow-x: scroll;
         appearance: none; //@@無效 todo隱藏
     }
 }
-// flex-wrap: nowrap;
-// overflow: scroll;
-// white-space: nowrap;
-
 
 // ##也可改bg--cover
 .image--cover {
     background-size: cover;
     background-position: 50% 50%;
-    background-repeat: no-repeat
 }
 
 .object--cover {
@@ -55,4 +56,21 @@
     @include media-breakpoint-up(lg) {
         column-count: 2;
     }
+}
+
+.input-text {
+  border: 0;
+  text-align: center;
+  width: 30px;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.four-sides {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
