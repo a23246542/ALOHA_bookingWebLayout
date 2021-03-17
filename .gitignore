@@ -2,6 +2,7 @@ node_modules
 dist
 public
 .sass-cache/
+*.js.map
 *.css.map
 *.sass.map
 *.scss.map

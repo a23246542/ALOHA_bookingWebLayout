@@ -139,11 +139,11 @@ $(document).ready(function () {
             break;
     }
 
-    AOS.init({
-        useClassNames: true,
-        initClassName: false,
-        animatedClassName: 'animate__animated'
-    });
+    // AOS.init({
+    //     useClassNames: true,
+    //     initClassName: false,
+    //     animatedClassName: 'animate__animated'
+    // });
 });
 
 
