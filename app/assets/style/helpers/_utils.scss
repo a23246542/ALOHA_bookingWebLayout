@@ -92,3 +92,9 @@
   }
 }
 
+@for $val from 1 through 5 {
+  .flex-#{$val}{
+    flex: $val;
+  }
+}
+

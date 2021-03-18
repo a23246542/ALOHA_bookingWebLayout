@@ -46,6 +46,19 @@ a.nav-link {
   }
 }
 
+ul{
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.btn{
+  font-size: inherit;
+}
+
 // a:hover, .btn-link:hover, .btn-link:focus{
 //   text-decoration: none;
 // }
