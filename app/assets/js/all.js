@@ -1,13 +1,14 @@
 
 $(document).ready(function () {
-    const swiperBanner = new Swiper('.js-banner .swiper-container',{
+    const swiperBanner = new Swiper('#c-banner .c-banner__swiper-container',{
       slidersPerView: 1,
       loop: true,
       navigation: {
-        // nextEl: '.js-banner .swiper-button-next',
-        // prevEl: '.js-banner .swiper-button-prev',
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '#c-banner .js-swiperButtonPrev',
+        nextEl: '#c-banner .js-swiperButtonNext',
+      },
+      autoplay:{
+        delay: 3000
       },
     })
     var swiper_Choices = new Swiper('.js-topChoices .swiper-container', {

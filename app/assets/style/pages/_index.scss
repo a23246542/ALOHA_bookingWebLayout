@@ -15,11 +15,13 @@
   //     // %%要文字不是圖
   // }
 
-  .swiper-container {
+  &__swiper-container {
     position: relative;
+    // width: 80%;
+    z-index: 1;
   }
 
-  .swiper-slide {
+  &__swiper-slide {
       text-align: center;
       font-size: 18px;
       white-space:nowrap;
@@ -29,9 +31,10 @@
       // align-items: center;
   }
 
-  .swiper-navigation{
+  &__swiperNavigation{
     position: absolute;
     // position: relative;
+    z-index: 10;
     top: 50%;
     left: 0;
     right: 0;
@@ -39,21 +42,24 @@
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    color: #fff;
   }
 
-  .swiper-button-prev{
-    // position: absolute;
-    width: 24px;
-    height: 24px;
-    // font-size: 30px;
+  &__swiperButtonPrev{
+    // width: 24px;
+    // height: 24px;
+    font-size: 60px;
   }
 
-  .swiper-button-next{
-    // position: absolute;
-    width: 24px;
-    height: 24px;
+  &__swiperButtonNext{
+    // width: 24px;
+    // height: 24px;
+    font-size: 60px;
   }
 
+  // .material-icons{
+  //   font-size: 3rem;
+  // }
 }
 
 .c-search{
@@ -113,10 +119,17 @@
     }
 
   }
-  //&.&__card--textRight{ @@//純修飾是否需要改這樣
+  //@@純修飾是否需要改這樣
   //@@沒有建立元素就--修飾
+  // & &__card--textRight{
+  //   text-align: left;
+  // }
+
   &__card{
       text-align: left;
+      // &--textRight{
+      //   text-align: left;
+      // }
   }
 }
 .c-destinations{
@@ -133,10 +146,12 @@
     cursor: pointer;
   }
 
+  // &__card-img-overlay--bg{//@@
   &__card-img-overlay{
     background: linear-gradient(-90deg, #0000 0%, #000 100%);
   }
 
+  // &__card-title--fz{//@@
   &__card-title{
     font-size: 12px;
   }
