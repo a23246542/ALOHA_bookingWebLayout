@@ -13,11 +13,11 @@ h4 {
     color: #000000DE;
 }
 
-@each $key,$val in $fontSize {
-#{$key},.#{$key}{
-  font-size: #{$val}px;
-}
-}
+// @each $key,$val in $fontSize {
+//   #{$key},.#{$key}{
+//     font-size: #{$val}px;
+//   }
+// }
 
 small{
   font-size: 12px;

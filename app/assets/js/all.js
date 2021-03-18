@@ -1,20 +1,25 @@
-// import $ from 'jquery';
-// import aos from 'aos';
-// import 'aos';
-// import Swiper from 'swiper';
-// import '/node_modules/swiper/js/swiper.min.js';
-// import '../../../../node_modules/swiper/js/swiper'
 
 $(document).ready(function () {
+    const swiperBanner = new Swiper('.js-banner .swiper-container',{
+      slidersPerView: 1,
+      loop: true,
+      navigation: {
+        // nextEl: '.js-banner .swiper-button-next',
+        // prevEl: '.js-banner .swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
     var swiper_Choices = new Swiper('.js-topChoices .swiper-container', {
+        // slidesPerView: 'auto',
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
         loopFillGroupWithBlank: true, //@@todo
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable: true,
+        // },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -37,42 +42,13 @@ $(document).ready(function () {
         }
     });
 
-    var swiper__inspiration = new Swiper('.section__inspiration .swiper-container', {
-        slidesPerView: 1,
+    var swiper__inspiration = new Swiper('.js-inspiration .swiper-container', {
+        // slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 30,
         loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        // loopFillGroupWithBlank: true,
         // @@slidesPerGroup
-        breakpoints: {
-            // 576: {
-            //     slidesPerView: 2,
-            //     // slidesPerGroup: 1,
-            // },
-            // 1199: {
-            //     slidesPerView: 3,
-            //     // slidesPerGroup: 3,
-            // },
-            500: {
-                slidesPerView: 2,
-                slidesPerGroup: 1,//一個一組
-            },
-            // 992: {
-            //     slidesPerView: 3,
-            //     slidesPerGroup: 2,
-            // },
-            1200: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,//三個一組
-            }
-        }
     });
     var swiper__detailBanner = new Swiper('.section__detailBanner .swiper-container', {
         slidesPerView: 1,
