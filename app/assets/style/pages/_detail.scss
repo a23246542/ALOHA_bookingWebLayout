@@ -1,0 +1,148 @@
+main,.main{
+  min-height: calc(100vh - 72px);
+}
+
+.c-detail{
+  margin-top: 144px;
+}
+
+.c-album{
+
+  &__img{
+    width: 100%;
+    object-fit: cover;
+    // height: 100%;
+
+    &--large{
+      @include media-breakpoint-up(md){
+        height: 268px;
+      }
+      @include media-breakpoint-up(lg){
+        // width: 635px;
+        height: 434px;
+      }
+    }
+
+    &--medium{
+      @include media-breakpoint-up(md){
+        height: 132px;
+      }
+
+      @include media-breakpoint-up(lg){
+        // width: 437px;
+        height: 213px;
+      }
+    }
+
+    &--small{
+      @include media-breakpoint-up(md){
+        height: 93px;
+      }
+      @include media-breakpoint-up(lg){
+        // width: 264px;
+        height: 151px;
+      }
+    }
+  }
+
+
+  &__btn{
+    width: 100%;
+    height: 34px;
+    font-size: .8rem;
+    @include pc-up{
+      height: 54px;
+      font-size: 1rem;
+    }
+  }
+
+}
+
+
+.c-description__textLink{
+  font-size: $h6-font-size;
+}
+
+.c-selectRoom{
+
+}
+
+.c-infoTag{
+
+  &__item{
+    font-size: $h6-font-size;
+    font-weight: normal;
+    padding: 12px;
+    &:not(:last-child){
+      margin-right: 15px;
+    }
+  }
+
+  &__btn{
+    font-size: 1rem;
+  }
+
+}
+
+.c-roomList{
+
+  &__item__imgWrap{
+      >img{
+        height: 100%;
+        object-fit: cover;
+      }
+
+  }
+
+  &__infoItemsWrap{
+
+  }
+
+  &__item__featureBucket{
+
+  }
+
+  &__item__sleeps{
+    text-align: left;
+    @include tablet-up{
+      text-align: center;
+    }
+  }
+
+  &__sideItemsWrap{
+    justify-content: space-between;
+    background-color: $color-primary-light;
+    @include tablet-up{
+      flex-direction: row-reverse;
+      justify-content: initial;
+      background-color: #fff;
+    }
+  }
+
+  &__item__roomsCount{
+    .form-control{
+      padding: 0;
+      height: auto;
+      text-align: center;
+      line-height: 1.5;
+      background-color: transparent;
+      color: #00000099;
+      border: 0;
+    }
+  }
+
+  &__item__roomsPrice{
+
+  }
+}
+
+.o-amenities{
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item{
+    display: flex;
+    @include pc-up{
+    }
+  }
+}

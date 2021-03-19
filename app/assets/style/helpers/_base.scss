@@ -29,10 +29,21 @@ button:focus{
 
 img{
     display: block;
+    max-width: 100%;
+}
+
+a{
+  display: inline-block;
 }
 
 th,td{
   text-align: center;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button{
+  -webkit-appearance: none !important;
+  margin: 0;
 }
 
 
@@ -44,6 +55,10 @@ a.nav-link {
   &.active {
       color: map-get($theme-colors, "primary");
   }
+}
+
+.form-control:focus{
+  box-shadow: none;
 }
 
 ul{
