@@ -28,7 +28,77 @@ small{
   font-size: 14px;
 }
 
-// 為了 14px
 .text--muted {
   font-size: 14px;
+}
+
+//產生(斷點)字體工具類
+$media-screen:(sm,md,lg);
+
+@each $key,$val in $media-screen {
+  @if($key == sm){
+    @for $i from 1 through 6 {
+      .u-fz-sm-#{$i}{
+        @include media-breakpoint-up(sm){
+          @if($i == 1){
+            font-size: $h1-font-size;
+          }@else if($i == 2){
+            font-size: $h2-font-size;
+          }@else if($i == 3){
+            font-size: $h3-font-size;
+          }@else if($i == 4){
+            font-size: $h4-font-size;
+          }@else if($i == 5){
+            font-size: $h5-font-size;
+          }@else if($i == 6){
+            font-size: $h6-font-size;
+          }
+        }
+      }
+    }
+  }
+  @if($key == md){
+    @for $i from 1 through 6 {
+      .u-fz-md-#{$i}{
+        @include media-breakpoint-up(md){
+          @if($i == 1){
+            font-size: $h1-font-size;
+          }@else if($i == 2){
+            font-size: $h2-font-size;
+          }@else if($i == 3){
+            font-size: $h3-font-size;
+          }@else if($i == 4){
+            font-size: $h4-font-size;
+          }@else if($i == 5){
+            font-size: $h5-font-size;
+          }@else if($i == 6){
+            font-size: $h6-font-size;
+          }
+        }
+      }
+    }
+
+  }
+  @if($key == lg){
+    @for $i from 1 through 6 {
+      .u-fz-lg-#{$i}{
+        @include media-breakpoint-up(lg){
+          @if($i == 1){
+            font-size: $h1-font-size;
+          }@else if($i == 2){
+            font-size: $h2-font-size;
+          }@else if($i == 3){
+            font-size: $h3-font-size;
+          }@else if($i == 4){
+            font-size: $h4-font-size;
+          }@else if($i == 5){
+            font-size: $h5-font-size;
+          }@else if($i == 6){
+            font-size: $h6-font-size;
+          }
+        }
+      }
+    }
+  }
+
 }

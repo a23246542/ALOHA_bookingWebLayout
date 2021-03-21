@@ -11,7 +11,6 @@
   }
 }
 
-
 @mixin flex($hov:space-between,$col:center){
   display:flex;
   justify-content:$hov;
