@@ -1,0 +1,261 @@
+---
+title: 我的資料
+layout: ./app/reservation-layout.ejs
+engine: ejs
+current: reserve
+---
+<main class="p-user pt-4">
+  <div class="container">
+    <div class="row flex-lg-row-reverse">
+      <div class="col-12 col-lg-4 p-user__profile">
+        <!-- 使用者資訊 -->
+        <section class="c-profileCard card border-0">
+          <div
+            class="card-header d-flex justify-content-between align-items-center border-0 bg-transparent"
+          >
+            <div class="d-flex align-items-center">
+              <h2 class="title h3 mr-2">Profile</h2>
+              <!-- @@ o-badge--c-profileCard or c-profileCard__badge or c-profileCard--badge -->
+              <!-- @@vertical-align -->
+              <div class="badge badge-pill o-badge badge-primary">
+                <span class="material-icons">check</span>
+                VERIFIED
+              </div>
+            </div>
+            <a href="javascript:;" class="fz-sm lh-lg font-weight-bold">EDIT</a>
+          </div>
+          <div class="card-body bg-primary-light rounded--deepen">
+          <!-- <div class="card p-md-4 bg-secondary"> -->
+            <!-- <div class="card-body row"> -->
+            <div class="row no-gutters">
+              <div
+                class="col-12 col-md-6 col-lg-12 mb-4 mb-md-0 mb-lg-4 d-flex justify-content-between"
+              >
+                <div>
+                  <h5 class="card-title text-dark">User details</h5>
+                  <div class="d-flex">
+                    <img
+                      src="./assets/images/profile.jpg"
+                      class="d-none d-md-block d-lg-none"
+                      alt="userPhoto"
+                    />
+                    <ul class="pl-md-3 pl-lg-0">
+                      <li class="mb-3">
+                        David Lin
+                      </li>
+                      <li class="mb-3">
+                        david0520@mail.com.tw
+                      </li>
+                      <li>
+                        +886 9 32 456 789
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <img
+                  src="./assets/images/profile.jpg"
+                  class="d-md-none d-lg-block"
+                  alt="userPhoto"
+                />
+              </div>
+              <div class="col-12 col-md-6 col-lg-12 c-paymentMethod">
+                <h5 class="card-title text-dark">Payment methods</h5>
+                <div class="row no-gutters">
+                  <div class="col-6">
+                    <div class="card-body c-paymentMethod__item mr-md-1">
+                      <ul class="text-nowrap">
+                        <li class="mb-1">xxxx-xxxx-7890</li>
+                        <li class="mb-1">DAVID LIN</li>
+                        <li
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          08/2029
+                          <span class="material-icons">credit_card</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                      class="card-body h-100 d-flex c-paymentMethod__item ml-1 ml-lg-25 justify-content-center align-items-center"
+                    >
+                      <button class="btn btn-primary p-1 rounded-circle">
+                        <span class="material-icons" style="vertical-align:middle">add</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-lg-8 p-user__booking">
+        <!-- 預訂內容 -->
+        <section class="c-BookingList">
+          <h2 class="title h3 mb-4">My Bookings</h2>
+          <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+            <li class="nav-item mr-4">
+              <a
+                class="nav-link active"
+                id="bookUpcomingTab"
+                data-toggle="pill"
+                href="#js-upcomingList"
+                role="tab"
+                aria-controls="upcomingList"
+                aria-selected="true"
+                >Upcoming</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="bookCompletedTab"
+                data-toggle="pill"
+                href="#js-completedList"
+                role="tab"
+                aria-controls="completedList"
+                aria-selected="false"
+                >Completed</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="js-upcomingList"
+              role="tabpanel"
+              aria-labelledby="pills-upcoming-tab"
+            >
+              <ul>
+                <li class="mb-4 pb-md-4 border-bottom-md">
+                  <div class="card">
+                    <div
+                      class="row no-gutters flex-column flex-md-row align-items-md-center"
+                    >
+                      <div class="col-12 col-md-5">
+                        <img
+                          src="./assets/images/Rachada1.jpg"
+                          class="card-img-top"
+                          alt="hotelPhoto"
+                          title="hotelPhoto"
+                        />
+                      </div>
+                      <div class="col-12 col-md-7">
+                        <div class="card-body">
+                          <ul class="mb-4 mb-md-0">
+                            <li class="mb-2 d-flex">
+                              <span class="material-icons">hotel</span>
+                              <div>
+                                <h5 class="card-body__textBold">
+                                  Rachada Hotel
+                                </h5>
+                                <p>
+                                  Deluxe Suite with Pool
+                                </p>
+                              </div>
+                            </li>
+                            <li class="mb-2 d-flex">
+                              <span class="material-icons">date_range</span>
+                              <div>
+                                <h5 class="card-body__textBold">
+                                  17 June 2020 - 19 June 2020
+                                </h5>
+                                <p>
+                                  2 nights・2 adults
+                                </p>
+                              </div>
+                            </li>
+                            <li class="d-flex">
+                              <span class="material-icons">attach_money</span>
+                              <div>
+                                <h5 class="card-body__textBold">
+                                  TWD 4,633
+                                </h5>
+                                <p>
+                                  includes taxes and charges
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                          <a href="detail.html" class="font-weight-bold"
+                            >VIEW DETAILS</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <div
+                      class="row no-gutters flex-column flex-md-row align-items-md-center"
+                    >
+                      <div class="col-12 col-md-5">
+                        <img
+                          src="./assets/images/Chatuchack1.jpg"
+                          class="card-img-top"
+                          alt="hotelPhoto"
+                        />
+                      </div>
+                      <div class="col-12 col-md-7">
+                        <div class="card-body">
+                          <ul class="mb-4 mb-md-0">
+                            <li class="mb-2 d-flex">
+                              <span class="material-icons">hotel</span>
+                              <div>
+                                <h5 class="card-body__textBold">
+                                  WOW Life Hotel
+                                </h5>
+                                <p>
+                                  Standard Double Room
+                                </p>
+                              </div>
+                            </li>
+                            <li class="mb-2 d-flex">
+                              <span class="material-icons">date_range</span>
+                              <div>
+                                <h5 class="card-body__textBold">
+                                  8 Sep 2020 - 15 Sep 2020
+                                </h5>
+                                <p>
+                                  7 nights・2 adults
+                                </p>
+                              </div>
+                            </li>
+                            <li class="d-flex">
+                              <span class="material-icons">attach_money</span>
+                              <div>
+                                <h5 class="card-body__textBold">
+                                  TWD 13,084
+                                </h5>
+                                <p>
+                                  includes taxes and charges
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                          <a href="detail.html" class="font-weight-bold"
+                            >VIEW DETAILS</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="js-completedList"
+              role="tabpanel"
+              aria-labelledby="pills-completed-tab"
+            >
+              completed
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
