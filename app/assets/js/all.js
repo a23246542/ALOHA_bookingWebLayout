@@ -121,6 +121,11 @@ $(document).ready(function () {
     //     initClassName: false,
     //     animatedClassName: 'animate__animated'
     // });
+
+    $('#js-collapseToggle__reserveInfo__btn').on('click',function(){
+      $('#js-collapse__reserveInfo__body').collapse('toggle');
+      $('#js-reserveInfo__total--fadeToggle').fadeToggle(100);
+    })
 });
 
 

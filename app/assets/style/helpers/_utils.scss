@@ -27,8 +27,15 @@
     object-fit: cover;
 }
 
-.cursor-point {
-  cursor: pointer;
+.u-cursor--point {
+  cursor: pointer !important;
+}
+
+.u-ml-auto{
+  margin-left: auto !important;
+}
+.u-mr-auto{
+  margin-right: auto !important;
 }
 
 // 圓角
