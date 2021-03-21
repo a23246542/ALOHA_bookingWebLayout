@@ -41,17 +41,17 @@ $media-screen:(sm,md,lg);
       .u-fz-sm-#{$i}{
         @include media-breakpoint-up(sm){
           @if($i == 1){
-            font-size: $h1-font-size;
+            font-size: $h1-font-size !important;
           }@else if($i == 2){
-            font-size: $h2-font-size;
+            font-size: $h2-font-size !important;
           }@else if($i == 3){
-            font-size: $h3-font-size;
+            font-size: $h3-font-size !important;
           }@else if($i == 4){
-            font-size: $h4-font-size;
+            font-size: $h4-font-size !important;
           }@else if($i == 5){
-            font-size: $h5-font-size;
+            font-size: $h5-font-size !important;
           }@else if($i == 6){
-            font-size: $h6-font-size;
+            font-size: $h6-font-size !important;
           }
         }
       }
@@ -62,17 +62,17 @@ $media-screen:(sm,md,lg);
       .u-fz-md-#{$i}{
         @include media-breakpoint-up(md){
           @if($i == 1){
-            font-size: $h1-font-size;
+            font-size: $h1-font-size !important;
           }@else if($i == 2){
-            font-size: $h2-font-size;
+            font-size: $h2-font-size !important;
           }@else if($i == 3){
-            font-size: $h3-font-size;
+            font-size: $h3-font-size !important;
           }@else if($i == 4){
-            font-size: $h4-font-size;
+            font-size: $h4-font-size !important;
           }@else if($i == 5){
-            font-size: $h5-font-size;
+            font-size: $h5-font-size !important;
           }@else if($i == 6){
-            font-size: $h6-font-size;
+            font-size: $h6-font-size !important;
           }
         }
       }
@@ -84,17 +84,17 @@ $media-screen:(sm,md,lg);
       .u-fz-lg-#{$i}{
         @include media-breakpoint-up(lg){
           @if($i == 1){
-            font-size: $h1-font-size;
+            font-size: $h1-font-size !important;
           }@else if($i == 2){
-            font-size: $h2-font-size;
+            font-size: $h2-font-size !important;
           }@else if($i == 3){
-            font-size: $h3-font-size;
+            font-size: $h3-font-size !important;
           }@else if($i == 4){
-            font-size: $h4-font-size;
+            font-size: $h4-font-size !important;
           }@else if($i == 5){
-            font-size: $h5-font-size;
+            font-size: $h5-font-size !important;
           }@else if($i == 6){
-            font-size: $h6-font-size;
+            font-size: $h6-font-size !important;
           }
         }
       }
