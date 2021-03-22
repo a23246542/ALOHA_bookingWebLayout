@@ -6,7 +6,7 @@ current: result
 ---
 <main class="main searchPage">
    <!-- 搜尋 -->
- <div class="c-searchBar bg-primary-light">
+ <div class="d-none c-searchBar bg-primary-light">
   <div class="container">
     <div class="py-md-3 py-md-4">
       <form action="javascript:;" method="post" class="d-flex c-searchBar__wrapper">
@@ -221,7 +221,7 @@ current: result
     </div>
   </div>
 </div>
-<div class="w-100 bg-purple justify-content-center position-fixed zIndex500 fontOpenSans resultLayoutHeader positionTopLayout loginPageHide loaded">
+<div class="d-none w-100 bg-purple justify-content-center position-fixed zIndex500 fontOpenSans resultLayoutHeader positionTopLayout loginPageHide loaded">
   <div class="container d-flex align-items-center justify-content-center">
     <div class="mobileHide align-items-center">
       <ul class="d-flex listStyle_none p-0 my-md-3 my-xl-4 ">
@@ -257,8 +257,6 @@ current: result
               <div class="text-gray-2 fz_14">17 June - 19 June</div>
             </div>
           </div>
-
-
         </li>
         <li class="bg-white resultLayoutHeaderBlock mr-md-2 mr-xl-3 rounded d-flex align-items-center py_10 px-md-2 px-xl-3">
           <span class="material-icons mr-md-2 mr-xl-3">
@@ -283,5 +281,949 @@ current: result
     </div>
   </div>
 </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- 搜尋地點 -->
+      <div class="col-12 col-md-4 mb-md-4">
+        <section>
+          <h2 class="title text-center text-md-left">
+            Bangkok
+            <sup class="text-primary">3,240</sup>
+          </h2>
+        </section>
+      </div>
+      <!-- 篩選 / 排序條件 -->
+      <div class="col-12 col-md-8 mb-2 mb-md-4">
+        <section class="c-searchConditionBox d-flex">
+          <!-- filter -->
+          <button
+            type="button"
+            class="btn c-searchCondition__filterBtn w-50 d-md-none"
+            data-toggle="modal"
+            data-target="#filterModal"
+          >
+            <span class="material-icons mr-2">filter_list</span>
+            FILTER
+          </button>
+          <!-- sort -->
+          <div class="dropdown c-searchCondition__sortMenu w-50">
+            <button
+              class="btn dropdown-toggle d-md-none"
+              type="button"
+              id="dropdownSortButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-offset="0,0"
+            >
+              <span class="material-icons mr-2">sort</span>
+              SORT
+            </button>
+            <div
+              class="show dropdown-menu dropdown-menu-right py-0 border-0"
+              aria-labelledby="dropdownSortButton"
+            >
+              <ul class="c-sortBar d-flex">
+                <li class="c-sortBar__item">
+                  <a href="javascript:;" class="dropdown-item active"
+                   >Recommended
+                  </a>
+                </li>
+                <li class="c-sortBar__item">
+                  <a href="javascript:;" class="dropdown-item"
+                    >Lowest Price</a
+                  >
+                </li>
+                <li class="c-sortBar__item">
+                  <a href="javascript:;" class="dropdown-item"
+                    >Best Value</a
+                  >
+                </li>
+                <li class="c-sortBar__item">
+                  <a href="javascript:;" class="dropdown-item"
+                    >Distance to City Center</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="divider my-2 d-md-none"></div> -->
+        </section>
+      </div>
+      <!-- 篩選區塊 / 彈窗 -->
+      <!-- <div class="d-none d-md-block col-md-4 modal"> -->
+      <div class="d-none d-md-block col-md-4">
+        <!-- <section class="filter modal-dialog">  -->
+        <!-- <section class="filterOptions">  -->
+        <section class="c-filterContainer">
+          <!-- <ul class="card card-body p-4 bg-secondary modal-content"> -->
+          <!-- <ul class="card card-body filterOptions__list p-4 bg-secondary"> -->
+          <ul class="card card-body c-filterContainer__list p-4 bg-secondary">
+            <li class="c-filterContainer__list__item mb-4 pb-4 border-bottom">
+              <div class="c-filterGroup">
+                <h3 class="title c-filterGroup__title mb-3">Deals</h3>
+                <ul>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="freeCancellation"
+                    />
+                    <label class="custom-control-label" for="freeCancellation"
+                      >Free cancellation</label
+                    >
+                  </li>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="noPrepayment"
+                    />
+                    <label class="custom-control-label" for="noPrepayment"
+                      >No prepayment</label
+                    >
+                  </li>
+                  <li class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="specialOffers"
+                    />
+                    <label class="custom-control-label" for="specialOffers"
+                      >Special offers</label
+                    >
+                  </li>
+                </ul>
+            </li>
+            <li class="c-filterContainer__list__item mb-4 pb-4 border-bottom">
+              <div class="c-filterGroup">
+                <h3 class="title c-filterGroup__title mb-3">Popular filter</h3>
+                <ul>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="breakfastIncluded"
+                    />
+                    <label class="custom-control-label" for="breakfastIncluded"
+                      >Breakfast included</label
+                    >
+                  </li>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="freeWiFi"
+                    />
+                    <label class="custom-control-label" for="freeWiFi"
+                      >Free Wi-Fi</label
+                    >
+                  </li>
+                  <li class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="swimmingPool"
+                    />
+                    <label class="custom-control-label" for="swimmingPool"
+                      >Swimming pool</label
+                    >
+                  </li>
+                </ul>
+            </li>
+            <li class="c-filterContainer__list__item mb-4 pb-4 border-bottom">
+              <div class="c-filterGroup">
+                <h3 class="title c-filterGroup__title mb-3">Budget</h3>
+                <input type="range" class="custom-range mb-3" value="50" />
+                <div class="filter__budget">
+                  <div class="filter__budget__item">
+                    <h5 class="filter__budget__title mb-0">MIN PRICE</h5>
+                    <p>TWD 800</p>
+                  </div>
+                  <span class="d-none d-lg-block text-custom-gray-400">-</span>
+                  <div class="filter__budget__item">
+                    <h5 class="filter__budget__title mb-0">MAX PRICE</h5>
+                    <p class="d-lg-none">TWD 4,00+</p>
+                    <p class="d-none d-lg-block">TWD 4,000+</p>
+                  </div>
+                  <div class="divider my-2 d-lg-none"></div>
+                </div>
+              </div>
+            </li>
+            <!-- <li class="filter__rating mb-4 pb-4 border-bottom"> -->
+            <li class="c-filterContainer__list__item mb-4 pb-4 border-bottom">
+              <div class="c-filterGroup">
+                <h3 class="title c-filterGroup__title mb-3">Rating</h3>
+                <ul>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="fiveStar"
+                    />
+                    <label class="custom-control-label" for="fiveStar">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons mr-2">star</span>
+                      <span>5.0</span>
+                    </label>
+                  </li>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="fourStar"
+                    />
+                    <label class="custom-control-label" for="fourStar">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons mr-2">star</span>
+                      <span>4.0</span>
+                    </label>
+                  </li>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="threeStar"
+                    />
+                    <label class="custom-control-label" for="threeStar">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons mr-2">star</span>
+                      <span>3.0</span>
+                    </label>
+                  </li>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="twoStar"
+                    />
+                    <label class="custom-control-label" for="twoStar">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons mr-2">star</span>
+                      <span>2.0</span>
+                    </label>
+                  </li>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="oneStar"
+                    />
+                    <label class="custom-control-label" for="oneStar">
+                      <span class="material-icons mr-2">star</span>
+                      <span>1.0</span>
+                    </label>
+                  </li>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="unrated"
+                    />
+                    <label class="custom-control-label" for="unrated">
+                      <span>Unrated</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="c-filterContainer__list__item">
+              <div class="c-filterGroup">
+                <h3 class="title c-filterGroup__title mb-3">Stay type</h3>
+                <ul>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="hotel"
+                    />
+                    <label class="custom-control-label" for="hotel">Hotel</label>
+                  </li>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="apartment"
+                    />
+                    <label class="custom-control-label" for="apartment"
+                      >Apartment</label
+                    >
+                  </li>
+                  <li class="custom-control custom-checkbox mb-2">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="unique"
+                    />
+                    <label class="custom-control-label" for="unique">Unique</label>
+                  </li>
+                  <li class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="hostel"
+                    />
+                    <label class="custom-control-label" for="hostel">Hostel</label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <!-- 搜尋結果 -->
+      <div class="col-12 col-md-8 mb-7 mb-md-10">
+        <!-- 查詢結果列表 -->
+        <section>
+          <ul class="searchResult__list mb-3 mb-md-4 mb-lg-7">
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink">
+                    Rachada, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・2 km from center</span
+                    >
+                  </a>
+                  <h5 class="card-title">Rachada Hotel</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>4.0 (283)</span>
+                  </div>
+                  <div class="card-body--textBold">Deluxe Double Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                  <div
+                    class="d-none d-md-flex flex-column align-items-start flex-lg-row"
+                  >
+                    <span class="badge badge-pill badge-secondary mb-1"
+                      >Free cancellation</span
+                    >
+                    <span class="badge badge-pill badge-secondary"
+                      >No prepayment</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div class="mr-lg-1">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">4.0 (283)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div>TWD 1,980</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink"
+                    >Phaya Thai, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・2.9 km from center</span
+                    ></a
+                  >
+                  <h5 class="card-title">Forever Place</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>5.0 (121)</span>
+                  </div>
+                  <div class="card-body--textBold">Standard Double Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                  <div
+                    class="d-none d-md-flex flex-column align-items-start flex-lg-row"
+                  >
+                    <span class="badge badge-pill badge-secondary mb-1"
+                      >Free cancellation</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">5.0 (121)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div class="searchResult__price--textDel">
+                      TWD 1,980
+                    </div>
+                    <div class="d-flex">
+                      TWD <span class="ml-1 text-primary">1,680</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink"
+                    >Bangkapi, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・14 km from center</span
+                    ></a
+                  >
+                  <h5 class="card-title">LUV Hotel</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>4.0 (325)</span>
+                  </div>
+                  <div class="card-body--textBold">Standard Double Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                  <div
+                    class="d-none d-md-flex flex-column align-items-start flex-lg-row"
+                  >
+                    <span class="badge badge-pill badge-secondary mb-1"
+                      >Free cancellation</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div class="mr-lg-1">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">4.0 (325)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div>TWD 2,460</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink"
+                    >Chatuchack, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・12 km from center</span
+                    ></a
+                  >
+                  <h5 class="card-title">WOW Life Hotel</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>4.0 (204)</span>
+                  </div>
+                  <div class="card-body--textBold">Standard Double Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                  <div
+                    class="d-none d-md-flex flex-column align-items-start flex-lg-row"
+                  >
+                    <span class="badge badge-pill badge-secondary"
+                      >No prepayment</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div class="mr-lg-1">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">4.0 (204)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div class="searchResult__price--textDel">
+                      TWD 2,880
+                    </div>
+                    <div class="d-flex">
+                      TWD <span class="ml-1 text-primary">2,240</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink"
+                    >Chatuchack, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・8 km from center</span
+                    ></a
+                  >
+                  <h5 class="card-title">Celebrity Palace</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>5.0 (189)</span>
+                  </div>
+                  <div class="card-body--textBold">Standard Double Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                  <div
+                    class="d-none d-md-flex flex-column align-items-start flex-lg-row"
+                  >
+                    <span class="badge badge-pill badge-secondary"
+                      >No prepayment</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div class="mr-lg-1">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">5.0 (189)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div class="searchResult__price--textDel">
+                      TWD 2,120
+                    </div>
+                    <div class="d-flex">TWD <span class="ml-1 text-primary">1,890</span></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink"
+                    >Rang Rak, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・4.4 km from center</span
+                    ></a
+                  >
+                  <h5 class="card-title">RR Space</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>4.0 (112)</span>
+                  </div>
+                  <div class="card-body--textBold">Deluxe Double Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・1 bed (King size)</p>
+                  <div
+                    class="d-none d-md-flex flex-column align-items-start flex-lg-row"
+                  >
+                    <span class="badge badge-pill badge-secondary mb-1"
+                      >Free cancellation</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div class="mr-lg-1">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">4.0 (112)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div>TWD 2,090</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink"
+                    >Watana, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・6 km from center</span
+                    ></a
+                  >
+                  <h5 class="card-title">Bangkok Hostel</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>5.0 (102)</span>
+                  </div>
+                  <div class="card-body--textBold">Twin Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・2 beds (2 twins)</p>
+                  <div
+                    class="d-none d-md-flex flex-column align-items-start flex-lg-row"
+                  >
+                    <span class="badge badge-pill badge-secondary mb-1"
+                      >Free cancellation</span
+                    >
+                    <span class="badge badge-pill badge-secondary"
+                      >No prepayment</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div class="mr-lg-1">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">5.0 (102)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div>TWD 880</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink"
+                    >Watana, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・6 km from center</span
+                    ></a
+                  >
+                  <h5 class="card-title">Watana First Hostel</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>3.0 (608)</span>
+                  </div>
+                  <div class="card-body--textBold">Twin Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・2 beds (2 twins)</p>
+                  <div
+                    class="d-none d-md-flex flex-column align-items-start flex-lg-row"
+                  >
+                    <span class="badge badge-pill badge-secondary mb-1"
+                      >Free cancellation</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div class="mr-lg-1">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">3.0 (608)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div class="searchResult__price--textDel">
+                      TWD 1,280
+                    </div>
+                    <div class="d-flex">TWD <span class="ml-1 text-primary">790</span></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink"
+                    >Din Daeng, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・7 km from center</span
+                    ></a
+                  >
+                  <h5 class="card-title">DD Space</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>4.0 (138)</span>
+                  </div>
+                  <div class="card-body--textBold">Standard Double Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div class="mr-lg-1">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">4.0 (138)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div class="searchResult__price--textDel">
+                      TWD 1,700
+                    </div>
+                    <div class="d-flex">TWD <span class="ml-1 text-primary">1,240</span></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="assets/images"
+                  alt="searchPhoto"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <a href="javascript:;" class="card-body--textLink"
+                    >Din Daeng, Bangkok
+                    <span class="card-body--textSmall d-none d-lg-inline"
+                      >・7 km from center</span
+                    ></a
+                  >
+                  <h5 class="card-title">Dininn Hotel</h5>
+                  <div class="mb-1 d-md-none">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-2">star</span>
+                    <span>3.0 (446)</span>
+                  </div>
+                  <div class="card-body--textBold">Deluxe Twin Room</div>
+                  <p class="mb-md-2 mb-lg-3">2 guests・2 beds (2 twins)</p>
+                </div>
+                <div
+                  class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                >
+                  <div
+                    class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                  >
+                    <div class="mr-lg-1">
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                      <span class="material-icons">star</span>
+                    </div>
+                    <div class="text-right">3.0 (446)</div>
+                  </div>
+                  <div class="searchResult__price">
+                    <div class="card-body--textSmall d-none d-md-block">
+                      per night
+                    </div>
+                    <div>TWD 3,450</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- 分頁 -->
+        <nav>
+          <ul class="pagination">
+            <li class="page-item page-item__previous">
+              <a
+                class="page-link btn btn-outline-primary"
+                href="javascript:;"
+                tabindex="-1"
+                aria-disabled="true"
+              >
+                <span class="material-icons d-lg-none"
+                  >keyboard_arrow_left</span
+                >
+                <span class="d-none d-lg-block">PREVIOUS</span>
+              </a>
+            </li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="javascript:;">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:;">2</a>
+            </li>
+            <li class="page-item d-none d-md-block">
+              <a class="page-link" href="javascript:;">3</a>
+            </li>
+            <li class="page-item d-none d-lg-block">
+              <a class="page-link" href="javascript:;">4</a>
+            </li>
+            <li class="page-item d-none d-lg-block">
+              <a class="page-link" href="javascript:;">5</a>
+            </li>
+            <li class="page-item d-none d-lg-block">
+              <a class="page-link" href="javascript:;">6</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:;">…</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:;">9</a>
+            </li>
+            <li class="page-item page-item__next">
+              <a class="page-link btn btn-primary" href="javascript:;">
+                <span class="material-icons d-lg-none"
+                  >keyboard_arrow_right</span
+                >
+                <span class="d-none d-lg-block">NEXT</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    !(function(doc, win) {
+      var docEle = doc.documentElement, //获取html元素
+          event = "onorientationchange" in window ? "orientationchange" : "resize", //判断是屏幕旋转还是resize;
+          fn = function() {
+              var width = docEle.clientWidth;
+              console.log(width);
+              // width && (docEle.style.fontSize = 50 * (width / 375) + "px"); //设置html的fontSize，随着event的改变而改变。
+          };
+      fn();
+      win.addEventListener(event, fn, false);
+      doc.addEventListener("DOMContentLoaded", fn, false);
+    }(document, window));
+  </script>
 </main>
 
