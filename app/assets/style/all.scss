@@ -21,12 +21,12 @@
 
 /*pages*/
 @import "./pages/index";
-@import "./pages/search-result";
-@import "./pages/search-result1";
 @import "./pages/detail";
 @import "./pages/reserve";
 @import "./pages/reserve-success";
-@import "./pages/user";
+@import "./pages/user";//@@順序
+@import "./pages/search-result";
+@import "./pages/search-result1";//@@順序
 
 
 // @@sass使用相對路徑 其他html用絕對路勁 gitPage絕對路徑

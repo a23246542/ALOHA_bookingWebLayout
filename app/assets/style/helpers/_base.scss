@@ -69,6 +69,10 @@ a.nav-link {
   }
 }
 
+.dropdown-toggle::after {
+  display: none;
+}
+
 .form-control:focus{
   box-shadow: none;
 }

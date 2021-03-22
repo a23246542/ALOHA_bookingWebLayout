@@ -1,16 +1,179 @@
-
+img{
+  width: 200px;
+  height: 100px;
+}
 
 .c-searchConditionBox{
+  display: flex;
+  align-items: center;
+  @include tablet-up{
+    overflow-x: auto;
+  }
 
-  &__filterBtn{}
+  &__btn{
+    @include flex-center;
+    width: 100%;
+    &:focus{
+      box-shadow:none;
+    }
+  }
 
-  &__sortMenu{}
+  &__filterBtn{
+    width: 50%;
+    @include tablet-up{
+      display: none;
+    }
+  }
+
+  &__sortMenu{
+    width: 50%;
+    @include tablet-up{
+      width: 100%;
+    }
+
+    &__btn{
+      @include tablet-up{
+        display: none;
+      }
+
+    }
+
+    &__body{
+      position: static;
+      @include tablet-up{
+        display: block;
+      }
+    }
+  }
+}
+
+.c-sortList{
+  padding: 1rem 0;
+  background-color: $color-primary-light;
+  border-radius:8px;
+  overflow: hidden;
+  @include tablet-up{
+    display: flex;
+    background-color: transparent;
+  }
+  &__item{
+    // @@
+    .dropdown-item{
+      color:$color-secondary-dark;
+      font-weight: bold;
+      font-size: $h6-font-size;
+      background-color: transparent;
+      @include tablet-up{
+        font-size: 1rem;
+      }
+    }
+    .dropdown-item.active{
+      color:$color-primary;
+    }
+  }
+}
+
+// .c-searchResult{
+
+//   &__list{}
+
+//   &__item{
+
+//   }
+
+//   &__roomCard{
+
+//     &__imgWrap{
+//       width: 40%;
+//     }
+
+//     &__body{
+//       width: 60%;
+//     }
+//   }
+// }
+
+.c-roomCard{
+
+  &__imgWrap{
+    width: 100%;
+    >img{
+      width: 100%;
+      height: 226px;
+      object-fit: cover;
+      @include tablet-up{
+        height: 186px;
+      }
+      @include pc-up{
+        height: 175px;
+      }
+    }
+  }
+
+  .material-icons{
+    color: $color-secondary-dark;
+  }
+
+  &__body{
+    background-color: $color-primary-light;
+    flex-wrap: nowrap;
+    @include tablet-up{
+      background-color: #fff;
+      // padding: 0;
+      // display: flex;
+    }
+
+    &__item:not(:last-child){
+      .c-roomCard__body__text{
+        margin-bottom: 9px;
+      }
+    }
+
+    &__title{
+      font-size: 1rem;
+      font-weight: bold;
+      color: $color-secondary-dark;
+      margin-bottom: 0;
+    }
+
+    &__text{
+      font-size: $h6-font-size;
+      color: $color-secondary;
+      margin-bottom: 0;
+      &--small{
+        font-size: .75rem;
+      }
+      &--bold{
+        font-weight: bold;
+      }
+      &--link{
+        font-size: .75rem;
+        color: $color-primary;
+      }  
+    }
+
+  }
 }
 
 
-.c-sortBar{
+.c-searchResult{
+
+  &__list{}
 
   &__item{
 
+  }
+
+  &__roomCard{
+    display: flex;
+    flex-direction:row;  
+    &__imgWrap{
+      width: 40%;
+    }
+
+    &__body{
+      width: 60%;
+      display: flex;
+    }
   }
 }

@@ -126,7 +126,33 @@ $(document).ready(function () {
       $('#js-collapse__reserveInfo__body').collapse('toggle');
       $('#js-reserveInfo__total--fadeToggle').fadeToggle(100);
     })
+
+    !(function(doc, win) {
+      const docEle = doc.documentElement, //获取html元素
+          event = "onorientationchange" in window ? "orientationchange" : "resize", //判断是屏幕旋转还是resize;
+          fn = function() {
+              const width = docEle.clientWidth;
+              const filterModal = $('#js-filterModal');
+              const filterContainer = filterModal.find('.c-filterContainer');
+              const filterContainerList = filterModal.find('.c-filterContainer__list');
+              if(width<767){
+                filterModal.addClass('modal fade');
+                filterContainer.addClass('modal-dialog');
+                filterContainerList.addClass('modal-content');
+              }else{
+                filterModal.removeClass('modal fade');
+                filterContainer.removeClass('modal-dialog');
+                filterContainerList.removeClass('modal-content');
+                filterModal.show();
+              }
+          };
+      fn();
+      win.addEventListener(event, fn, false);
+      doc.addEventListener("DOMContentLoaded", fn, false);
+    }(document, window));
 });
+
+
 
 
 

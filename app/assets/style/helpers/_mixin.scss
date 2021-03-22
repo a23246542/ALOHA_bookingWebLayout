@@ -17,6 +17,12 @@
   align-items:$col;
 }
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin banner($url, $height) {
 	background-image: url($url);
 	height: $height;
