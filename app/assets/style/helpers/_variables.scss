@@ -368,7 +368,8 @@ $h6-font-size: $font-size-base * 0.88;
 //   h4:20,
 //   h5:16,
 //   h6:14,
-$headings-margin-bottom: $spacer / 2 !default;
+//custom-bs4
+$headings-margin-bottom: 0;//$spacer / 2 !default;
 $headings-font-family: null !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
@@ -896,7 +897,8 @@ $jumbotron-bg: $gray-200 !default;
 
 $card-spacer-y: .75rem !default;
 $card-spacer-x: 1.25rem !default;
-$card-border-width: $border-width !default;
+//custom0-bs4
+$card-border-width: 0;//$border-width !default;
 $card-border-radius: $border-radius !default;
 $card-border-color: rgba($black, .125) !default;
 $card-inner-border-radius: subtract($card-border-radius, $card-border-width) !default;
