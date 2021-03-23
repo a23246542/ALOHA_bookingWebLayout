@@ -77,7 +77,8 @@
 }
 
 .c-roomCard{
-
+  border-radius: 8px;
+  overflow: hidden;
   &__imgWrap{
     width: 100%;
     >img{

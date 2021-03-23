@@ -32,6 +32,15 @@ small{
   font-size: 14px;
 }
 
+@mixin font-raleway{
+  font-family: "Raleway", sans-serif;
+}
+
+@mixin font-open-sans{
+  font-family: "Open Sans", sans-serif
+}
+
+
 //產生(斷點)字體工具類
 $media-screen:(sm,md,lg);
 

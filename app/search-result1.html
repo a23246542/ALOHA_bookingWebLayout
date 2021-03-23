@@ -4,7 +4,7 @@ layout: ./app/layout.ejs
 engine: ejs
 current: result
 ---
-<main class="main searchPage">
+<main class="main p-searchPage">
    <!-- 搜尋 -->
  <div class="d-none c-searchBar bg-primary-light">
   <div class="container">
@@ -598,43 +598,47 @@ current: result
                         >・2 km from center</span
                       >
                     </a>
-                    <h5 class="card-title c-roomCard__body__title">Rachada Hotel</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">Rachada Hotel</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>4.0 (283)</span>
+                      <span class="o-starGroup__starNum">4.0 (283)</span>
                     </div>
-                    <div class="c-roomCard__body__text c-roomCard__body__text--bold">Deluxe Double Room</div>
-                    <p class="c-roomCard__body__text c-roomCard__body__text--small mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
-                    <div
+                    <p class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Deluxe Double Room</p>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・1 bed (Queen size)</p>
+                    <aside
                       class="d-none d-md-flex flex-column align-items-start flex-lg-row"
                     >
-                      <span class="badge badge-pill badge-secondary mb-1"
+                      <span class="badge badge-pill c-searchResult__item__badge mb-md-25 mb-lg-0"
                         >Free cancellation</span
                       >
-                      <span class="badge badge-pill badge-secondary"
+                      <span class="badge badge-pill c-searchResult__item__badge"
                         >No prepayment</span
                       >
-                    </div>
+                    </aside>
                   </div>
+                  <!-- <div
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                  > -->
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div class="mr-lg-1">
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">4.0 (283)</div>
+                      <div class="text-right o-starGroup__starNum">4.0 (283)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <!-- <div class="c-c-searchResult__item__price"> -->
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
                       <div>TWD 1,980</div>
@@ -644,60 +648,60 @@ current: result
               </div>
             </li>
             <li class="c-searchResult__item">
-              <div class="card">
-                <div class="card-img">
+              <div class="card c-roomCard c-searchResult__roomCard">
+                <div class="c-roomCard__imgWrap c-searchResult__roomCard__imgWrap">
                   <img
                     src="assets/images/Phaya.jpg"
                     alt="searchPhoto"
                   />
                 </div>
-                <div class="card-body">
+                <div class="card-body c-roomCard__body c-searchResult__roomCard__body">
                   <div>
-                    <a href="javascript:;" class="card-body--textLink"
+                    <a href="javascript:;" class="c-roomCard__body__text c-roomCard__body__text--link"
                       >Phaya Thai, Bangkok
-                      <span class="card-body--textSmall d-none d-lg-inline"
+                      <span class="c-roomCard__body__text c-roomCard__body__text--small d-none d-lg-inline"
                         >・2.9 km from center</span
                       ></a
                     >
-                    <h5 class="card-title">Forever Place</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">Forever Place</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>5.0 (121)</span>
+                      <span class="o-starGroup__starNum">5.0 (121)</span>
                     </div>
-                    <div class="card-body--textBold">Standard Double Room</div>
-                    <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
-                    <div
+                    <p class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Standard Double Room</p>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・1 bed (Queen size)</p>
+                    <aside
                       class="d-none d-md-flex flex-column align-items-start flex-lg-row"
                     >
-                      <span class="badge badge-pill badge-secondary mb-1"
+                      <span class="badge badge-pill c-searchResult__item__badge"
                         >Free cancellation</span
                       >
-                    </div>
+                    </aside>
                   </div>
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div>
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">5.0 (121)</div>
+                      <div class="text-right o-starGroup__starNum">5.0 (121)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
-                      <div class="searchResult__price--textDel">
+                      <div class="c-searchResult__item__price--textDel">
                         TWD 1,980
                       </div>
                       <div class="d-flex">
@@ -709,55 +713,55 @@ current: result
               </div>
             </li>
             <li class="c-searchResult__item">
-              <div class="card">
-                <div class="card-img">
+              <div class="card c-roomCard c-searchResult__roomCard">
+                <div class="c-roomCard__imgWrap c-searchResult__roomCard__imgWrap">
                   <img
                     src="assets/images/Bangkapi.jpg"
                     alt="searchPhoto"
                   />
                 </div>
-                <div class="card-body">
+                <div class="card-body c-roomCard__body c-searchResult__roomCard__body">
                   <div>
-                    <a href="javascript:;" class="card-body--textLink"
+                    <a href="javascript:;" class="c-roomCard__body__text c-roomCard__body__text--link"
                       >Bangkapi, Bangkok
-                      <span class="card-body--textSmall d-none d-lg-inline"
+                      <span class="c-roomCard__body__text c-roomCard__body__text--small d-none d-lg-inline"
                         >・14 km from center</span
                       ></a
                     >
-                    <h5 class="card-title">LUV Hotel</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">LUV Hotel</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>4.0 (325)</span>
+                      <span class="o-starGroup__starNum">4.0 (325)</span>
                     </div>
-                    <div class="card-body--textBold">Standard Double Room</div>
-                    <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                    <div class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Standard Double Room</div>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・1 bed (Queen size)</p>
                     <div
                       class="d-none d-md-flex flex-column align-items-start flex-lg-row"
                     >
-                      <span class="badge badge-pill badge-secondary mb-1"
+                      <span class="badge badge-pill c-searchResult__item__badge mb-1"
                         >Free cancellation</span
                       >
                     </div>
                   </div>
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div class="mr-lg-1">
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">4.0 (325)</div>
+                      <div class="text-right o-starGroup__starNum">4.0 (325)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
                       <div>TWD 2,460</div>
@@ -767,58 +771,58 @@ current: result
               </div>
             </li>
             <li class="c-searchResult__item">
-              <div class="card">
-                <div class="card-img">
+              <div class="card c-roomCard c-searchResult__roomCard">
+                <div class="c-roomCard__imgWrap c-searchResult__roomCard__imgWrap">
                   <img
                     src="assets/images/Chatuchack1.jpg"
                     alt="searchPhoto"
                   />
                 </div>
-                <div class="card-body">
+                <div class="card-body c-roomCard__body c-searchResult__roomCard__body">
                   <div>
-                    <a href="javascript:;" class="card-body--textLink"
+                    <a href="javascript:;" class="c-roomCard__body__text c-roomCard__body__text--link"
                       >Chatuchack, Bangkok
-                      <span class="card-body--textSmall d-none d-lg-inline"
+                      <span class="c-roomCard__body__text c-roomCard__body__text--small d-none d-lg-inline"
                         >・12 km from center</span
                       ></a
                     >
-                    <h5 class="card-title">WOW Life Hotel</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">WOW Life Hotel</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>4.0 (204)</span>
+                      <span class="o-starGroup__starNum">4.0 (204)</span>
                     </div>
-                    <div class="card-body--textBold">Standard Double Room</div>
-                    <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                    <div class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Standard Double Room</div>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・1 bed (Queen size)</p>
                     <div
                       class="d-none d-md-flex flex-column align-items-start flex-lg-row"
                     >
-                      <span class="badge badge-pill badge-secondary"
+                      <span class="badge badge-pill c-searchResult__item__badge"
                         >No prepayment</span
                       >
                     </div>
                   </div>
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div class="mr-lg-1">
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">4.0 (204)</div>
+                      <div class="text-right o-starGroup__starNum">4.0 (204)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
-                      <div class="searchResult__price--textDel">
+                      <div class="c-searchResult__item__price--textDel">
                         TWD 2,880
                       </div>
                       <div class="d-flex">
@@ -830,60 +834,60 @@ current: result
               </div>
             </li>
             <li class="c-searchResult__item">
-              <div class="card">
-                <div class="card-img">
+              <div class="card c-roomCard c-searchResult__roomCard">
+                <div class="c-roomCard__imgWrap c-searchResult__roomCard__imgWrap">
                   <img
                     src="assets/images/Chatuchack2.jpg"
                     alt="searchPhoto"
                   />
                 </div>
-                <div class="card-body">
+                <div class="card-body c-roomCard__body c-searchResult__roomCard__body">
                   <div>
-                    <a href="javascript:;" class="card-body--textLink"
+                    <a href="javascript:;" class="c-roomCard__body__text c-roomCard__body__text--link"
                       >Chatuchack, Bangkok
-                      <span class="card-body--textSmall d-none d-lg-inline"
+                      <span class="c-roomCard__body__text c-roomCard__body__text--small d-none d-lg-inline"
                         >・8 km from center</span
                       ></a
                     >
-                    <h5 class="card-title">Celebrity Palace</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">Celebrity Palace</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>5.0 (189)</span>
+                      <span class="o-starGroup__starNum">5.0 (189)</span>
                     </div>
-                    <div class="card-body--textBold">Standard Double Room</div>
-                    <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                    <div class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Standard Double Room</div>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・1 bed (Queen size)</p>
                     <div
                       class="d-none d-md-flex flex-column align-items-start flex-lg-row"
                     >
-                      <span class="badge badge-pill badge-secondary"
+                      <span class="badge badge-pill c-searchResult__item__badge"
                         >No prepayment</span
                       >
                     </div>
                   </div>
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div class="mr-lg-1">
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">5.0 (189)</div>
+                      <div class="text-right o-starGroup__starNum">5.0 (189)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
-                      <div class="searchResult__price--textDel">
+                      <div class="c-searchResult__item__price--textDel">
                         TWD 2,120
                       </div>
                       <div class="d-flex">TWD <span class="ml-1 text-primary">1,890</span></div>
@@ -893,55 +897,55 @@ current: result
               </div>
             </li>
             <li class="c-searchResult__item">
-              <div class="card">
-                <div class="card-img">
+              <div class="card c-roomCard c-searchResult__roomCard">
+                <div class="c-roomCard__imgWrap c-searchResult__roomCard__imgWrap">
                   <img
                     src="assets/images/RangRak.jpg"
                     alt="searchPhoto"
                   />
                 </div>
-                <div class="card-body">
+                <div class="card-body c-roomCard__body c-searchResult__roomCard__body">
                   <div>
-                    <a href="javascript:;" class="card-body--textLink"
+                    <a href="javascript:;" class="c-roomCard__body__text c-roomCard__body__text--link"
                       >Rang Rak, Bangkok
-                      <span class="card-body--textSmall d-none d-lg-inline"
+                      <span class="c-roomCard__body__text c-roomCard__body__text--small d-none d-lg-inline"
                         >・4.4 km from center</span
                       ></a
                     >
-                    <h5 class="card-title">RR Space</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">RR Space</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>4.0 (112)</span>
+                      <span class="o-starGroup__starNum">4.0 (112)</span>
                     </div>
-                    <div class="card-body--textBold">Deluxe Double Room</div>
-                    <p class="mb-md-2 mb-lg-3">2 guests・1 bed (King size)</p>
+                    <div class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Deluxe Double Room</div>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・1 bed (King size)</p>
                     <div
                       class="d-none d-md-flex flex-column align-items-start flex-lg-row"
                     >
-                      <span class="badge badge-pill badge-secondary mb-1"
+                      <span class="badge badge-pill c-searchResult__item__badge mb-md-25 mb-lg-0"
                         >Free cancellation</span
                       >
                     </div>
                   </div>
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div class="mr-lg-1">
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">4.0 (112)</div>
+                      <div class="text-right o-starGroup__starNum">4.0 (112)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
                       <div>TWD 2,090</div>
@@ -951,60 +955,60 @@ current: result
               </div>
             </li>
             <li class="c-searchResult__item">
-              <div class="card">
-                <div class="card-img">
+              <div class="card c-roomCard c-searchResult__roomCard">
+                <div class="c-roomCard__imgWrap c-searchResult__roomCard__imgWrap">
                   <img
                     src="assets/images/Watana1.jpg"
                     alt="searchPhoto"
                   />
                 </div>
-                <div class="card-body">
+                <div class="card-body c-roomCard__body c-searchResult__roomCard__body">
                   <div>
-                    <a href="javascript:;" class="card-body--textLink"
+                    <a href="javascript:;" class="c-roomCard__body__text c-roomCard__body__text--link"
                       >Watana, Bangkok
-                      <span class="card-body--textSmall d-none d-lg-inline"
+                      <span class="c-roomCard__body__text c-roomCard__body__text--small d-none d-lg-inline"
                         >・6 km from center</span
                       ></a
                     >
-                    <h5 class="card-title">Bangkok Hostel</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">Bangkok Hostel</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>5.0 (102)</span>
+                      <span class="o-starGroup__starNum">5.0 (102)</span>
                     </div>
-                    <div class="card-body--textBold">Twin Room</div>
-                    <p class="mb-md-2 mb-lg-3">2 guests・2 beds (2 twins)</p>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Twin Room</p>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・2 beds (2 twins)</p>
                     <div
                       class="d-none d-md-flex flex-column align-items-start flex-lg-row"
                     >
-                      <span class="badge badge-pill badge-secondary mb-1"
+                      <span class="badge badge-pill c-searchResult__item__badge mb-1"
                         >Free cancellation</span
                       >
-                      <span class="badge badge-pill badge-secondary"
+                      <span class="badge badge-pill c-searchResult__item__badge"
                         >No prepayment</span
                       >
                     </div>
                   </div>
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div class="mr-lg-1">
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">5.0 (102)</div>
+                      <div class="text-right o-starGroup__starNum">5.0 (102)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
                       <div>TWD 880</div>
@@ -1014,56 +1018,56 @@ current: result
               </div>
             </li>
             <li class="c-searchResult__item">
-              <div class="card">
-                <div class="card-img">
+              <div class="card c-roomCard c-searchResult__roomCard">
+                <div class="c-roomCard__imgWrap c-searchResult__roomCard__imgWrap">
                   <img
                     src="assets/images/Watana2.jpg"
                     alt="searchPhoto"
                   />
                 </div>
-                <div class="card-body">
+                <div class="card-body c-roomCard__body c-searchResult__roomCard__body">
                   <div>
-                    <a href="javascript:;" class="card-body--textLink"
+                    <a href="javascript:;" class="c-roomCard__body__text c-roomCard__body__text--link"
                       >Watana, Bangkok
-                      <span class="card-body--textSmall d-none d-lg-inline"
+                      <span class="c-roomCard__body__text c-roomCard__body__text--small d-none d-lg-inline"
                         >・6 km from center</span
                       ></a
                     >
-                    <h5 class="card-title">Watana First Hostel</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">Watana First Hostel</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>3.0 (608)</span>
+                      <span class="o-starGroup__starNum">3.0 (608)</span>
                     </div>
-                    <div class="card-body--textBold">Twin Room</div>
-                    <p class="mb-md-2 mb-lg-3">2 guests・2 beds (2 twins)</p>
+                    <div class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Twin Room</div>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・2 beds (2 twins)</p>
                     <div
                       class="d-none d-md-flex flex-column align-items-start flex-lg-row"
                     >
-                      <span class="badge badge-pill badge-secondary mb-1"
+                      <span class="badge badge-pill c-searchResult__item__badge mb-1"
                         >Free cancellation</span
                       >
                     </div>
                   </div>
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div class="mr-lg-1">
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">3.0 (608)</div>
+                      <div class="text-right o-starGroup__starNum">3.0 (608)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
-                      <div class="searchResult__price--textDel">
+                      <div class="c-searchResult__item__price--textDel">
                         TWD 1,280
                       </div>
                       <div class="d-flex">TWD <span class="ml-1 text-primary">790</span></div>
@@ -1073,51 +1077,51 @@ current: result
               </div>
             </li>
             <li class="c-searchResult__item">
-              <div class="card">
-                <div class="card-img">
+              <div class="card c-roomCard c-searchResult__roomCard">
+                <div class="c-roomCard__imgWrap c-searchResult__roomCard__imgWrap">
                   <img
                     src="assets/images/DinDaeng1.jpg"
                     alt="searchPhoto"
                   />
                 </div>
-                <div class="card-body">
+                <div class="card-body c-roomCard__body c-searchResult__roomCard__body">
                   <div>
-                    <a href="javascript:;" class="card-body--textLink"
+                    <a href="javascript:;" class="c-roomCard__body__text c-roomCard__body__text--link"
                       >Din Daeng, Bangkok
-                      <span class="card-body--textSmall d-none d-lg-inline"
+                      <span class="c-roomCard__body__text c-roomCard__body__text--small d-none d-lg-inline"
                         >・7 km from center</span
                       ></a
                     >
-                    <h5 class="card-title">DD Space</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">DD Space</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>4.0 (138)</span>
+                      <span class="o-starGroup__starNum">4.0 (138)</span>
                     </div>
-                    <div class="card-body--textBold">Standard Double Room</div>
-                    <p class="mb-md-2 mb-lg-3">2 guests・1 bed (Queen size)</p>
+                    <div class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Standard Double Room</div>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・1 bed (Queen size)</p>
                   </div>
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div class="mr-lg-1">
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">4.0 (138)</div>
+                      <div class="text-right o-starGroup__starNum">4.0 (138)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
-                      <div class="searchResult__price--textDel">
+                      <div class="c-searchResult__item__price--textDel">
                         TWD 1,700
                       </div>
                       <div class="d-flex">TWD <span class="ml-1 text-primary">1,240</span></div>
@@ -1127,46 +1131,46 @@ current: result
               </div>
             </li>
             <li class="c-searchResult__item">
-              <div class="card">
-                <div class="card-img">
+              <div class="card c-roomCard c-searchResult__roomCard">
+                <div class="c-roomCard__imgWrap c-searchResult__roomCard__imgWrap">
                   <img
                     src="assets/images/DinDaeng2.jpg"
                     alt="searchPhoto"
                   />
                 </div>
-                <div class="card-body">
+                <div class="card-body c-roomCard__body c-searchResult__roomCard__body">
                   <div>
-                    <a href="javascript:;" class="card-body--textLink"
+                    <a href="javascript:;" class="c-roomCard__body__text c-roomCard__body__text--link"
                       >Din Daeng, Bangkok
-                      <span class="card-body--textSmall d-none d-lg-inline"
+                      <span class="c-roomCard__body__text c-roomCard__body__text--small d-none d-lg-inline"
                         >・7 km from center</span
                       ></a
                     >
-                    <h5 class="card-title">Dininn Hotel</h5>
-                    <div class="mb-1 d-md-none">
+                    <h5 class="card-title c-roomCard__body__title c-searchResult__roomCard__title">Dininn Hotel</h5>
+                    <div class="mb-1 d-md-none o-starGroup o-starGroup--small">
                       <span class="material-icons">star</span>
                       <span class="material-icons">star</span>
                       <span class="material-icons mr-2">star</span>
-                      <span>3.0 (446)</span>
+                      <span class="o-starGroup__starNum">3.0 (446)</span>
                     </div>
-                    <div class="card-body--textBold">Deluxe Twin Room</div>
-                    <p class="mb-md-2 mb-lg-3">2 guests・2 beds (2 twins)</p>
+                    <div class="c-roomCard__body__text c-roomCard__body__text--bold mb-lg-25 u-lh--1">Deluxe Twin Room</div>
+                    <p class="c-roomCard__body__text c-roomCard__body__text--small c-searchResult__item__lastTextLine mb-md-1 mb-lg-2">2 guests・2 beds (2 twins)</p>
                   </div>
                   <div
-                    class="align-self-end align-self-md-stretch d-md-flex flex-md-column justify-content-md-between align-items-md-end"
+                    class="d-md-flex flex-md-column justify-content-md-between align-items-md-end"
                   >
                     <div
-                      class="d-none d-md-flex flex-md-column flex-xl-row text-right"
+                      class="d-none d-md-flex flex-md-column flex-xl-row align-items-center text-right"
                     >
-                      <div class="mr-lg-1">
+                      <div class="mr-lg-1 o-starGroup o-starGroup--small">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
                       </div>
-                      <div class="text-right">3.0 (446)</div>
+                      <div class="text-right o-starGroup__starNum">3.0 (446)</div>
                     </div>
-                    <div class="searchResult__price">
-                      <div class="card-body--textSmall d-none d-md-block">
+                    <div class="c-searchResult__item__price">
+                      <div class="c-roomCard__body__text--small d-none d-md-block">
                         per night
                       </div>
                       <div>TWD 3,450</div>
