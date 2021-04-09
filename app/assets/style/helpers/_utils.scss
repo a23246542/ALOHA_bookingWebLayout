@@ -10,6 +10,12 @@
   align-items: center;
 }
 
+.d-flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .overflow--Xscroll {
     @media screen and (max-width:1199px) {
         overflow-x: scroll;

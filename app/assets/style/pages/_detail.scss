@@ -2,8 +2,8 @@ main,.main{
   min-height: calc(100vh - 72px);
 }
 
-.c-detail{
-  margin-top: 144px;
+.c__mobileAlbum {
+  height: 247px;
 }
 
 .c-album{
@@ -63,10 +63,6 @@ main,.main{
   font-size: $h6-font-size;
 }
 
-.c-selectRoom{
-
-}
-
 .c-infoTag{
 
   &__item{
@@ -84,7 +80,56 @@ main,.main{
 
 }
 
+
+.c-roomListHead {
+  display: flex;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  @include font-open-sans;
+  border-bottom: 1px solid $color-primary-light;
+  &__item {
+    padding: 10px;
+
+    &.--roomType{
+      width: 54%;
+    }
+
+    &.--sleeps{
+      width: 14%;
+    }
+
+    &.--price {
+      width: 15%;
+    }
+
+    &.--rooms {
+      flex: 1;
+    }
+  }
+}
+
 .c-roomList{
+
+  &__card {
+    border-radius: 10px;
+    overflow: hidden;
+    @include tablet-up {
+      border-radius: 0;
+      overflow: unset;
+    }
+  }
+
+  &__cardMain.card{
+    border: solid #f1f0f8;
+    border-width: 1px 1px 0 0; //##
+    border-radius: 10px;
+    @include tablet-up {
+      border: 0;
+      border-radius: 0;
+    }
+  }
 
   &__item__imgWrap{
       >img{
@@ -94,7 +139,7 @@ main,.main{
 
   }
 
-  &__infoItemsWrap{
+  &__cardSide{
 
   }
 
@@ -109,7 +154,8 @@ main,.main{
     }
   }
 
-  &__sideItemsWrap{
+  // &__sideItemsWrap{
+  &__cardSide{
     justify-content: space-between;
     background-color: $color-primary-light;
     @include tablet-up{
@@ -142,6 +188,9 @@ main,.main{
 
   &__item{
     display: flex;
+    align-items: center;
+    margin-right: 11px;
+    margin-bottom: 10px;
     @include pc-up{
     }
   }

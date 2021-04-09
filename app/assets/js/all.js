@@ -51,21 +51,31 @@ $(document).ready(function () {
         // loopFillGroupWithBlank: true,
         // @@slidesPerGroup
     });
-    var swiper__detailBanner = new Swiper('.section__detailBanner .swiper-container', {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 0,
-        loop: false,
-        loopFillGroupWithBlank: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+    // var swiper__detailBanner = new Swiper('.section__detailBanner .swiper-container', {
+    //     slidesPerView: 1,
+    //     slidesPerGroup: 1,
+    //     spaceBetween: 0,
+    //     loop: false,
+    //     loopFillGroupWithBlank: true,
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true,
+    //     },
+    //     navigation: {
+    //         nextEl: '.swiper-button-next',
+    //         prevEl: '.swiper-button-prev',
+    //     },
+    // });
+    var swiper__detailBanner = new Swiper('#js-detail__swiper', {
+      // slidesPerView: 'auto',
+      slidesPerView: 1,
+      loop: true,
+      loopFillGroupWithBlank: true, //@@todo
+      navigation: {
+        prevEl: '#js-detail__swiper .c-swiper__navButtonPrev',
+        nextEl: '#js-detail__swiper .c-swiper__navButtonNext',
+      },
+  });
 
     $(".js-btn").click(function () {
         $(this).find('.js-btn__info').toggleClass('invisible');
