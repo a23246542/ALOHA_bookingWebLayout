@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+
     const swiperBanner = new Swiper('#c-banner .c-banner__swiper-container',{
       slidersPerView: 1,
       loop: true,

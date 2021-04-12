@@ -135,7 +135,7 @@ current: detail
       <h3 class="title c-selectRoom__title mb-3">Select your room</h3>
       <div class="c-editDetailBar align-items-center mb-md-3">
         <!-- <div class="d-none d-md-flex align-items-center mb-md-3"> -->
-        <a class="d-md-none c-editDetailBar__backArrow mr-md-2">
+        <a href="./search-result1.html" class="d-md-none c-editDetailBar__backArrow mr-md-2">
           <span class="material-icons">arrow_back</span>
         </a>
         <ul class="d-flex c-infoTag c-editDetailBar__infoTag">
@@ -161,22 +161,22 @@ current: detail
             <!-- 房型選擇清單 -->
             <div class="col-12 col-md-8">
               <!-- <div class="card flex-row"> -->
-              <div class="card c-roomList__cardMain">
-                <div class="row no-gutters">
-                  <div class="col-5 d-flex">
-                    <div class="c-roomList__item__imgWrap d-flex">
+              <div class="c-roomList__cardMain">
+                <div class="row no-gutters align-items-center">
+                  <div class="col-4 d-flex">
+                    <div class="c-roomList__imgWrap d-flex">
                   <!-- <div class="col-5 h-100">
-                    <div class="c-roomList__item__imgWrap h-100"> 失敗-->
+                    <div class="c-roomList__imgWrap h-100"> 失敗-->
                       <img src="./assets/images/roomA.jpg" alt="">
                     </div>
                   </div>
-                  <div class="col-7 card-body pl-2">
-                    <div class="row no-gutters">
+                  <div class="col-8 pl-2 pt-2">
+                    <div class="row no-gutters align-items-center">
                       <div class="col-md-8">
                         <div class="c-roomList__item__featureBucket">
-                          <h5 class="card-title text-dark">Deluxe Double Room A</h5>
+                          <h5 class="mb-25 font-weight-bold text-dark">Deluxe Double Room A</h5>
                           <!-- <p class="detail__selectRoom--textSmall mb-2 mb-md-3"> -->
-                          <p class="text-muted mb-2 mb-md-3">
+                          <p class="text-muted mb-2">
                             1 bed (Queen size)
                           </p>
                           <!-- @@BEM block只能一個 -->
@@ -255,6 +255,220 @@ current: detail
                   <p class="mb-0 text-nowrap font-weight-bold text-primary">
                     <span class="">TWD</span>1,490
                   </p>
+                  <span class="d-none d-md-block text-muted">per night</span>
+                </div>
+              </div>
+            </div>
+        </li>
+        <li class="row c-roomList__card no-gutters">
+            <!-- 房型選擇清單 -->
+            <div class="col-12 col-md-8">
+              <!-- <div class="card flex-row"> -->
+              <div class="c-roomList__cardMain">
+                <div class="row no-gutters align-items-center">
+                  <div class="col-4 d-flex">
+                    <div class="c-roomList__imgWrap d-flex">
+                  <!-- <div class="col-5 h-100">
+                    <div class="c-roomList__imgWrap h-100"> 失敗-->
+                      <img src="./assets/images/roomB.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-8 pl-2 pt-2">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col-md-8">
+                        <div class="c-roomList__item__featureBucket">
+                          <h5 class="mb-25 font-weight-bold text-dark">Deluxe Double Room B</h5>
+                          <!-- <p class="detail__selectRoom--textSmall mb-2 mb-md-3"> -->
+                          <p class="text-muted mb-2 mb-md-3">
+                            1 bed (Queen size)
+                          </p>
+                          <!-- @@BEM block只能一個 -->
+                          <!-- <ul class="o-amenities c-roomList__item__amenities"> -->
+                          <ul class="o-amenities c-roomList__amenities">
+                            <li class="o-amenities__item c-roomList__amenitiesItem o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">wifi</span>
+                              <span class="d-none d-lg-inline">Wi-Fi</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">personal_video</span>
+                              <span class="d-none d-lg-inline">Television</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">restaurant</span>
+                              <span class="d-none d-lg-inline">Breakfast</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">ac_unit</span>
+                              <span class="d-none d-lg-inline"
+                                >Air Conditioner</span
+                              >
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">room_service</span>
+                              <span class="d-none d-lg-inline">Room Service</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">smoke_free</span>
+                              <span class="d-none d-lg-inline">Smoke Free</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="c-roomList__sleeps">
+                          <span class="material-icons">person</span>
+                          <span class="material-icons">person</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <!-- <div class="row no-gutters"></div> -->
+              <div class="c-roomList__cardSide d-flex h-100 align-items-center py-1 py-md-0">
+                <div class="c-roomList__roomCount d-flex align-items-center">
+                  <div class="input-group c-roomList__roomCount__inputGroup">
+                    <button
+                      class="btn"
+                      data-toggle="modal"
+                      data-target="#reserveModal"
+                    >
+                      <span class="material-icons">remove</span>
+                    </button>
+                    <input
+                      type="number"
+                      class="form-control c-roomList__roomCount__numInput text-center text-dark"
+                      min="1"
+                      max="99"
+                      value="0"
+                    />
+                    <button
+                      class="btn"
+                      data-toggle="modal"
+                      data-target="#reserveModal"
+                    >
+                      <span class="material-icons">add</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="c-roomList__roomPrice pr-2 pr-md-0 text-center">
+                  <p class="mb-0 text-nowrap font-weight-bold text-dark">
+                    <span class="">TWD</span>1,600
+                  </p>
+                  <span class="d-none d-md-block text-muted">per night</span>
+                </div>
+              </div>
+            </div>
+        </li>
+        <li class="row c-roomList__card no-gutters">
+            <!-- 房型選擇清單 -->
+            <div class="col-12 col-md-8">
+              <!-- <div class="card flex-row"> -->
+              <div class="c-roomList__cardMain">
+                <div class="row no-gutters align-items-center">
+                  <div class="col-4 d-flex">
+                    <div class="c-roomList__imgWrap d-flex">
+                  <!-- <div class="col-5 h-100">
+                    <div class="c-roomList__imgWrap h-100"> 失敗-->
+                      <img src="./assets/images/Rachada1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-8 pl-2 pt-2">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col-md-8">
+                        <div class="c-roomList__item__featureBucket">
+                          <h5 class="mb-25 font-weight-bold text-dark">Deluxe Double Room C</h5>
+                          <!-- <p class="detail__selectRoom--textSmall mb-2 mb-md-3"> -->
+                          <p class="text-muted mb-2 mb-md-3">
+                            1 bed (Queen size)
+                          </p>
+                          <!-- @@BEM block只能一個 -->
+                          <!-- <ul class="o-amenities c-roomList__item__amenities"> -->
+                          <ul class="o-amenities c-roomList__amenities">
+                            <li class="o-amenities__item c-roomList__amenitiesItem o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">wifi</span>
+                              <span class="d-none d-lg-inline">Wi-Fi</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">personal_video</span>
+                              <span class="d-none d-lg-inline">Television</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">restaurant</span>
+                              <span class="d-none d-lg-inline">Breakfast</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">ac_unit</span>
+                              <span class="d-none d-lg-inline"
+                                >Air Conditioner</span
+                              >
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">kitchen</span>
+                              <span class="d-none d-lg-inline">Refrigerator</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">room_service</span>
+                              <span class="d-none d-lg-inline">Room Service</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">local_bar</span>
+                              <span class="d-none d-lg-inline">Mini Bar</span>
+                            </li>
+                            <li class="o-amenities__item c-roomList__amenitiesItem">
+                              <span class="material-icons">smoke_free</span>
+                              <span class="d-none d-lg-inline">Smoke Free</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="c-roomList__sleeps">
+                          <span class="material-icons">person</span>
+                          <span class="material-icons">person</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <!-- <div class="row no-gutters"></div> -->
+              <div class="c-roomList__cardSide d-flex h-100 align-items-center py-1 py-md-0">
+                <div class="c-roomList__roomCount d-flex align-items-center">
+                  <div class="input-group c-roomList__roomCount__inputGroup">
+                    <button
+                      class="btn"
+                      data-toggle="modal"
+                      data-target="#reserveModal"
+                    >
+                      <span class="material-icons">remove</span>
+                    </button>
+                    <input
+                      type="number"
+                      class="form-control c-roomList__roomCount__numInput text-center text-dark"
+                      min="1"
+                      max="99"
+                      value="1"
+                    />
+                    <button
+                      class="btn"
+                      data-toggle="modal"
+                      data-target="#reserveModal"
+                    >
+                      <span class="material-icons">add</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="c-roomList__roomPrice pr-2 pr-md-0 text-center">
+                  <p class="mb-0 text-nowrap font-weight-bold text-dark">
+                    <span class="mr-25">TWD</span>1,980
+                  </p>
+                  <!-- <span class="text-muted per-price">per night</span> -->
+                  <span class="d-none d-md-block text-muted">per night</span>
                 </div>
               </div>
             </div>
@@ -263,47 +477,33 @@ current: detail
     </div>
   </section>
   <!-- 預定確認 modal -->
-  <div
-    class="modal fade"
+  <aside
+    class="modal c-reserveModal fade px-0"
     id="reserveModal"
     tabindex="-1"
     role="dialog"
     aria-labelledby="reserveModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="confirm">
-            <div class="card card-body">
-              <div class="container">
-                <div class="row">
-                  <div
-                    class="col-12 offset-md-1 col-md-6 offset-lg-0 col-lg-9 text-right text-md-left"
-                  >
-                    <p class="card-text mb-1">1 room・2 night</p>
-                    <h2 class="title mb-4 mb-md-0">TWD 3,960</h2>
-                  </div>
-                  <div class="col-12 col-md-5 col-lg-3">
-                    <div class="confirm__btnGroup">
-                      <button
-                        type="button"
-                        class="btn btn-outline-light"
-                        data-dismiss="modal"
-                      >
-                        CANCEL
-                      </button>
-                      <a href="reservation-detail.html" class="btn btn-primary"
-                        >RESERVE</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="modal-dialog w-100 m-0" role="document">
+      <div class="modal-content text-white rounded-0">
+        <div class="modal-body p-2">
+          <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-column">
+              <span class="mb-1 text-muted">1 room・2 night</span>
+              <span class="title h3 mb-0">TWD 3,960</span>
+            </div>
+            <div class="d-flex">
+              <button type="button" class="btn p-2 mr-2 border-white text-white"  data-dismiss="modal">
+                CANCEL
+              </button>
+              <a href="./reserve.html" class="btn p-2 btn-primary">
+                RESERVE
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </aside>
 </main>
