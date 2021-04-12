@@ -4,7 +4,7 @@ layout: ./app/layout.ejs
 engine: ejs
 current: detail
 ---
-<main class="p-detail pt-md-3 pt-lg-4">
+<main class="p-detail">
   <!-- 房間相簿 -->
   <section class="swiper c-swiper c__mobileAlbum d-md-none">
     <div class="swiper-container c-swiper__container" id="js-detail__swiper">
@@ -96,7 +96,7 @@ current: detail
     </div>
   </section>
   <!-- 房間描述 -->
-  <section class="c-description mt-3 mb-4 mb-lg-10">
+  <section class="c-description mt-3 mb-4">
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-9 col-lg-7">
@@ -130,22 +130,25 @@ current: detail
     </div>
   </section>
   <!-- 選擇房間 -->
-  <section class="c-selectRoom mb-4 mb-lg-10">
+  <section class="c-selectRoom mb-4">
     <div class="container">
       <h3 class="title c-selectRoom__title mb-3">Select your room</h3>
-      <div class="row c-selectRoom__editDetailBar">
-        <div class="d-none col-12 d-md-flex align-items-center mb-md-3">
-          <div class="c-infoTag d-flex">
-            <ul class="d-flex">
-              <li class="c-infoTag__item badge bg-primary-light">Bangkok, Thailand</li>
-              <li class="c-infoTag__item badge bg-primary-light">17 June - 19 June・2 nights</li>
-              <li class="c-infoTag__item badge bg-primary-light">2 adults・1 room</li>
-            </ul>
-            <button type="button" class="btn btn-link c-infoTag__btn px-0 py-0 ml-2 font-weight-bold outline-0 border-0">
-              EDIT DETAIL
-            </button>
-          </div>
-        </div>
+      <div class="c-editDetailBar align-items-center mb-md-3">
+        <!-- <div class="d-none d-md-flex align-items-center mb-md-3"> -->
+        <a class="d-md-none c-editDetailBar__backArrow mr-md-2">
+          <span class="material-icons">arrow_back</span>
+        </a>
+        <ul class="d-flex c-infoTag c-editDetailBar__infoTag">
+          <li class="c-infoTag__item badge bg-primary-light">Bangkok<span class="d-none d-md-inline">, Thailand</span></li>
+          <li class="c-infoTag__item badge bg-primary-light">17 June - 19 June<span class="d-none d-md-inline">・2 nights</span></li>
+          <!-- <li class="c-infoTag__item badge bg-primary-light">Bangkok<span class="d-md-inline">, Thailand</span></li>
+          <li class="c-infoTag__item badge bg-primary-light">17 June - 19 June<span class="d-md-inline">・2 nights</span></li> -->
+          <li class="c-infoTag__item badge bg-primary-light">2 adults・1 room</li>
+        </ul>
+        <button type="button" class="d-none d-md-block btn btn-link c-editDetailBar__btn px-0 py-0 ml-2 font-weight-bold outline-0 border-0">
+          EDIT DETAIL
+        </button>
+          <!-- </div> -->
       </div>
       <ul class="d-none d-md-flex row c-roomListHead no-gutters text-dark text-uppercase">
         <li class="c-roomListHead__item --roomType text-left">roomType</li>
@@ -167,7 +170,7 @@ current: detail
                       <img src="./assets/images/roomA.jpg" alt="">
                     </div>
                   </div>
-                  <div class="col-7 card-body pl-1">
+                  <div class="col-7 card-body pl-2">
                     <div class="row no-gutters">
                       <div class="col-md-8">
                         <div class="c-roomList__item__featureBucket">
@@ -208,8 +211,8 @@ current: detail
                           </ul>
                         </div>
                       </div>
-                      <div class="col-md-4 d-flex-center">
-                        <div class="c-roomList__item__sleeps">
+                      <div class="col-md-4">
+                        <div class="c-roomList__sleeps">
                           <span class="material-icons">person</span>
                           <span class="material-icons">person</span>
                         </div>
@@ -221,37 +224,35 @@ current: detail
             </div>
             <div class="col-12 col-md-4">
               <!-- <div class="row no-gutters"></div> -->
-              <div class="c-roomList__cardSide d-flex h-100 align-items-center">
-                <div
-                  class="c-roomList__item__roomsCount w-50 d-flex align-items-center"
-                >
-                <div class="input-group">
-                  <button
-                    class="btn"
-                    data-toggle="modal"
-                    data-target="#reserveModal"
-                  >
-                    <span class="material-icons">remove</span>
-                  </button>
-                  <input
-                    type="number"
-                    class="form-control text-center"
-                    min="1"
-                    max="99"
-                    value="0"
-                  />
-                  <button
-                    class="btn"
-                    data-toggle="modal"
-                    data-target="#reserveModal"
-                  >
-                    <span class="material-icons">add</span>
-                  </button>
+              <div class="c-roomList__cardSide d-flex h-100 align-items-center py-1 py-md-0">
+                <div class="c-roomList__roomCount d-flex align-items-center">
+                  <div class="input-group c-roomList__roomCount__inputGroup">
+                    <button
+                      class="btn"
+                      data-toggle="modal"
+                      data-target="#reserveModal"
+                    >
+                      <span class="material-icons">remove</span>
+                    </button>
+                    <input
+                      type="number"
+                      class="form-control c-roomList__roomCount__numInput text-center text-dark"
+                      min="1"
+                      max="99"
+                      value="0"
+                    />
+                    <button
+                      class="btn"
+                      data-toggle="modal"
+                      data-target="#reserveModal"
+                    >
+                      <span class="material-icons">add</span>
+                    </button>
+                  </div>
                 </div>
-                </div>
-                <div class="c-roomList__item__price w-50 text-center">
+                <div class="c-roomList__roomPrice pr-2 pr-md-0 text-center">
                   <del class="text-nowrap">TWD 1,600</del>
-                  <p class="text-nowrap font-weight-bold text-primary">
+                  <p class="mb-0 text-nowrap font-weight-bold text-primary">
                     <span class="">TWD</span>1,490
                   </p>
                 </div>
