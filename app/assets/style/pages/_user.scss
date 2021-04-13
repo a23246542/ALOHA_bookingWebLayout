@@ -1,29 +1,27 @@
-.o-badge{
+.o-badge {
   display: flex;
   align-items: center;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   font-weight: normal;
   line-height: 1.5;
-  .material-icons{
+  .material-icons {
     font-size: 1rem;
     display: inline-block;
     margin-right: 4px;
   }
 }
 
-.p-user{
-
-  &__profile{
+.p-user {
+  &__profile {
     font-size: $h6-font-size;
   }
 
-  &__booking{
-
+  &__booking {
   }
 }
 
-.c-profileCard{
-  &__userPhoto{
+.c-profileCard {
+  &__userPhoto {
     position: absolute;
     right: 0;
     top: 0;
@@ -31,99 +29,96 @@
     height: 64px;
     object-fit: cover;
     object-position: 50% 50%;
-    @include tablet-up{
+    @include tablet-up {
       position: static;
     }
-    @include pc-up{
+    @include pc-up {
       position: absolute;
     }
   }
 }
 
-
-.c-paymentMethod{
+.c-paymentMethod {
   overflow: hidden;
-  &__item{
+  &__item {
     background-color: #fff;
     border-radius: 4px;
-    border:none;
+    border: none;
   }
 }
 
-.c-bookingNav{
-
-  & &__tabLink{ // @@
-  // &__tabLink{ // @@
+.c-bookingNav {
+  & &__tabLink {
+    // @@
+    // &__tabLink{ // @@
     font-size: 1rem;
     color: $color-secondary-dark;
-    &.active.active{
+    &.active.active {
       background-color: transparent;
       color: $color-primary;
     }
   }
 }
 
-.c-cardList{
-
-  &__itemWrap{
+.c-cardList {
+  &__itemWrap {
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
-    &:not(:last-child){
-      @include tablet-up{
+    &:not(:last-child) {
+      @include tablet-up {
         border-bottom: 1px solid $color-primary-light;
       }
     }
   }
 }
 
-.c-roomCard{
+.c-roomCard {
   border-radius: 8px;
   overflow: hidden;
-  &__imgWrap{
+  &__imgWrap {
     width: 100%;
-    >img{
+    > img {
       width: 100%;
       height: 226px;
       object-fit: cover;
-      @include tablet-up{
+      @include tablet-up {
         height: 186px;
       }
-      @include pc-up{
+      @include pc-up {
         height: 175px;
       }
     }
   }
 
-  .material-icons{
+  .material-icons {
     color: $color-secondary-dark;
   }
 
-  &__body{
+  &__body {
     background-color: $color-primary-light;
     flex-wrap: nowrap;
-    @include tablet-up{
+    @include tablet-up {
       background-color: #fff;
       // padding: 0;
       // display: flex;
     }
 
-    &__item:not(:last-child){
-      .c-roomCard__body__text{
+    &__item:not(:last-child) {
+      .c-roomCard__body__text {
         margin-bottom: 9px;
       }
     }
 
-    &__title{
+    &__title {
       font-size: 1rem;
       font-weight: bold;
       color: $color-secondary-dark;
       margin-bottom: 0;
     }
 
-    &__text{
+    &__text {
       font-size: $h6-font-size;
       margin-bottom: 0;
     }
-
   }
 }

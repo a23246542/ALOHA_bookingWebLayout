@@ -1,71 +1,61 @@
-
-.p-detail{
-  padding-top: 42px;
-  @include tablet-up {
-    padding-top: 0;
-  }
-
+.p-detail {
 }
 
 .c__mobileAlbum {
   height: 247px;
 }
 
-.c-album{
-
-  &__img{
+.c-album {
+  &__img {
     width: 100%;
     object-fit: cover;
     // height: 100%;
 
-    &--large{
-      @include media-breakpoint-up(md){
+    &--large {
+      @include media-breakpoint-up(md) {
         height: 268px;
       }
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         // width: 635px;
         height: 434px;
       }
     }
 
-    &--medium{
-      @include media-breakpoint-up(md){
+    &--medium {
+      @include media-breakpoint-up(md) {
         height: 132px;
       }
 
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         // width: 437px;
         height: 213px;
       }
     }
 
-    &--small{
-      @include media-breakpoint-up(md){
+    &--small {
+      @include media-breakpoint-up(md) {
         height: 93px;
       }
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         // width: 264px;
         height: 151px;
       }
     }
   }
 
-
-  &__btn{
+  &__btn {
     width: 100%;
     height: 34px;
     white-space: nowrap;
-    font-size: .8rem;
-    @include pc-up{
+    font-size: 0.8rem;
+    @include pc-up {
       height: 54px;
       font-size: 1rem;
     }
   }
-
 }
 
-
-.c-description__textLink{
+.c-description__textLink {
   font-size: $h6-font-size;
 }
 
@@ -88,7 +78,7 @@
   &__infoTag.c-infoTag {
     flex: 1;
     @include tablet-up {
-      flex:0
+      flex: 0;
     }
     .c-infoTag__item {
       // width: 0;
@@ -99,33 +89,30 @@
       @include tablet-up {
         width: auto;
         font-size: $h6-font-size;
-        &:not(:last-child){ //@@重複寫一遍
+        &:not(:last-child) {
+          //@@重複寫一遍
           margin-right: 15px;
         }
       }
     }
   }
 
-  &__btn{
+  &__btn {
     font-size: 1rem;
   }
 }
 
-.c-infoTag{
-
-  &__item{
+.c-infoTag {
+  &__item {
     font-size: $h6-font-size;
     font-weight: normal;
     padding: 12px;
     line-height: 1.5;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 15px;
     }
   }
 }
-
-
-
 
 .c-roomListHead {
   display: flex;
@@ -138,11 +125,11 @@
   &__item {
     padding: 10px;
 
-    &.--roomType{
+    &.--roomType {
       width: 54%;
     }
 
-    &.--sleeps{
+    &.--sleeps {
       width: 14%;
     }
 
@@ -156,8 +143,7 @@
   }
 }
 
-.c-roomList{
-
+.c-roomList {
   &__card {
     margin-bottom: 15px;
     border-radius: 6px;
@@ -172,7 +158,7 @@
     }
   }
 
-  &__cardMain.card{
+  &__cardMain.card {
     border: solid #f1f0f8;
     border-width: 1px 1px 0 0; //##
     border-radius: 10px;
@@ -182,7 +168,7 @@
     }
   }
 
-  &__imgWrap{
+  &__imgWrap {
     width: 100%;
     height: 150px;
     @include tablet-up {
@@ -190,58 +176,54 @@
       border-bottom-left-radius: 8px;
       overflow: hidden;
     }
-    @include pc-up{
+    @include pc-up {
       height: 175px;
     }
 
-    >img{
+    > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: 50% 50%;
     }
-
-
   }
 
-  &__cardSide{
-
+  &__cardSide {
   }
 
-  &__item__featureBucket{
-
+  &__item__featureBucket {
   }
 
-  &__sleeps{
+  &__sleeps {
     // justify-content: flex-start;
     text-align: left;
-    @include tablet-up{
+    @include tablet-up {
       text-align: center;
     }
   }
 
   // &__sideItemsWrap{
-  &__cardSide{
+  &__cardSide {
     justify-content: space-between;
     background-color: $color-primary-light;
-    @include tablet-up{
+    @include tablet-up {
       flex-direction: row-reverse;
       justify-content: initial;
       background-color: #fff;
     }
   }
 
-  &__roomCount{
+  &__roomCount {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 41.6666%;
 
-    &__inputGroup{
+    &__inputGroup {
       width: 150px;
     }
 
-    &__numInput{
+    &__numInput {
       padding: 0;
       height: auto;
       text-align: center;
@@ -256,46 +238,43 @@
     }
   }
 
-  &__roomPrice{
+  &__roomPrice {
     @include tablet-up {
       width: 50%;
     }
-    .text-muted{
+    .text-muted {
       font-size: 12px;
     }
   }
 }
 
-.o-amenities{
+.o-amenities {
   display: flex;
   flex-wrap: wrap;
   font-size: $h6-font-size;
-  @include pc-up{
+  @include pc-up {
     height: 116px;
     flex-direction: column;
-    align-items:space-between;
-
+    align-items: space-between;
   }
 
-  .material-icons{
+  .material-icons {
     font-size: 18px;
     margin-right: 6px;
   }
 
-  &__item{
+  &__item {
     display: flex;
     align-items: center;
     margin-right: 12px;
     margin-bottom: 5px;
-    @include pc-up{
+    @include pc-up {
     }
   }
 }
 
-
 .c-reserveModal {
-
-  .modal-dialog{
+  .modal-dialog {
     position: absolute;
     max-width: 100%;
     bottom: 0;
@@ -303,7 +282,7 @@
     right: 0;
   }
 
-  .modal-content{
-    background-color: rgba(0,0,0,.7);
+  .modal-content {
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }

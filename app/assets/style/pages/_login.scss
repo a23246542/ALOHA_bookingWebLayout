@@ -1,14 +1,12 @@
-
-.p-login{
-
-  &__container{
-    @include pc-up{
+.p-login {
+  &__container {
+    @include pc-up {
       // max-width: 1320px;
       max-width: 80%; //#百分比取代固定尺寸
     }
   }
 
-  &__backBg{
+  &__backBg {
     width: 100%;
     height: 100vh;
     top: 0;
@@ -18,18 +16,17 @@
     z-index: -1;
   }
 
-  &__copyRightTitle{
-    @include pc-up{
+  &__copyRightTitle {
+    @include pc-up {
       padding-top: 104px;
     }
   }
 
-  &__loginForm{
+  &__loginForm {
     padding-top: 24px;
 
-    @include pc-up{
+    @include pc-up {
       padding-top: 104px;
     }
   }
-
 }
