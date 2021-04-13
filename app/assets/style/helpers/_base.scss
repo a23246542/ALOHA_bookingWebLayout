@@ -1,19 +1,47 @@
 /*全站設定*/
 
+// ========layout===============
+
 html{
   overflow-x: hidden;
 }
 body{
   overflow-x: hidden;
-  // font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  // font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  padding-top: 72px;
   min-width: 320px;
 }
 
-.main{
-    min-height: calc(100vh - 260px);//header+footer
+.navbar{
+  height: 56px;
+  @include tablet-up{
+    height: 72px;
+  }
 }
+
+main,.main{
+  //header m:56px tablet:72px pc:72px
+  //footer m:102px tablet:67px pc:72px
+  min-height: calc(100vh - 102px);
+  padding-top: 56px;
+  @include tablet-up{
+    min-height: calc(100vh - 67px);
+    padding-top: 72px;
+  }
+  @include pc-up{
+    min-height: calc(100vh - 72px);
+    padding-top: 72px;
+  }
+}
+
+footer,.footer{
+  height: 102px;
+  @include tablet-up{
+    height: 67px;
+  }
+  @include pc-up{
+    height: 72px;
+  }
+}
+
 
 .container{
   position: relative;
@@ -107,11 +135,6 @@ ul{
     box-shadow:none;
   }
 }
-
-.form-control:focus {
-  background-color: transparent;
-}
-
 
 
 // a:hover, .btn-link:hover, .btn-link:focus{

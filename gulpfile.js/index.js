@@ -10,7 +10,8 @@ let options = minimist(process.argv.slice(2), envOptions);
 console.log(`Current mode：${options.env}`);
 
 function copyFile() {
-  return gulp.src(envOptions.conyFile.src)
+  return gulp
+  .src(envOptions.conyFile.src)
   .pipe(gulp.dest(envOptions.conyFile.path))
   .pipe(
     browserSync.reload({
@@ -20,7 +21,8 @@ function copyFile() {
 }
 
 function layoutHTML() {
-  return gulp.src(envOptions.html.src)
+  return gulp
+    .src(envOptions.html.src)
     .pipe($.plumber())
     .pipe($.frontMatter())
     .pipe(
@@ -41,7 +43,8 @@ function sass() {
   const plugins = [
     autoprefixer(),
   ];
-  return gulp.src(envOptions.style.src)
+  return gulp
+    .src(envOptions.style.src)
     .pipe($.sourcemaps.init())
     .pipe($.sass({
         outputStyle: envOptions.style.outputStyle,
@@ -60,7 +63,8 @@ function sass() {
 }
 
 function babel() {
-  return gulp.src(envOptions.javascript.src)
+  return gulp
+    .src(envOptions.javascript.src)
     .pipe($.sourcemaps.init())
     .pipe($.babel({
       presets: ['@babel/env'],
@@ -77,7 +81,8 @@ function babel() {
 }
 
 function vendorsJs() {
-  return gulp.src(envOptions.vendors.src)
+  return gulp
+    .src(envOptions.vendors.src)
     .pipe($.concat(envOptions.vendors.concat))
     .pipe(gulp.dest(envOptions.vendors.path));
 }

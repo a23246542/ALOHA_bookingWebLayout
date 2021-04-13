@@ -1,29 +1,10 @@
-body{
-  padding-top: 0;
-}
 
 .p-login{
-  padding-top: 56px;
-  @include tablet-up{
-    padding-top: 72px;
-  }
 
   &__container{
     @include pc-up{
       // max-width: 1320px;
       max-width: 80%; //#百分比取代固定尺寸
-    }
-  }
-
-  &__header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    height: 56px;
-    @include tablet-up{
-      height: 72px;
     }
   }
 

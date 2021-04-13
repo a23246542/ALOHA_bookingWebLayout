@@ -45,100 +45,59 @@
 </head>
 
 <body>
-    <!-- ##fixed-top -->
-    <nav class="navbar navbar-expand-md navbar-light bg-white py-2 fixed-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand py-0" href="index.html">
-                <h1 class="l_logo mb-0">ALOHA</h1>
-            </a>
-            <!-- 手機顯示 Login -->
-            <div class="navbar-nav d-md-none">
-                <!-- 未登入 -->
-                <a class="js-nav__login nav-link text-dark font-weight-bold"
-                    data-toggle="modal"
-                    data-target="#mobileLogin">
-                    <span class="login__userName">Login</span>
-                </a>
-                <!-- 已登入todo -->
-                <!-- <button class="js-nav__hasLogin  nav-link btn btn-link login__navImage ml-5 d-none">
-                </button> -->
-            </div>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <!-- ##ml-auto -->
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <!-- ##mr-5 -->
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
-                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="material-icons text-dark"> language </span>
-                        </a>
-                        <!-- ##md-right -->
-                        <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="language">
-                            <a href="#" class="dropdown-item">繁體中文</a>
-                            <a href="#" class="dropdown-item">日本語</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark font-weight-bold" href="#">Sign up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark font-weight-bold d-none d-md-block" href="login.html">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-sm navbar-light bg-white py-2">
+          <div class="container">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand py-0" href="index.html">
+                  <h1 class="l_logo mb-0">ALOHA</h1>
+              </a>
+              <!-- 手機顯示 Login -->
+              <div class="navbar-nav d-md-none">
+                  <!-- 未登入 -->
+                  <a class="js-nav__login nav-link text-dark font-weight-bold"
+                      data-toggle="modal"
+                      data-target="#mobileLogin">
+                      <span class="login__userName">Login</span>
+                  </a>
+                  <!-- 已登入todo -->
+                  <!-- <button class="js-nav__hasLogin  nav-link btn btn-link login__navImage ml-5 d-none">
+                  </button> -->
+              </div>
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                  <!-- ##ml-auto -->
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item dropdown">
+                          <!-- ##mr-5 -->
+                          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                              id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="material-icons text-dark"> language </span>
+                          </a>
+                          <!-- ##md-right -->
+                          <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="language">
+                              <a href="#" class="dropdown-item">繁體中文</a>
+                              <a href="#" class="dropdown-item">日本語</a>
+                          </div>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-dark font-weight-bold" href="#">Sign up</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-dark font-weight-bold d-none d-md-block" href="login.html">Login</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
 
-    </nav>
-    <!-- mobile Login modal -->
-    <div class="modal--fluid modal fade" id="mobileLogin" tabindex="-1" role="dialog" aria-labelledby="mobileLogin"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content rounded-0">
-                <div class="modal-header border-0 rounded-0">
-                    <h4 class="l_logo modal-title mb-0">
-                        ALOHA
-                    </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span class="material-icons text-info"> close </span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <h3 class="font-weight-bold">Login</h3>
-                    <form action="" class="mb-3">
-                        <div class="form-group ">
-                            <label for="userNameLogin" class="mb-0">Name</label>
-                            <input type="text" id="userNameLogin" class="form-control form-control-lg">
-                        </div>
-                        <div class="form-group ">
-                            <label for="userEmail" class="mb-0">Email</label>
-                            <input type="email" id="userNameLogin" class="form-control form-control-lg">
-                        </div>
-                        <small class="mb-2 d-block">By signing in or creating an account, you agree with our
-                            <a href="">Terms & Conditions</a> and
-                            <a href="">Privacy Statement</a>
-                        </small>
-                        <div class="form-group">
-                            <input type="checkbox" id="userRemember" class="checkbox" checked>
-                            <label for="userRemember" class="checkbox__label"> Remember me</label>
-                        </div>
-                        <a href="member.html" class="btn btn-primary btn-block py-2 mb-1">LOGIN</a>
-                        <p class="text-muted text-center">Don’t have an account yet? <span
-                                class="text-primary font-weight-bold">Sign up</span></p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+      </nav>
+    </header>
 
     <%- contents %>
 
     <footer>
-
-
         <!-- 頁尾導覽列 -->
         <nav class="d-none js-footer__nav navbar navbar-expand-lg navbar-light bg-white py-3">
             <div class="container">
