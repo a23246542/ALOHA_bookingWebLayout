@@ -1,0 +1,60 @@
+---
+title: login
+layout: ./app/login-layout.ejs
+engine: ejs
+current: login
+---
+<main class="p-login">
+  <nav class="navbar p-login__header  navbar-expand-sm">
+    <div class="container p-login__container px-lg-0">
+      <a href="./index.html" class="navbar-brand">
+        <img src="./assets/images/logo-aloha.svg" alt="">
+      </a>
+      <a href="./index.html" class="d-sm-none">
+        <span class="material-icons text-dark">close</span>
+      </a>
+    </div>
+  </nav>
+  <section>
+    <div class="row no-gutters">
+      <div class="d-none d-sm-block col-md-12 col-lg-7 p-login__backBg position-absolute"></div>
+      <div class="container p-login__container">
+        <div class="row justify-content-center">
+          <section class="d-none d-lg-block p-login__copyRightTitle col-lg-8">
+            <article style="width: 80%;">
+              <!-- <div> -->
+                <h1 class="title mb-2">An ideal hotel makes a wonderful Trip.</h1>
+                <p class="text-secondary">Discover your dream destination and hotel on ALOHA.com</p>
+              <!-- </div> -->
+            </article>
+          </section>
+          <section class="col-12 col-sm-6 col-lg-4">
+            <div class="c-loginForm p-login__loginForm">
+              <h1 class="title h3 mb-3 font-weight-bold">Login</h1>
+              <form action="" class="mb-3">
+                <div class="form-group ">
+                  <label for="userNameLogin" class="mb-25">Name</label>
+                  <input type="text" id="userNameLogin" class="form-control form-control-lg">
+                </div>
+                <div class="form-group ">
+                  <label for="userEmail" class="mb-25">Email</label>
+                  <input type="email" id="userNameLogin" class="form-control form-control-lg">
+                </div>
+                <small class="mb-2 d-block">By signing in or creating an account, you agree with our
+                  <a href="javascript:;">Terms & Conditions</a> and<a href="javascript:;">Privacy Statement</a>
+                </small>
+                <div class="form-group">
+                  <input type="checkbox" id="userRemember" class="checkbox" checked>
+                  <label for="userRemember" class="checkbox__label"> Remember me</label>
+                </div>
+                <a href="member.html" class="btn btn-primary btn-block py-2 mb-1">LOGIN</a>
+                <p class="text-muted text-center">Don’t have an account yet? <span
+                  class="text-primary font-weight-bold">Sign up</span></p>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,54 @@
+body{
+  padding-top: 0;
+}
+
+.p-login{
+  padding-top: 56px;
+  @include tablet-up{
+    padding-top: 72px;
+  }
+
+  &__container{
+    @include pc-up{
+      // max-width: 1320px;
+      max-width: 80%; //#百分比取代固定尺寸
+    }
+  }
+
+  &__header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 56px;
+    @include tablet-up{
+      height: 72px;
+    }
+  }
+
+  &__backBg{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-image: url("../images/login.jpg");
+    background-size: cover;
+    background-position: 50% 60%;
+    z-index: -1;
+  }
+
+  &__copyRightTitle{
+    @include pc-up{
+      padding-top: 104px;
+    }
+  }
+
+  &__loginForm{
+    padding-top: 24px;
+
+    @include pc-up{
+      padding-top: 104px;
+    }
+  }
+
+}
