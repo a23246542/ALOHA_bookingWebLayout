@@ -2,56 +2,57 @@
 
 // ========layout===============
 
-html{
+html {
   overflow-x: hidden;
 }
-body{
+body {
   overflow-x: hidden;
   min-width: 320px;
 }
 
-.navbar{
+.navbar {
   height: 56px;
-  @include tablet-up{
+  @include tablet-up {
     height: 72px;
   }
 }
 
-main,.main{
+main,
+.main {
   //header m:56px tablet:72px pc:72px
   //footer m:102px tablet:67px pc:72px
   min-height: calc(100vh - 102px);
   padding-top: 56px;
-  @include tablet-up{
+  @include tablet-up {
     min-height: calc(100vh - 67px);
     padding-top: 72px;
   }
-  @include pc-up{
+  @include pc-up {
     min-height: calc(100vh - 72px);
     padding-top: 72px;
   }
 }
 
-footer,.footer{
+footer,
+.footer {
   height: 102px;
-  @include tablet-up{
+  @include tablet-up {
     height: 67px;
   }
-  @include pc-up{
+  @include pc-up {
     height: 72px;
   }
 }
 
-
-.container{
+.container {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  @include tablet-up{
+  @include tablet-up {
     max-width: 720px;
   }
 
-  @include pc-up{
+  @include pc-up {
     max-width: 1112px;
   }
 }
@@ -62,45 +63,45 @@ footer,.footer{
   font-weight: bold;
 }
 
-
 // =======其他全域設定===============
 
-ul{
+ul {
   list-style: none;
 }
 
-button:focus{
+button:focus {
   outline: 0;
 }
 
-img{
-    display: block;
-    max-width: 100%;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-a{
+a {
   display: inline-block;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-th,td{
+th,
+td {
   text-align: center;
 }
 
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button{
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none !important;
   margin: 0;
 }
 
-label{
-  margin:0;
+label {
+  margin: 0;
 }
 
-.material-icons{
+.material-icons {
   vertical-align: bottom;
 }
 
@@ -110,7 +111,7 @@ a.nav-link {
   color: map-get($theme-colors, "secondary");
 
   &.active {
-      color: map-get($theme-colors, "primary");
+    color: map-get($theme-colors, "primary");
   }
 }
 
@@ -118,24 +119,24 @@ a.nav-link {
   display: none;
 }
 
-.form-control:focus{
+.form-control:focus {
   box-shadow: none;
 }
 
-ul{
+ul {
   padding-left: 0;
   margin-bottom: 0;
 }
 
-.btn{
+.btn {
   font-size: inherit;
   font-weight: 700;
-  &:focus,&.focus{
+  &:focus,
+  &.focus {
     outline: 0;
-    box-shadow:none;
+    box-shadow: none;
   }
 }
-
 
 // a:hover, .btn-link:hover, .btn-link:focus{
 //   text-decoration: none;
@@ -144,4 +145,3 @@ ul{
 // a.text-dark:focus {
 //   color: #0E8A00 !important;
 // }
-

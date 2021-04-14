@@ -17,6 +17,12 @@
     "url": "https://github.com/a23246542/ALOHA_bookingWebLayout/issues"
   },
   "homepage": "https://github.com/a23246542/ALOHA_bookingWebLayout#readme",
+  "prettier": {
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "editor.formatOnSave": true
+  },
   "dependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",

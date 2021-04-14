@@ -1,16 +1,17 @@
 $(document).ready(function () {
-  const swiperBanner = new Swiper("#c-banner .c-banner__swiper-container", {
+  const swiperBanner = new Swiper('#c-banner .c-banner__swiper-container', {
     slidersPerView: 1,
     loop: true,
     navigation: {
-      prevEl: "#c-banner .js-swiperButtonPrev",
-      nextEl: "#c-banner .js-swiperButtonNext",
+      prevEl: '#c-banner .js-swiperButtonPrev',
+      nextEl: '#c-banner .js-swiperButtonNext',
     },
     autoplay: {
       delay: 3000,
     },
   });
-  const swiper_Choices = new Swiper(".js-topChoices .swiper-container", {
+
+  const swiper_Choices = new Swiper('.js-topChoices .swiper-container', {
     // slidesPerView: 'auto',
     slidesPerView: 1,
     spaceBetween: 30,
@@ -21,8 +22,8 @@ $(document).ready(function () {
     //     clickable: true,
     // },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     breakpoints: {
       // 767: {
@@ -42,9 +43,9 @@ $(document).ready(function () {
     },
   });
 
-  const swiper__inspiration = new Swiper(".js-inspiration .swiper-container", {
+  const swiper__inspiration = new Swiper('.js-inspiration .swiper-container', {
     // slidesPerView: 1,
-    slidesPerView: "auto",
+    slidesPerView: 'auto',
     spaceBetween: 30,
     loop: true,
     // loopFillGroupWithBlank: true,
@@ -65,23 +66,23 @@ $(document).ready(function () {
   //         prevEl: '.swiper-button-prev',
   //     },
   // });
-  const swiper__detailBanner = new Swiper("#js-detail__swiper", {
+  const swiper__detailBanner = new Swiper('#js-detail__swiper', {
     // slidesPerView: 'auto',
     slidesPerView: 1,
     loop: true,
     loopFillGroupWithBlank: true, // @@todo
     navigation: {
-      prevEl: "#js-detail__swiper .c-swiper__navButtonPrev",
-      nextEl: "#js-detail__swiper .c-swiper__navButtonNext",
+      prevEl: '#js-detail__swiper .c-swiper__navButtonPrev',
+      nextEl: '#js-detail__swiper .c-swiper__navButtonNext',
     },
   });
 
-  $(".js-btn").click(function () {
-    $(this).find(".js-btn__info").toggleClass("invisible");
-    if ($(this).find(".js-btn__more").text() != "expand_less") {
-      $(this).find(".js-btn__more").text("expand_less");
+  $('.js-btn').click(function () {
+    $(this).find('.js-btn__info').toggleClass('invisible');
+    if ($(this).find('.js-btn__more').text() != 'expand_less') {
+      $(this).find('.js-btn__more').text('expand_less');
     } else {
-      $(this).find(".js-btn__more").text("expand_more");
+      $(this).find('.js-btn__more').text('expand_more');
     }
   });
 
@@ -101,25 +102,25 @@ $(document).ready(function () {
   //     }
   // });
 
-  switch ($("title").text()) {
-    case "Index":
-      $(".js-nav").addClass("fixed-top");
+  switch ($('title').text()) {
+    case 'Index':
+      $('.js-nav').addClass('fixed-top');
       break;
-    case "Result":
-      $(".js-nav").addClass("fixed-top");
+    case 'Result':
+      $('.js-nav').addClass('fixed-top');
       break;
-    case "Result - Detail":
-      $(".js-nav").addClass("fixed-top");
+    case 'Result - Detail':
+      $('.js-nav').addClass('fixed-top');
       break;
-    case "Login":
-      $(".js-nav").hide();
-      $(".js-footer__nav").hide();
+    case 'Login':
+      $('.js-nav').hide();
+      $('.js-footer__nav').hide();
       break;
-    case "My Booking":
-      $(".js-nav__signUp").hide();
-      $(".js-nav__login").hide();
-      $(".js-nav__hasLogin").addClass("d-block");
-      $(".js-nav__hasLogin__userName").text("David Lin");
+    case 'My Booking':
+      $('.js-nav__signUp').hide();
+      $('.js-nav__login').hide();
+      $('.js-nav__hasLogin').addClass('d-block');
+      $('.js-nav__hasLogin__userName').text('David Lin');
       break;
   }
 
@@ -129,33 +130,33 @@ $(document).ready(function () {
   //     animatedClassName: 'animate__animated'
   // });
 
-  $("#js-collapseToggle__reserveInfo__btn").on("click", function () {
-    $("#js-collapse__reserveInfo__body").collapse("toggle");
-    $("#js-reserveInfo__total--fadeToggle").fadeToggle(100);
+  $('#js-collapseToggle__reserveInfo__btn').on('click', function () {
+    $('#js-collapse__reserveInfo__body').collapse('toggle');
+    $('#js-reserveInfo__total--fadeToggle').fadeToggle(100);
   });
 
   !(function (doc, win) {
     const docEle = doc.documentElement; // 获取html元素
     const event =
-      "onorientationchange" in window ? "orientationchange" : "resize"; // 判断是屏幕旋转还是resize;
+      'onorientationchange' in window ? 'orientationchange' : 'resize'; // 判断是屏幕旋转还是resize;
     const fn = function () {
       const width = docEle.clientWidth;
-      const filterModal = $("#js-filterModal");
-      const filterContainer = filterModal.find(".c-filterContainer");
-      const filterContainerList = filterModal.find(".c-filterContainer__list");
+      const filterModal = $('#js-filterModal');
+      const filterContainer = filterModal.find('.c-filterContainer');
+      const filterContainerList = filterModal.find('.c-filterContainer__list');
       if (width < 767) {
-        filterModal.addClass("modal fade");
-        filterContainer.addClass("modal-dialog");
-        filterContainerList.addClass("modal-content");
+        filterModal.addClass('modal fade');
+        filterContainer.addClass('modal-dialog');
+        filterContainerList.addClass('modal-content');
       } else {
-        filterModal.removeClass("modal fade");
-        filterContainer.removeClass("modal-dialog");
-        filterContainerList.removeClass("modal-content");
+        filterModal.removeClass('modal fade');
+        filterContainer.removeClass('modal-dialog');
+        filterContainerList.removeClass('modal-content');
         filterModal.show();
       }
     };
     fn();
     win.addEventListener(event, fn, false);
-    doc.addEventListener("DOMContentLoaded", fn, false);
+    doc.addEventListener('DOMContentLoaded', fn, false);
   })(document, window);
 });

@@ -1,13 +1,13 @@
-.searchPage{
+.searchPage {
   padding-top: 72px;
 }
 
-.c-searchBar{
+.c-searchBar {
   font-size: 12px !important;
-  h3{
+  h3 {
     font-size: 12px;
   }
-  &__wrapper{
+  &__wrapper {
     height: 56px;
   }
   // .dropdown{
@@ -19,30 +19,30 @@
   //   }
   // }
 
-  li{
-    flex:1
+  li {
+    flex: 1;
   }
-  .dropdown-toggle::after{
-    display:none;
+  .dropdown-toggle::after {
+    display: none;
   }
 
-  &__itemGroup{
+  &__itemGroup {
     width: 100%;
   }
 
-  &__item{
+  &__item {
     // width: 33%;
     flex: 1;
     // flex-shrink: 1;
   }
 
-  &__dropdownBtn{
-    @include media-breakpoint-up(md){
+  &__dropdownBtn {
+    @include media-breakpoint-up(md) {
       background-color: #fff;
     }
   }
 
-  &__btn{
+  &__btn {
     line-height: 42px;
     // vertical-align: middle;//@@無效
     font-size: $h5-font-size;
@@ -50,41 +50,41 @@
 }
 
 .section {
-    &__resultList {
-        &__sort{
-            .nav-link{
-                font-size: 18px;
-            }
-        }
-        ._inner {
-            // &__title{
-
-            // }
-            &__item {
-                // 手機
-                margin: 0px -15px;//##no-gutter
-                border-bottom: 4px solid $color-primary-light;
-                //平板.pc
-                @include media-breakpoint-up(sm) {
-                    margin: 0px;
-                }
-            }
-
-            &__link {
-                &:hover {
-                    border-radius: 8px;
-                    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.075);
-                    transition: all 0.35s;
-
-                    ._inner__title {
-                        text-decoration: underline;
-                    }
-                }
-            }
-
-            // &__badge{
-                
-            // }
-        }
+  &__resultList {
+    &__sort {
+      .nav-link {
+        font-size: 18px;
+      }
     }
+    ._inner {
+      // &__title{
+
+      // }
+      &__item {
+        // 手機
+        margin: 0px -15px; //##no-gutter
+        border-bottom: 4px solid $color-primary-light;
+        //平板.pc
+        @include media-breakpoint-up(sm) {
+          margin: 0px;
+        }
+      }
+
+      &__link {
+        &:hover {
+          border-radius: 8px;
+          box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.075);
+          transition: all 0.35s;
+
+          ._inner__title {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      // &__badge{
+
+      // }
+    }
+  }
 }

@@ -4,85 +4,85 @@
 //   overflow-x: auto;
 // }
 
-.flex-center{
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.d-flex-center{
+.d-flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .overflow--Xscroll {
-    @media screen and (max-width:1199px) {
-        overflow-x: scroll;
-        appearance: none; //@@無效 todo隱藏
-    }
+  @media screen and (max-width: 1199px) {
+    overflow-x: scroll;
+    appearance: none; //@@無效 todo隱藏
+  }
 }
 
 // ##也可改bg--cover
 .image--cover {
-    background-size: cover;
-    background-position: 50% 50%;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .object--cover {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .u-cursor--point {
   cursor: pointer !important;
 }
 
-.u-letter-spacing--small{
-  letter-spacing: .5px;
+.u-letter-spacing--small {
+  letter-spacing: 0.5px;
 }
 
-.u-lh--1{
+.u-lh--1 {
   line-height: 1;
 }
 
-.u-ml-auto{
+.u-ml-auto {
   margin-left: auto !important;
 }
-.u-mr-auto{
+.u-mr-auto {
   margin-right: auto !important;
 }
 
 // 圓角
 .rounded--deepen {
-    border-radius: 8px;
-    overflow: hidden;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .rounded-top--deepen {
-    border-radius: 8px 8px 0 0;
-    overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
 }
 
 // 分隔線
 .lineSeparator {
-    position: relative;
-    &::before {
-        position: absolute;
-        content: "";
-        width: 1px;
-        height: 80%;
-        top: 10%; //##上下10% 高度80%
-        bottom: 10%;
-        right: -1px; //##right必要
-        background-color: map-get($theme-colors, secondary); //##map-get
-    }
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 80%;
+    top: 10%; //##上下10% 高度80%
+    bottom: 10%;
+    right: -1px; //##right必要
+    background-color: map-get($theme-colors, secondary); //##map-get
+  }
 }
 
 // 欄位設定
 .card-columns {
-    @include media-breakpoint-up(lg) {
-        column-count: 2;
-    }
+  @include media-breakpoint-up(lg) {
+    column-count: 2;
+  }
 }
 
 .input-text {
@@ -102,22 +102,20 @@
   left: 0;
 }
 
-
-@each $key,$val in $colorClassMap {
-  .bg-#{$key}{
+@each $key, $val in $colorClassMap {
+  .bg-#{$key} {
     background-color: $val;
   }
 }
 
-@each $key,$val in $colorClassMap {
-  .text-#{$key}{
+@each $key, $val in $colorClassMap {
+  .text-#{$key} {
     color: $val;
   }
 }
 
 @for $val from 1 through 5 {
-  .flex-#{$val}{
+  .flex-#{$val} {
     flex: $val;
   }
 }
-

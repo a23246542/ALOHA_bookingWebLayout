@@ -6,5 +6,4 @@ public
 *.css.map
 *.sass.map
 *.scss.map
-.vscode
 .DS_Store
