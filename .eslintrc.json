@@ -20,7 +20,11 @@
       "error",
       "single",
       { "avoidEscape": true, "allowTemplateLiterals": false }
-    ]
+    ],
+    "no-unused-vars": "warn"
+  },
+  "globals": {
+    "$": "readonly"
   },
   "parserOptions": {
     "ecmaVersion": 12,

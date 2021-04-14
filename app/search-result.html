@@ -5,8 +5,8 @@ engine: ejs
 current: result
 ---
 <main class="main p-searchPage">
-   <!-- 搜尋 -->
- <div class="d-none c-searchBar bg-primary-light">
+  <!-- 搜尋 -->
+  <div class="d-none c-searchBar bg-primary-light">
   <div class="container">
     <div class="py-md-3 py-md-4">
       <form action="javascript:;" method="post" class="d-flex c-searchBar__wrapper">
@@ -220,68 +220,68 @@ current: result
       </a> -->
     </div>
   </div>
-</div>
-<div class="d-none w-100 bg-purple justify-content-center position-fixed zIndex500 fontOpenSans resultLayoutHeader positionTopLayout loginPageHide loaded">
-  <div class="container d-flex align-items-center justify-content-center">
-    <div class="mobileHide align-items-center">
-      <ul class="d-flex listStyle_none p-0 my-md-3 my-xl-4 ">
-        <li class="bg-white resultLayoutHeaderBlock mr-md-2 mr-xl-3 rounded d-flex align-items-center py_10 px-md-2 px-xl-3">
-          <span class="material-icons mr-md-2 mr-xl-3">
-            location_on
-          </span>
-          <div class="d-flex flex-column">
-            <h6 class="m-0 fz_12 font-weight-bold">DESTINATION</h6>
-            <div class="text-gray-2 fz_14">Bangkok, Thailand</div>
-          </div>
-        </li>
-        <li class="bg-white resultLayoutHeaderBlock mr-md-2 mr-xl-3 rounded d-flex align-items-center py_10 px-md-2 px-xl-3">
-          <div class="w_50_xl d-flex align-items-center">
+  </div>
+  <div class="d-none w-100 bg-purple justify-content-center position-fixed zIndex500 fontOpenSans resultLayoutHeader positionTopLayout loginPageHide loaded">
+    <div class="container d-flex align-items-center justify-content-center">
+      <div class="mobileHide align-items-center">
+        <ul class="d-flex listStyle_none p-0 my-md-3 my-xl-4 ">
+          <li class="bg-white resultLayoutHeaderBlock mr-md-2 mr-xl-3 rounded d-flex align-items-center py_10 px-md-2 px-xl-3">
             <span class="material-icons mr-md-2 mr-xl-3">
-              date_range
+              location_on
             </span>
-            <div class="d-flex flex-column desktopShow">
-              <h6 class="m-0 fz_12 font-weight-bold">CHECK-IN</h6>
-              <div class="text-gray-2 fz_14">17 June</div>
-            </div>
-          </div>
-          <div class="verticalLine mx-3 h-100 desktopShow"></div>
-          <div class="w_50 desktopShow">
             <div class="d-flex flex-column">
-              <h6 class="m-0 fz_12 font-weight-bold">CHECK-OUT</h6>
-              <div class="text-gray-2 fz_14">19 June</div>
+              <h6 class="m-0 fz_12 font-weight-bold">DESTINATION</h6>
+              <div class="text-gray-2 fz_14">Bangkok, Thailand</div>
             </div>
-          </div>
-          <div class="mobileShow_xl">
+          </li>
+          <li class="bg-white resultLayoutHeaderBlock mr-md-2 mr-xl-3 rounded d-flex align-items-center py_10 px-md-2 px-xl-3">
+            <div class="w_50_xl d-flex align-items-center">
+              <span class="material-icons mr-md-2 mr-xl-3">
+                date_range
+              </span>
+              <div class="d-flex flex-column desktopShow">
+                <h6 class="m-0 fz_12 font-weight-bold">CHECK-IN</h6>
+                <div class="text-gray-2 fz_14">17 June</div>
+              </div>
+            </div>
+            <div class="verticalLine mx-3 h-100 desktopShow"></div>
+            <div class="w_50 desktopShow">
+              <div class="d-flex flex-column">
+                <h6 class="m-0 fz_12 font-weight-bold">CHECK-OUT</h6>
+                <div class="text-gray-2 fz_14">19 June</div>
+              </div>
+            </div>
+            <div class="mobileShow_xl">
+              <div class="d-flex flex-column">
+                <h6 class="m-0 fz_12 font-weight-bold">CHECK-IN / OUT</h6>
+                <div class="text-gray-2 fz_14">17 June - 19 June</div>
+              </div>
+            </div>
+          </li>
+          <li class="bg-white resultLayoutHeaderBlock mr-md-2 mr-xl-3 rounded d-flex align-items-center py_10 px-md-2 px-xl-3">
+            <span class="material-icons mr-md-2 mr-xl-3">
+              person
+            </span>
             <div class="d-flex flex-column">
-              <h6 class="m-0 fz_12 font-weight-bold">CHECK-IN / OUT</h6>
-              <div class="text-gray-2 fz_14">17 June - 19 June</div>
+              <h6 class="m-0 fz_12 font-weight-bold">GUESTS</h6>
+              <div class="text-gray-2 fz_14">2 adults・1 room</div>
             </div>
-          </div>
-        </li>
-        <li class="bg-white resultLayoutHeaderBlock mr-md-2 mr-xl-3 rounded d-flex align-items-center py_10 px-md-2 px-xl-3">
-          <span class="material-icons mr-md-2 mr-xl-3">
-            person
-          </span>
-          <div class="d-flex flex-column">
-            <h6 class="m-0 fz_12 font-weight-bold">GUESTS</h6>
-            <div class="text-gray-2 fz_14">2 adults・1 room</div>
-          </div>
-        </li>
-      </ul>
-      <a href="#" class="btn btn-primary resultLayoutHeaderBtn font-weight-bold d-flex align-items-center justify-content-center">SEARCH</a>
-    </div>
-    <div class="mobileShow">
-      <ul class="listStyle_none m-0 d-flex align-items-center py-2 justify-content-center">
-        <li class="text-gray-2 py-2 fz_12">Bangkok</li>
-        <div class="verticalLine border-white h-100 mx-2"></div>
-        <li class="text-gray-2 py-2 fz_12">17 June - 19 June</li>
-        <div class="verticalLine border-white h-100 mx-2"></div>
-        <li class="text-gray-2 py-2 fz_12">2 adults・1 room</li>
-      </ul>
+          </li>
+        </ul>
+        <a href="#" class="btn btn-primary resultLayoutHeaderBtn font-weight-bold d-flex align-items-center justify-content-center">SEARCH</a>
+      </div>
+      <div class="mobileShow">
+        <ul class="listStyle_none m-0 d-flex align-items-center py-2 justify-content-center">
+          <li class="text-gray-2 py-2 fz_12">Bangkok</li>
+          <div class="verticalLine border-white h-100 mx-2"></div>
+          <li class="text-gray-2 py-2 fz_12">17 June - 19 June</li>
+          <div class="verticalLine border-white h-100 mx-2"></div>
+          <li class="text-gray-2 py-2 fz_12">2 adults・1 room</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
-
+  <!-- 內容 -->
   <div class="container">
     <div class="row">
       <!-- 搜尋地點 -->
@@ -1234,26 +1234,26 @@ current: result
       </div>
     </div>
   </div>
-  <script defer type="text/javascript">
-    // !(function(doc, win) {
-    //   const docEle = doc.documentElement, //获取html元素
-    //       event = "onorientationchange" in window ? "orientationchange" : "resize", //判断是屏幕旋转还是resize;
-    //       fn = function() {
-    //           const width = docEle.clientWidth;
-    //           console.log(width);
-    //           if(width<767){
-    //             const filterModal = $('#js-filterModal');
-    //             filterModal.addClass('modal');
-    //             filterModal.find('.c-filterContainer').addClass('modal-dialog');
-    //             filterModal.find('.c-filterContainer__list').addClass('modal-content');
-
-    //           }
-    //           // width && (docEle.style.fontSize = 50 * (width / 375) + "px"); //设置html的fontSize，随着event的改变而改变。
-    //       };
-    //   fn();
-    //   win.addEventListener(event, fn, false);
-    //   doc.addEventListener("DOMContentLoaded", fn, false);
-    // }(document, window));
-  </script>
+  <section class="c-subscribe bg-primary-light">
+    <div class="jumbotron jumbotron-fluid mb-0 py-3 bg-transparent">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <!-- //@text-center無效 兩種做法 -->
+          <div class="col-12 col-md-4 col-xl-6 mb-3 mb-md-0 ">
+            <h3 class="h2 font-weight-bold d-none d-xl-block mb-1 text-center">Subscribe for Exclusive Offer</h3>
+            <h3 class="h3 font-weight-bold d-xl-none mb-0 text-center">Subscribe for Exclusive Offer</h3>
+          </div>
+          <div class="col-12 col-md-8 col-xl-6 ">
+            <div class="input-group">
+              <input type="text" id="subscribe" placeholder="Your email address" class="form-control py-2 h-100 border-0"
+                required>
+              <div class="input-group-append">
+                <input class="btn btn-primary border-0 px-4" type="submit" value="SUBSCRIBE">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
 </main>
 

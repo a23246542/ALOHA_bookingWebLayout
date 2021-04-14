@@ -1,121 +1,132 @@
-    // @@每頁都可用到的樣式
-    .l_logo {
-        @include hidden-text(96px, 24px, url("../images/logo-aloha.svg"));
-    }
-    //todo 拆分到header
-    // .l_login {
-    //     &__navImage {
-    //         position: relative;
-    //         &::before {
-    //             position: absolute;
-    //             content: "";
-    //             width: 24px;
-    //             height: 24px;
-    //             background-image: url("../images/sung-wang-g4DgCF90EM4-unsplash.jpg");
-    //             background-size: cover;
-    //             background-position: center;
-    //             background-repeat: no-repeat;
-    //             border-radius: 50%;
-    //             border: 2px solid map-get($theme-colors, primary);
-    //             top: 0px;
-    //             left: -32px;
-    //             @include media-breakpoint-up(md) {
-    //                 top: 0;
-    //             }
-    //         }
-    //     }
+// 每頁都可用到的樣式
 
-    //     &__memberImage {
-    //         width: 64px;
-    //         height: 64px;
+.c-footer {
+  border-top: 1px solid $color-primary-light;
+
+  &--simple {
+    .c-footer__language {
+      display: none;
+    }
+    .c-footer__currency {
+      display: none;
+    }
+  }
+}
+
+.l_logo {
+  @include hidden-text(96px, 24px, url('../images/logo-aloha.svg'));
+}
+//todo 拆分到header
+// .l_login {
+//     &__navImage {
+//         position: relative;
+//         &::before {
+//             position: absolute;
+//             content: "";
+//             width: 24px;
+//             height: 24px;
+//             background-image: url("../images/sung-wang-g4DgCF90EM4-unsplash.jpg");
+//             background-size: cover;
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             border-radius: 50%;
+//             border: 2px solid map-get($theme-colors, primary);
+//             top: 0px;
+//             left: -32px;
+//             @include media-breakpoint-up(md) {
+//                 top: 0;
+//             }
+//         }
+//     }
+
+//     &__memberImage {
+//         width: 64px;
+//         height: 64px;
+//     }
+// }
+
+.l_icon {
+  &__rating {
+    //評價星星字變小
+    font-size: 18px;
+  }
+}
+
+.section {
+  // ##todo 之後做login
+  &__login {
+  }
+  &__searchResult {
+    margin-top: 72px;
+    .lineSeparator {
+      &::before {
+        @include media-breakpoint-down(md) {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+/*layout-產品*/
+.l_product {
+  &__img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0;
+
+    @include media-breakpoint-up(sm) {
+      border-radius: 8px 0px 0px 8px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 255px;
+      height: 175px;
+    }
+
+    // &__booking {
+    //     @include media-breakpoint-down(sm) {
+    //         width: 100%;
+    //         height: 226px;
+    //         border-radius: 8px 8px 0px 0px;
     //     }
     // }
+  }
 
+  &__price {
+    position: relative;
+    font-size: 16px;
 
-    .l_icon {
-        &__rating {//評價星星字變小
-            font-size: 18px;
+    &__title {
+      @include media-breakpoint-up(md) {
+        font-size: 24px;
+
+        &::before {
+          position: absolute;
+          content: 'per night';
+          font-size: 12px;
+          font-weight: normal;
+          color: #00000099;
+          top: -15px;
+          right: 0;
         }
+      }
     }
 
+    &.active {
+      .product__price__title {
+        color: map-get($theme-colors, primary);
 
-    .section {   
-        // ##todo 之後做login
-        &__login{
-            
+        &::before {
+          top: -20px;
         }
-        &__searchResult {
-            margin-top: 72px;
-            .lineSeparator {
-                &::before {
-                    @include media-breakpoint-down(md) {
-                        background-color: white;
-                    }
-                }
-            }
-        }
+      }
     }
-
-
-    /*layout-產品*/
-    .l_product {
-        &__img {
-            width: 150px;
-            height: 150px;
-            border-radius: 0;
-
-            @include media-breakpoint-up(sm) {
-                border-radius: 8px 0px 0px 8px;
-            }
-
-            @include media-breakpoint-up(lg) {
-                width: 255px;
-                height: 175px;
-            }
-
-            // &__booking {
-            //     @include media-breakpoint-down(sm) {
-            //         width: 100%;
-            //         height: 226px;
-            //         border-radius: 8px 8px 0px 0px;
-            //     }
-            // }
-        }
-
-        &__price {
-            position: relative;
-            font-size: 16px;
-
-            &__title {
-                @include media-breakpoint-up(md) {
-                    font-size: 24px;
-
-                    &::before {
-                        position: absolute;
-                        content: "per night";
-                        font-size: 12px;
-                        font-weight: normal;
-                        color: #00000099;
-                        top: -15px;
-                        right: 0;
-                    }
-                }
-            }
-
-            &.active {
-                .product__price__title {
-                    color: map-get($theme-colors, primary);
-
-                    &::before {
-                        top: -20px;
-                    }
-                }
-            }
-            // &__origin {
-            //     font-size: 12px;
-            //     @include media-breakpoint-up(md) {
-            //         font-size: 14px;
-            //     }
-            // }
-        }
-    }
+    // &__origin {
+    //     font-size: 12px;
+    //     @include media-breakpoint-up(md) {
+    //         font-size: 14px;
+    //     }
+    // }
+  }
+}

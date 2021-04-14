@@ -1,19 +1,24 @@
 ---
-title: login
+title: Login
 layout: ./app/assets/layouts/login-layout.ejs
 engine: ejs
 current: login
 ---
+
 <main class="p-login">
   <div class="row no-gutters">
-    <div class="d-none d-sm-block col-md-12 col-lg-7 p-login__backBg position-absolute"></div>
+    <div
+      class="d-none d-sm-block col-md-12 col-lg-7 p-login__backBg position-absolute"
+    ></div>
     <div class="container p-login__container">
       <div class="row justify-content-center">
         <section class="d-none d-lg-block p-login__copyRightTitle col-lg-8">
-          <article style="width: 80%;">
+          <article style="width: 80%">
             <!-- <div> -->
-              <h1 class="title mb-2">An ideal hotel makes a wonderful Trip.</h1>
-              <p class="text-secondary">Discover your dream destination and hotel on ALOHA.com</p>
+            <h1 class="title mb-2">An ideal hotel makes a wonderful Trip.</h1>
+            <p class="text-secondary">
+              Discover your dream destination and hotel on ALOHA.com
+            </p>
             <!-- </div> -->
           </article>
         </section>
@@ -21,24 +26,47 @@ current: login
           <div class="c-loginForm p-login__loginForm">
             <h1 class="title h3 mb-3 font-weight-bold">Login</h1>
             <form action="" class="mb-3">
-              <div class="form-group ">
+              <div class="form-group">
                 <label for="userNameLogin" class="mb-25">Name</label>
-                <input type="text" id="userNameLogin" class="form-control form-control-lg">
+                <input
+                  type="text"
+                  id="userNameLogin"
+                  class="form-control form-control-lg"
+                />
               </div>
-              <div class="form-group ">
+              <div class="form-group">
                 <label for="userEmail" class="mb-25">Email</label>
-                <input type="email" id="userNameLogin" class="form-control form-control-lg">
+                <input
+                  type="email"
+                  id="userNameLogin"
+                  class="form-control form-control-lg"
+                />
               </div>
-              <small class="mb-2 d-block">By signing in or creating an account, you agree with our
-                <a href="javascript:;">Terms & Conditions</a> and<a href="javascript:;">Privacy Statement</a>
+              <small class="mb-2 d-block"
+                >By signing in or creating an account, you agree with our
+                <a href="javascript:;">Terms & Conditions</a> and<a
+                  href="javascript:;"
+                  >Privacy Statement</a
+                >
               </small>
               <div class="form-group custom-control custom-checkbox">
-                <input type="checkbox" id="userRemember" class="custom-control-input" checked>
-                <label for="userRemember" class="custom-control-label"> Remember me</label>
+                <input
+                  type="checkbox"
+                  id="userRemember"
+                  class="custom-control-input"
+                  checked
+                />
+                <label for="userRemember" class="custom-control-label">
+                  Remember me</label
+                >
               </div>
-              <a href="member.html" class="btn btn-primary btn-block py-2 mb-1">LOGIN</a>
-              <p class="text-muted text-center">Don’t have an account yet? <span
-                class="text-primary font-weight-bold">Sign up</span></p>
+              <a href="member.html" class="btn btn-primary btn-block py-2 mb-1"
+                >LOGIN</a
+              >
+              <p class="text-muted text-center">
+                Don’t have an account yet?
+                <span class="text-primary font-weight-bold">Sign up</span>
+              </p>
             </form>
           </div>
         </section>

@@ -77,14 +77,14 @@ $(document).ready(function () {
     },
   });
 
-  $('.js-btn').click(function () {
-    $(this).find('.js-btn__info').toggleClass('invisible');
-    if ($(this).find('.js-btn__more').text() != 'expand_less') {
-      $(this).find('.js-btn__more').text('expand_less');
-    } else {
-      $(this).find('.js-btn__more').text('expand_more');
-    }
-  });
+  // $('.js-btn').click(function () {
+  //   $(this).find('.js-btn__info').toggleClass('invisible');
+  //   if ($(this).find('.js-btn__more').text() != 'expand_less') {
+  //     $(this).find('.js-btn__more').text('expand_less');
+  //   } else {
+  //     $(this).find('.js-btn__more').text('expand_more');
+  //   }
+  // });
 
   // $(window).resize(function () {
   //     if ($(window).width() < 576) {
@@ -101,26 +101,41 @@ $(document).ready(function () {
   //         $('.js-calendar__mobileTable').removeClass('table-sm');
   //     }
   // });
-
-  switch ($('title').text()) {
-    case 'Index':
-      $('.js-nav').addClass('fixed-top');
+  const pageTitle = $('title').text();
+  const footerEl = $('#js-footer');
+  console.log(pageTitle);
+  switch (pageTitle) {
+    case 'ALOHA':
+      // $('.js-nav').addClass('fixed-top');
       break;
-    case 'Result':
-      $('.js-nav').addClass('fixed-top');
+    case 'Search Result':
+      // $('.js-nav').addClass('fixed-top');
       break;
-    case 'Result - Detail':
-      $('.js-nav').addClass('fixed-top');
+    case 'Detail':
+      // $('.js-nav').addClass('fixed-top');
+      break;
+    case 'Reserve':
+      footerEl
+        .find('.c-footer__language,.c-footer__currency')
+        .removeClass('d-lg-block');
+      footerEl.addClass('c-footer--simple');
+      break;
+    case 'Reserve Success':
+      footerEl
+        .find('.c-footer__language,.c-footer__currency')
+        .removeClass('d-lg-block');
+      footerEl.addClass('c-footer--simple');
       break;
     case 'Login':
-      $('.js-nav').hide();
-      $('.js-footer__nav').hide();
+      // $('.js-nav').hide();
+      // $('.js-footer__nav').hide();
       break;
     case 'My Booking':
-      $('.js-nav__signUp').hide();
-      $('.js-nav__login').hide();
-      $('.js-nav__hasLogin').addClass('d-block');
-      $('.js-nav__hasLogin__userName').text('David Lin');
+      // $('.js-nav__signUp').hide();
+      // $('.js-nav__login').hide();
+      // $('.js-nav__hasLogin').addClass('d-block');
+      // $('.js-nav__hasLogin__userName').text('David Lin');
+      $('#js-footer').addClass('c-footer--simple');
       break;
   }
 

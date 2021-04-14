@@ -1,90 +1,294 @@
-.searchPage {
-  padding-top: 72px;
-}
-
-.c-searchBar {
-  font-size: 12px !important;
-  h3 {
-    font-size: 12px;
-  }
-  &__wrapper {
-    height: 56px;
-  }
-  // .dropdown{
-  //   width: 302px;
-  //   height: 56px;
-  //   .btn{
-  //     width: 100%;
-  //     height: 100%;
-  //   }
-  // }
-
-  li {
-    flex: 1;
-  }
-  .dropdown-toggle::after {
-    display: none;
-  }
-
-  &__itemGroup {
-    width: 100%;
-  }
-
-  &__item {
-    // width: 33%;
-    flex: 1;
-    // flex-shrink: 1;
-  }
-
-  &__dropdownBtn {
-    @include media-breakpoint-up(md) {
-      background-color: #fff;
-    }
+.c-searchConditionBox {
+  display: flex;
+  align-items: center;
+  @include tablet-up {
+    overflow-x: auto;
   }
 
   &__btn {
-    line-height: 42px;
-    // vertical-align: middle;//@@無效
-    font-size: $h5-font-size;
+    @include flex-center;
+    width: 100%;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &__filterBtn {
+    width: 50%;
+    @include tablet-up {
+      display: none;
+    }
+  }
+
+  &__sortMenu {
+    width: 50%;
+    @include tablet-up {
+      width: 100%;
+    }
+
+    &__btn {
+      @include tablet-up {
+        display: none;
+      }
+    }
+
+    &__body {
+      position: static;
+      @include tablet-up {
+        display: block;
+      }
+    }
   }
 }
 
-.section {
-  &__resultList {
-    &__sort {
-      .nav-link {
-        font-size: 18px;
+.c-sortList {
+  padding: 1rem 0;
+  background-color: $color-primary-light;
+  border-radius: 8px;
+  overflow: hidden;
+  @include tablet-up {
+    display: flex;
+    background-color: transparent;
+  }
+  &__item {
+    // @@
+    .dropdown-item {
+      color: $color-secondary-dark;
+      font-weight: bold;
+      font-size: $h6-font-size;
+      background-color: transparent;
+      @include tablet-up {
+        font-size: 1rem;
       }
     }
-    ._inner {
-      // &__title{
+    .dropdown-item.active {
+      color: $color-primary;
+    }
+  }
+}
 
-      // }
-      &__item {
-        // 手機
-        margin: 0px -15px; //##no-gutter
-        border-bottom: 4px solid $color-primary-light;
-        //平板.pc
-        @include media-breakpoint-up(sm) {
-          margin: 0px;
-        }
+// .c-searchResult{
+
+//   &__list{}
+
+//   &__item{
+
+//   }
+
+//   &__roomCard{
+
+//     &__imgWrap{
+//       width: 40%;
+//     }
+
+//     &__body{
+//       width: 60%;
+//     }
+//   }
+// }
+
+.c-roomCard {
+  &__imgWrap {
+    width: 100%;
+    > img {
+      width: 100%;
+      height: 226px;
+      object-fit: cover;
+      @include tablet-up {
+        height: 186px;
+      }
+      @include pc-up {
+        height: 175px;
+      }
+    }
+  }
+
+  .material-icons {
+    color: $color-secondary-dark;
+  }
+
+  &__body {
+    background-color: $color-primary-light;
+    flex-wrap: nowrap;
+    @include tablet-up {
+      background-color: #fff;
+      // padding: 0;
+      // display: flex;
+    }
+
+    &__item:not(:last-child) {
+      .c-roomCard__body__text {
+        margin-bottom: 9px;
+      }
+    }
+
+    &__title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: $color-secondary-dark;
+      margin-bottom: 0;
+    }
+
+    &__text {
+      font-size: $h6-font-size;
+      color: $color-secondary;
+      margin-bottom: 0;
+      &--small {
+        font-size: 0.75rem;
+        font-weight: normal;
+        @include font-open-sans;
+      }
+      &--bold {
+        font-weight: bold;
+      }
+      &--link {
+        font-size: 0.75rem;
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.o-starGroup {
+  display: flex;
+  align-items: center;
+  .material-icons {
+    font-size: 24px;
+  }
+  &__starNum {
+    font-size: 16px;
+  }
+
+  &--small {
+    line-height: 1;
+    .material-icons {
+      font-size: 16px;
+    }
+
+    .o-starGroup__starNum {
+      font-size: 12px;
+    }
+  }
+}
+
+.c-searchResult {
+  margin-left: -15px;
+  margin-right: -15px;
+  @include tablet-up {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &__list {
+  }
+
+  &__item {
+    border-bottom: 3px solid $color-primary-light;
+
+    @include tablet-up {
+      padding-bottom: 17px;
+      margin-bottom: 16px;
+      border-bottom: 1.5px solid $color-primary-light;
+    }
+    @include pc-up {
+      padding-bottom: 25px;
+      margin-bottom: 24px;
+    }
+
+    &__price {
+      // text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @include font-raleway;
+      font-weight: bold;
+      @include pc-up {
+        font-size: 1.5rem;
       }
 
-      &__link {
-        &:hover {
-          border-radius: 8px;
-          box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.075);
-          transition: all 0.35s;
-
-          ._inner__title {
-            text-decoration: underline;
-          }
+      &--textDel {
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: line-through;
+        @include tablet-up {
+          font-size: $h6-font-size;
+        }
+        @include pc-up {
+          font-size: $h5-font-size;
         }
       }
+    }
 
-      // &__badge{
+    &__lastTextLine {
+      @include tablet-up {
+        margin-bottom: 0.5rem;
+      }
+      @include pc-up {
+        margin-bottom: 0.75rem;
+      }
+    }
 
-      // }
+    &__badge {
+      font-size: 10px;
+      background-color: $color-primary-light;
+      font-weight: normal;
+      line-height: 1.3;
+      padding: 0.1rem 0.5rem;
+      &:not(:last-child) {
+        margin-right: 0.4rem;
+      }
+      @include pc-up {
+        font-size: $h6-font-size;
+      }
+    }
+  }
+
+  &__roomCard {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border-radius: 0;
+    @include tablet-up {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    &__imgWrap {
+      width: 30%;
+      > img {
+        height: 150px;
+      }
+      @include tablet-up {
+        width: 35%;
+      }
+      @include pc-up {
+        > img {
+          height: 175px;
+        }
+      }
+    }
+
+    &__body {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.5rem;
+      background-color: transparent;
+      @include tablet-up {
+        width: 65%;
+        flex-direction: row;
+      }
+      @include pc-up {
+        padding: 1rem;
+      }
+    }
+
+    &__title {
+      margin-bottom: 0.6rem;
+      font-size: $h5-font-size;
+      @include pc-up {
+        font-size: $h3-font-size;
+        margin-bottom: 1rem;
+      }
     }
   }
 }

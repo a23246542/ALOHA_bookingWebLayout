@@ -1,9 +1,10 @@
 ---
-title: 預訂資訊
+title: Reserve
 layout: ./app/assets/layouts/layout.ejs
 engine: ejs
 current: reserve
 ---
+
 <main class="p-reservationDetail">
   <div class="container pt-1 pt-md-5">
     <div class="row justify-content-center">
@@ -17,10 +18,15 @@ current: reserve
             type="checkbox"
             id="c-interactiveCheckbox__toggle"
             class="c-interactiveCheckbox__toggle"
-            />
-          <label for="c-interactiveCheckbox__toggle"
-            class="d-md-none c-mobileCollpase__Header c-reserveInfo__header d-flex align-items-center py-3">
-            <div id="js-reserveInfo__total--fadeToggle" class="c-reserveInfo__header__total">
+          />
+          <label
+            for="c-interactiveCheckbox__toggle"
+            class="d-md-none c-mobileCollpase__Header c-reserveInfo__header d-flex align-items-center py-3"
+          >
+            <div
+              id="js-reserveInfo__total--fadeToggle"
+              class="c-reserveInfo__header__total"
+            >
               <span class="mr-2 text-custom-gray-400">Total</span>
               <span class="font-weight-bold text-custom-gray-500"
                 >TWD 4,633</span
@@ -32,28 +38,29 @@ current: reserve
             >
               DETAIL
               <!-- <span class="material-icons c-interactiveCheckbox__arrow c-reserveInfo__header__arrow ml-1">keyboard_arrow_down</span> -->
-              <span class="material-icons c-reserveInfo__header__arrow ml-1">keyboard_arrow_down</span>
+              <span class="material-icons c-reserveInfo__header__arrow ml-1"
+                >keyboard_arrow_down</span
+              >
             </div>
           </label>
-          <div class="collapse c-mobileCollapse__body c-reserveInfo__body d-md-block"
+          <div
+            class="collapse c-mobileCollapse__body c-reserveInfo__body d-md-block"
             id="js-collapse__reserveInfo__body"
           >
             <!-- <div class="card card-body p-3 p-md-4 px-md-0 bg-primary-light border-0"> -->
             <div class="card card-body p-md-3 bg-primary-light border-0">
               <div class="mb-3 mb-md-4 pb-3 pb-md-4 border-bottom">
-                <h3 class="card-title h5">
-                  Booking details
-                </h3>
+                <h3 class="card-title h5">Booking details</h3>
                 <ul>
                   <li class="mb-1">17 June 2020 - 19 June 2020・2 nights</li>
                   <li class="mb-1">2 adults・1 room</li>
                   <li>Rachada Hotel</li>
                 </ul>
               </div>
-              <div class="mb-3 mb-md-4 pb-3 pb-md-4 border-bottom c-reserveInfo__border-bottom">
-                <h3 class="card-title h5">
-                  Price summary
-                </h3>
+              <div
+                class="mb-3 mb-md-4 pb-3 pb-md-4 border-bottom c-reserveInfo__border-bottom"
+              >
+                <h3 class="card-title h5">Price summary</h3>
                 <ul>
                   <li
                     class="d-flex justify-content-between align-items-center mb-1"
@@ -82,7 +89,9 @@ current: reserve
       </div>
       <!-- 用戶資訊 -->
       <!-- <div class="col-12 col-md-6 col-lg-4 offset-lg-2 order-2 order-md-1"> -->
-      <div class="col-12 col-md-6 col-lg-4  p-reservationDetail__userInfoForm order-2 order-md-1">
+      <div
+        class="col-12 col-md-6 col-lg-4 p-reservationDetail__userInfoForm order-2 order-md-1"
+      >
         <h2 class="title mb-4 h3 u-fz-md-2">Reservation details</h2>
         <form action="javascript:;">
           <div class="form-group">

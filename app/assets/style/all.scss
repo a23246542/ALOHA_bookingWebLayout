@@ -1,37 +1,33 @@
 @import 'functions';
-@import "./helpers/variables";
-@import "bootstrap";
+@import './helpers/variables';
+@import 'bootstrap';
 
 /*plugin or vendors*/
-@import "swiper";
+@import 'swiper';
 // @import "navigation";
 // @import "aos/src/sass/aos.scss";
 
 /*初始化.全站設定.工具類*/
-@import "./helpers/mixin";
-@import "./helpers/base";
-@import "./helpers/fontStyle";
-@import "./helpers/utils";
+@import './helpers/mixin';
+@import './helpers/base';
+@import './helpers/fontStyle';
+@import './helpers/utils';
 
 /*components*/
-@import "./helpers/custom";  // Bootstrap 4 調整
-@import "./components/swiper";
+@import './helpers/custom'; // Bootstrap 4 調整
+@import './components/swiper';
 
 /*layout*/
-@import "./layout/layout";
+@import './layout/layout';
 
 /*pages*/
-@import "./pages/index";
-@import "./pages/detail";
-@import "./pages/reserve";
-@import "./pages/reserve-success";
-@import "./pages/user";//@@順序
-@import "./pages/search-result";
-@import "./pages/search-result1";//@@順序
-@import "./pages/login";
-
+@import './pages/index';
+@import './pages/detail';
+@import './pages/reserve';
+@import './pages/reserve-success';
+@import './pages/member'; //@@順序
+// @import "./pages/search-result";
+@import './pages/search-result'; //@@順序
+@import './pages/login';
 
 // @@sass使用相對路徑 其他html用絕對路勁 gitPage絕對路徑
-
-
-

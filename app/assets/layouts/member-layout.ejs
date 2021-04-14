@@ -113,17 +113,33 @@
                   <a href="#" class="dropdown-item">日本語</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark font-weight-bold" href="#"
-                  >Sign up</a
-                >
-              </li>
-              <li class="nav-item">
+              <li class="nav-item dropdown">
                 <a
-                  class="nav-link text-dark font-weight-bold d-none d-md-block"
-                  href="login.html"
-                  >Login</a
+                  class="nav-link dropdown-toggle d-flex align-items-center"
+                  href="javascript:;"
+                  id="navbarProfileDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
+                  <img
+                    src="assets/images/profile.jpg"
+                    class="rounded-circle mr-2"
+                    alt="userPhoto"
+                    style="width: 30px"
+                  />
+                  David Lin
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-md-right"
+                  aria-labelledby="navbarProfileDropdown"
+                >
+                  <a class="dropdown-item" href="index.html">Sign out</a>
+                </div>
+                <!-- <a class="nav-link text-dark font-weight-bold" href="#"
+                  >Sign up</a
+                > -->
               </li>
             </ul>
           </div>
@@ -157,7 +173,7 @@
               >
             </li>
             <!-- language -->
-            <li class="btn-group d-lg-block d-none ml-auto c-footer__language">
+            <li class="btn-group ml-auto d-lg-block d-none c-footer__language">
               <button
                 type="button"
                 class="btn btn-link dropdown-toggle d-flex align-items-center text-decoration-none"
