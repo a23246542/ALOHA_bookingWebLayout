@@ -1,12 +1,6 @@
-.searchPage {
-  padding-top: 72px;
-}
-
 .c-searchBar {
-  font-size: 12px !important;
-  h3 {
-    font-size: 12px;
-  }
+  margin-bottom: 30px;
+  font-size: 12px;
   &__wrapper {
     height: 56px;
   }
@@ -18,10 +12,10 @@
   //     height: 100%;
   //   }
   // }
-
   li {
     flex: 1;
   }
+
   .dropdown-toggle::after {
     display: none;
   }
@@ -36,13 +30,62 @@
     // flex-shrink: 1;
   }
 
-  &__dropdownBtn {
+  &__dropdown {
+  }
+
+  &__dropdownToggle {
+    width: 100%;
+    font-size: 12px;
     @include media-breakpoint-up(md) {
       background-color: #fff;
     }
+    // &:focus {
+    //   box-shadow: 0 0 0 20px $color-primary-light;
+    // }
+
+    .dropdown-toggle__title {
+      font-size: 12px;
+      font-weight: bold;
+      color: $color-secondary-dark;
+      @include font-raleway;
+    }
+
+    .dropdown-toggle__desc {
+      font-size: 14px;
+    }
   }
 
-  &__btn {
+  &__dropdownMenu {
+    width: 100%;
+    .dropdown-item {
+      display: flex;
+    }
+    .dropdown-item__title {
+      font-size: 16px;
+      line-height: 1.5;
+      color: $color-secondary-dark;
+      font-weight: bold;
+    }
+    .dropdown-item__desc {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: $color-secondary;
+    }
+  }
+
+  &__textTitle {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-secondary-dark;
+    font-weight: bold;
+  }
+
+  &__textDesc {
+    font-size: 14px;
+    color: $color-secondary;
+  }
+
+  &__searchBtn {
     line-height: 42px;
     // vertical-align: middle;//@@無效
     font-size: $h5-font-size;

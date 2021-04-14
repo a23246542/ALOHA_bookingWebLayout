@@ -112,7 +112,8 @@ a.nav-link {
 }
 
 .dropdown-toggle::after {
-  display: none;
+  // display: none;
+  color: $color-secondary-dark;
 }
 
 .form-control:focus {

@@ -6,220 +6,222 @@ current: result
 ---
 <main class="main p-searchPage">
   <!-- 搜尋 -->
-  <div class="d-none c-searchBar bg-primary-light">
-  <div class="container">
-    <div class="py-md-3 py-md-4">
-      <form action="javascript:;" method="post" class="d-flex c-searchBar__wrapper">
-        <div class="c-searchBar__itemGroup d-flex">
-          <!-- 目的地 -->
-          <!-- <div class="form-group mb-0 mr-md-2 mr-lg-3"> -->
-          <div class="c-searchBar__item mb-0 mr-md-2 mr-lg-3">
-            <div class="dropdown">
-              <button
-                class="btn dropdown-toggle c-searchBar__dropdownBtn rounded--deepen"
-                type="button"
-                id="dropdownDestination"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                data-offset="0,8"
-              >
-                <div class="d-flex align-items-center text-left">
-                  <span class="material-icons d-none d-md-block mr-2 mr-lg-3">
-                    place
-                  </span>
-                  <div>
-                    <h3 class="dropdown-toggle__title d-none d-md-block">
-                      DESTINATION
-                    </h3>
-                    <span class="d-md-none">Bangkok</span>
-                    <span class="d-none d-md-block fz-md-sm"
-                      >Bangkok, Thailand</span
-                    >
+  <div class="c-searchBar bg-primary-light">
+    <div class="container">
+      <div class="py-md-3 py-md-4">
+        <form action="javascript:;" method="post" class="d-flex c-searchBar__wrapper">
+          <div class="c-searchBar__itemGroup d-flex">
+            <!-- 目的地 -->
+            <!-- <div class="form-group mb-0 mr-md-2 mr-lg-3"> -->
+            <div class="c-searchBar__item mb-0 mr-md-2 mr-lg-3">
+              <div class="dropdown c-searchBar__dropdown">
+                <button
+                  class="btn dropdown-toggle c-searchBar__dropdownToggle rounded--deepen"
+                  type="button"
+                  id="dropdownDestination"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  data-offset="0,8"
+                >
+                  <div class="d-flex align-items-center text-left">
+                    <span class="material-icons d-none d-md-block mr-2 mr-lg-3">
+                      place
+                    </span>
+                    <div>
+                      <h3 class="dropdown-toggle__title d-none d-md-block">
+                        DESTINATION
+                      </h3>
+                      <span class="d-md-none dropdown-toggle__desc">Bangkok</span>
+                      <span class="d-none d-md-block u-fz-md-6"
+                        >Bangkok, Thailand</span
+                      >
+                    </div>
                   </div>
+                </button>
+                <div
+                  class="dropdown-menu c-searchBar__dropdownMenu"
+                  aria-labelledby="dropdownDestination"
+                >
+                  <a class="dropdown-item" href="javascript:;">
+                    <span class="material-icons mr-2">
+                      star
+                    </span>
+                    <div class="flex-grow-1">
+                      <h3 class="dropdown-item__title">Bangkok</h3>
+                      <p class="dropdown-item__desc">
+                        Thailand
+                      </p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <span class="material-icons mr-2">
+                      star
+                    </span>
+                    <div class="flex-grow-1">
+                      <h3 class="dropdown-item__title">Osaka</h3>
+                      <p class="dropdown-item__desc">Japan</p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <span class="material-icons mr-2">
+                      star
+                    </span>
+                    <div class="flex-grow-1">
+                      <h3 class="dropdown-item__title">Roma</h3>
+                      <p class="dropdown-item__desc">Italy</p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <span class="material-icons mr-2">
+                      star
+                    </span>
+                    <div class="flex-grow-1">
+                      <h3 class="dropdown-item__title">Paris</h3>
+                      <p class="dropdown-item__desc">London</p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <span class="material-icons mr-2">
+                      star
+                    </span>
+                    <div class="flex-grow-1">
+                      <h3 class="dropdown-item__title">Reykjavik</h3>
+                      <p class="dropdown-item__desc">
+                        Iceland
+                      </p>
+                    </div>
+                  </a>
                 </div>
-              </button>
+              </div>
+              <div class="divider d-md-none my-2 bg-white"></div>
+            </div>
+            <!-- 入住時間 -->
+            <div class="c-searchBar__item mb-0 mr-md-2 mr-lg-3">
+              <div class="dropdown c-searchBar__dropdown">
+                <button
+                  class="btn dropdown-toggle c-searchBar__dropdownToggle rounded--deepen"
+                  type="button"
+                  id="dropdownCheckIn"
+                >
+                  <div class="d-flex align-items-center text-left">
+                    <span
+                      class="material-icons d-none d-md-block mr-2 mr-lg-3"
+                    >
+                      date_range
+                    </span>
+                    <ul class="d-flex flex-grow-1">
+                      <li class="flex-1">
+                        <div class="dropdown-toggle__title">CHECK-IN</div>
+                        <div class="dropdown-toggle__desc">17 June</div>
+                      </li>
+                      <li class="flex-1">
+                        <div class="dropdown-toggle__title">CHECK-OUT</div>
+                        <div class="dropdown-toggle__desc">19 June</div>
+                      </li>
+                    </ul>
+                  </div>
+                </button>
+              </div>
+              <!-- 分隔線 -->
               <div
-                class="dropdown-menu"
-                aria-labelledby="dropdownDestination"
-              >
-                <a class="dropdown-item" href="javascript:;">
-                  <span class="material-icons mr-2">
-                    star
-                  </span>
-                  <div class="flex-grow-1">
-                    <h3 class="dropdown-item__title">Bangkok</h3>
-                    <p class="dropdown-item__text">
-                      Thailand
-                    </p>
+                class="divider d-md-none d-lg-block my-2 bg-white bg-lg-secondary"
+              ></div>
+            </div>
+            <!-- 客人數 -->
+            <div class="c-searchBar__item mb-0 mr-md-2 mr-lg-3">
+              <div class="dropdown c-searchBar__dropdown">
+                <button
+                  class="btn dropdown-toggle c-searchBar__dropdownToggle rounded--deepen"
+                  type="button"
+                  id="dropdownGuests"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  data-offset="0,8"
+                >
+                  <div class="d-flex align-items-center text-left">
+                    <span
+                      class="material-icons d-none d-md-block mr-2 mr-lg-3"
+                    >
+                      person
+                    </span>
+                    <div>
+                      <span class="dropdown-toggle__title d-none d-md-block">
+                        GUESTS
+                      </span>
+                      <span class="dropdown-toggle__desc">2 adults・1 room</span>
+                    </div>
                   </div>
-                </a>
-                <a class="dropdown-item" href="javascript:;">
-                  <span class="material-icons mr-2">
-                    star
-                  </span>
-                  <div class="flex-grow-1">
-                    <h3 class="dropdown-item__title">Osaka</h3>
-                    <p class="dropdown-item__text">Japan</p>
-                  </div>
-                </a>
-                <a class="dropdown-item" href="javascript:;">
-                  <span class="material-icons mr-2">
-                    star
-                  </span>
-                  <div class="flex-grow-1">
-                    <h3 class="dropdown-item__title">Roma</h3>
-                    <p class="dropdown-item__text">Italy</p>
-                  </div>
-                </a>
-                <a class="dropdown-item" href="javascript:;">
-                  <span class="material-icons mr-2">
-                    star
-                  </span>
-                  <div class="flex-grow-1">
-                    <h3 class="dropdown-item__title">Paris</h3>
-                    <p class="dropdown-item__text">London</p>
-                  </div>
-                </a>
-                <a class="dropdown-item" href="javascript:;">
-                  <span class="material-icons mr-2">
-                    star
-                  </span>
-                  <div class="flex-grow-1">
-                    <h3 class="dropdown-item__title">Reykjavik</h3>
-                    <p class="dropdown-item__text">
-                      Iceland
-                    </p>
-                  </div>
-                </a>
+                </button>
+                <ul
+                  class="dropdown-menu c-searchBar__dropdownMenu dropdown-menu-right dropdown-menu-md-left"
+                  aria-labelledby="dropdownGuests"
+                >
+                  <li class="dropdown-item d-flex justify-content-between" 
+                    href="javascript:;"
+                  >
+                    <h3 class="dropdown-item__title">Adult</h3>
+                    <div class="dropdown-item__desc">
+                      <span class="material-icons">
+                        remove
+                      </span>
+                      <span class="mx-2">2</span>
+                      <span class="material-icons">
+                        add
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    class="dropdown-item d-flex justify-content-between"
+                    href="javascript:;"
+                  >
+                    <h3 class="dropdown-item__title">Child</h3>
+                    <div class="dropdown-item__desc">
+                      <span class="material-icons">
+                        remove
+                      </span>
+                      <span class="mx-2">0</span>
+                      <span class="material-icons">
+                        add
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    class="dropdown-item d-flex justify-content-between"
+                    href="javascript:;"
+                  >
+                    <h3 class="dropdown-item__title">Room</h3>
+                    <div class="dropdown-item__desc">
+                      <span class="material-icons">
+                        remove
+                      </span>
+                      <span class="mx-2">1</span>
+                      <span class="material-icons">
+                        add
+                      </span>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="divider d-md-none my-2 bg-white"></div>
           </div>
-          <!-- 入住時間 -->
-          <div class="c-searchBar__item mb-0 mr-md-2 mr-lg-3">
-            <div class="dropdown">
-              <button
-                class="btn dropdown-toggle c-searchBar__dropdownBtn rounded--deepen"
-                type="button"
-                id="dropdownCheckIn"
-              >
-                <div class="d-flex align-items-center text-left">
-                  <span
-                    class="material-icons d-none d-md-block mr-2 mr-lg-3"
-                  >
-                    date_range
-                  </span>
-                  <ul class="d-flex flex-grow-1">
-                    <li class="flex-1">
-                      <div>check-in</div>
-                      <div>17 June</div>
-                    </li>
-                    <li class="flex-1">
-                      <div>check-out</div>
-                      <div>19 June</div>
-                    </li>
-                  </ul>
-                </div>
-              </button>
-            </div>
-            <!-- 分隔線 -->
-            <div
-              class="divider d-md-none d-lg-block my-2 bg-white bg-lg-secondary"
-            ></div>
-          </div>
-          <!-- 客人數 -->
-          <div class="c-searchBar__item mb-0 mr-md-2 mr-lg-3">
-            <div class="dropdown">
-              <button
-                class="btn dropdown-toggle c-searchBar__dropdownBtn rounded--deepen"
-                type="button"
-                id="dropdownGuests"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                data-offset="0,8"
-              >
-                <div class="d-flex align-items-center text-left">
-                  <span
-                    class="material-icons d-none d-md-block mr-2 mr-lg-3"
-                  >
-                    person
-                  </span>
-                  <div>
-                    <span class="dropdown-toggle__title d-none d-md-block">
-                      GUESTS
-                    </span>
-                    <span class="">2 adults・1 room</span>
-                  </div>
-                </div>
-              </button>
-              <ul
-                class="search__guestList dropdown-menu dropdown-menu-right dropdown-menu-md-left"
-                aria-labelledby="dropdownGuests"
-              >
-                <li class="dropdown-item" href="javascript:;">
-                  <h3 class="dropdown-item__title">Adult</h3>
-                  <div class="dropdown-item__text">
-                    <span class="material-icons">
-                      remove
-                    </span>
-                    <span class="mx-2">2</span>
-                    <span class="material-icons">
-                      add
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="dropdown-item d-flex justify-content-between"
-                  href="javascript:;"
-                >
-                  <h3 class="dropdown-item__title">Child</h3>
-                  <div class="dropdown-item__text">
-                    <span class="material-icons">
-                      remove
-                    </span>
-                    <span class="mx-2">0</span>
-                    <span class="material-icons">
-                      add
-                    </span>
-                  </div>
-                </li>
-                <li
-                  class="dropdown-item d-flex justify-content-between"
-                  href="javascript:;"
-                >
-                  <h3 class="dropdown-item__title">Room</h3>
-                  <div class="dropdown-item__text">
-                    <span class="material-icons">
-                      remove
-                    </span>
-                    <span class="mx-2">1</span>
-                    <span class="material-icons">
-                      add
-                    </span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <a
+          <a
+            href="search-result.html"
+            class="btn c-searchBar__searchBtn btn-primary  flex-md-grow-1 d-none d-md-block"
+          >
+            SEARCH
+          </a>
+        </form>
+        <!-- <a
           href="search-result.html"
-          class="btn c-searchBar__btn btn-primary  flex-md-grow-1 d-none d-md-block"
+          class="dropdown-toggle d-none justify-content-start p-3"
         >
-          SEARCH
-        </a>
-      </form>
-      <!-- <a
-        href="search-result.html"
-        class="dropdown-toggle d-none justify-content-start p-3"
-      >
-        <span class="material-icons mr-3">arrow_back</span>
-        Bangkok・17 June - 19 June・2 adults・1 room
-      </a> -->
+          <span class="material-icons mr-3">arrow_back</span>
+          Bangkok・17 June - 19 June・2 adults・1 room
+        </a> -->
+      </div>
     </div>
-  </div>
   </div>
   <div class="d-none w-100 bg-purple justify-content-center position-fixed zIndex500 fontOpenSans resultLayoutHeader positionTopLayout loginPageHide loaded">
     <div class="container d-flex align-items-center justify-content-center">

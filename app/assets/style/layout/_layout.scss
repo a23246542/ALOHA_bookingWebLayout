@@ -13,6 +13,19 @@
   }
 }
 
+.c-profileMenu {
+  &__avatar {
+    width: 28px;
+    height: 28px;
+    border: 2px solid $color-primary;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  .dropdown-toggle::after {
+    display: block;
+  }
+}
+
 .l_logo {
   @include hidden-text(96px, 24px, url('../images/logo-aloha.svg'));
 }
