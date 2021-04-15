@@ -8,7 +8,7 @@ current: result
   <!-- 搜尋 -->
   <div class="c-searchBar bg-primary-light">
     <div class="container">
-      <div class="py-md-3 py-md-4">
+      <div class="py-md-3">
         <form action="javascript:;" method="post" class="d-flex c-searchBar__wrapper">
           <div class="c-searchBar__itemGroup d-flex">
             <!-- 目的地 -->
@@ -16,7 +16,7 @@ current: result
             <div class="c-searchBar__item mb-0 mr-md-2 mr-lg-3">
               <div class="dropdown c-searchBar__dropdown">
                 <button
-                  class="btn dropdown-toggle c-searchBar__dropdownToggle rounded--deepen"
+                  class="btn dropdown-toggle c-searchBar__dropdownToggle h-100 rounded--deepen"
                   type="button"
                   id="dropdownDestination"
                   data-toggle="dropdown"
@@ -24,7 +24,7 @@ current: result
                   aria-expanded="false"
                   data-offset="0,8"
                 >
-                  <div class="d-flex align-items-center text-left">
+                  <div class="d-flex align-items-center justify-content-center justify-content-lg-start text-left">
                     <span class="material-icons d-none d-md-block mr-2 mr-lg-3">
                       place
                     </span>
@@ -94,23 +94,26 @@ current: result
                   </a>
                 </div>
               </div>
-              <div class="divider d-md-none my-2 bg-white"></div>
             </div>
             <!-- 入住時間 -->
             <div class="c-searchBar__item mb-0 mr-md-2 mr-lg-3">
-              <div class="dropdown c-searchBar__dropdown">
+              <div class="dropdown c-searchBar__dropdown divider">
                 <button
-                  class="btn dropdown-toggle c-searchBar__dropdownToggle rounded--deepen"
+                  class="btn dropdown-toggle c-searchBar__dropdownToggle h-100 rounded--deepen"
                   type="button"
-                  id="dropdownCheckIn"
+                  id="js-searchBarCheckIn"
                 >
-                  <div class="d-flex align-items-center text-left">
+                  <div class="d-flex align-items-center justify-content-center justify-content-lg-start text-left">
                     <span
                       class="material-icons d-none d-md-block mr-2 mr-lg-3"
                     >
                       date_range
                     </span>
-                    <ul class="d-flex flex-grow-1">
+                    <div class="d-lg-none flex-column u-fz-6">
+                      <div class="d-none d-md-block dropdown-toggle__title">CHECK-IN/OUT</div>
+                      <div class="dropdown-toggle__desc">17June - 19June</div>
+                    </div>
+                    <ul class="d-none d-lg-flex flex-grow-1">
                       <li class="flex-1">
                         <div class="dropdown-toggle__title">CHECK-IN</div>
                         <div class="dropdown-toggle__desc">17 June</div>
@@ -123,16 +126,12 @@ current: result
                   </div>
                 </button>
               </div>
-              <!-- 分隔線 -->
-              <div
-                class="divider d-md-none d-lg-block my-2 bg-white bg-lg-secondary"
-              ></div>
             </div>
             <!-- 客人數 -->
             <div class="c-searchBar__item mb-0 mr-md-2 mr-lg-3">
               <div class="dropdown c-searchBar__dropdown">
                 <button
-                  class="btn dropdown-toggle c-searchBar__dropdownToggle rounded--deepen"
+                  class="btn dropdown-toggle c-searchBar__dropdownToggle h-100 rounded--deepen"
                   type="button"
                   id="dropdownGuests"
                   data-toggle="dropdown"
@@ -140,7 +139,7 @@ current: result
                   aria-expanded="false"
                   data-offset="0,8"
                 >
-                  <div class="d-flex align-items-center text-left">
+                  <div class="d-flex align-items-center justify-content-center justify-content-lg-start text-left">
                     <span
                       class="material-icons d-none d-md-block mr-2 mr-lg-3"
                     >
@@ -158,7 +157,7 @@ current: result
                   class="dropdown-menu c-searchBar__dropdownMenu dropdown-menu-right dropdown-menu-md-left"
                   aria-labelledby="dropdownGuests"
                 >
-                  <li class="dropdown-item d-flex justify-content-between" 
+                  <li class="dropdown-item d-flex justify-content-between"
                     href="javascript:;"
                   >
                     <h3 class="dropdown-item__title">Adult</h3>

@@ -1,3 +1,122 @@
+.c-searchBar {
+  margin-bottom: 30px;
+  font-size: 12px;
+
+  &__wrapper {
+    height: 56px;
+    @include tablet-up {
+      height: auto;
+    }
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  &__itemGroup {
+    width: 100%;
+  }
+
+  &__item {
+    // width: 33%;
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 2px;
+      height: 80%;
+      margin: auto;
+      background-color: #fff;
+      @include tablet-up {
+        display: none;
+      }
+    }
+
+    .divider::after {
+      @include pc-up {
+        content: '';
+        position: absolute;
+        right: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        height: 80%;
+        margin: auto;
+        background-color: $color-primary-light;
+      }
+    }
+  }
+
+  &__dropdown {
+    width: 100%;
+  }
+
+  &__dropdownToggle {
+    width: 100%;
+    font-size: 12px;
+    @include media-breakpoint-up(md) {
+      background-color: #fff;
+    }
+    // &:focus {
+    //   box-shadow: 0 0 0 20px $color-primary-light;
+    // }
+
+    .dropdown-toggle__title {
+      font-size: 12px;
+      font-weight: bold;
+      color: $color-secondary-dark;
+      @include font-raleway;
+    }
+
+    .dropdown-toggle__desc {
+      font-size: 14px;
+    }
+  }
+
+  &__dropdownMenu {
+    width: 100%;
+    .dropdown-item {
+      display: flex;
+    }
+    .dropdown-item__title {
+      font-size: 16px;
+      line-height: 1.5;
+      color: $color-secondary-dark;
+      font-weight: bold;
+    }
+    .dropdown-item__desc {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: $color-secondary;
+    }
+  }
+
+  &__textTitle {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-secondary-dark;
+    font-weight: bold;
+  }
+
+  &__textDesc {
+    font-size: 14px;
+    color: $color-secondary;
+  }
+
+  &__searchBtn {
+    width: 126px;
+    line-height: 42px;
+    // vertical-align: middle;//@@無效
+    font-size: $h5-font-size;
+  }
+}
+
 .c-searchConditionBox {
   display: flex;
   align-items: center;

@@ -11,5 +11,10 @@
   },
   "eslint.validate": ["javascript"],
   "eslint.format.enable": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "cSpell.words": [
+    "daterangepicker",
+    "dropdown",
+    "swiper"
+  ]
 }

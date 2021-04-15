@@ -101,6 +101,18 @@ $(document).ready(function () {
   //         $('.js-calendar__mobileTable').removeClass('table-sm');
   //     }
   // });
+
+  const searchBarCheckIn = $('#js-searchBarCheckIn');
+  searchBarCheckIn.daterangepicker();
+  searchBarCheckIn.click(() => {
+    if (!searchBarCheckIn.hasClass('active')) {
+      searchBarCheckIn.addClass('active');
+    } else {
+      searchBarCheckIn.removeClass('active');
+      searchBarCheckIn.data('daterangepicker').hide();
+    }
+  });
+
   const pageTitle = $('title').text();
   const footerEl = $('#js-footer');
   console.log(pageTitle);

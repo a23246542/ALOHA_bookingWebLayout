@@ -58,7 +58,7 @@ small {
 }
 
 //產生(斷點)字體工具類
-$media-screen: (sm, md, lg);
+$media-screen: (sm, md, lg, fullSize);
 
 @each $key, $val in $media-screen {
   @if ($key == sm) {
@@ -120,6 +120,26 @@ $media-screen: (sm, md, lg);
           } @else if($i == 6) {
             font-size: $h6-font-size !important;
           }
+        }
+      }
+    }
+  }
+
+  @if ($key == fullSize) {
+    @for $i from 1 through 6 {
+      .u-fz-#{$i} {
+        @if ($i == 1) {
+          font-size: $h1-font-size !important;
+        } @else if($i == 2) {
+          font-size: $h2-font-size !important;
+        } @else if($i == 3) {
+          font-size: $h3-font-size !important;
+        } @else if($i == 4) {
+          font-size: $h4-font-size !important;
+        } @else if($i == 5) {
+          font-size: $h5-font-size !important;
+        } @else if($i == 6) {
+          font-size: $h6-font-size !important;
         }
       }
     }

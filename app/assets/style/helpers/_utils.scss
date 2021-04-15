@@ -55,7 +55,7 @@
 // 圓角
 .rounded--deepen {
   border-radius: 8px;
-  overflow: hidden;
+  // overflow: hidden; //注意會切掉定位
 }
 
 .rounded-top--deepen {

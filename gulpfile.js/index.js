@@ -11,13 +11,13 @@ console.log(`Current mode：${options.env}`);
 
 function copyFile() {
   return gulp
-  .src(envOptions.conyFile.src)
-  .pipe(gulp.dest(envOptions.conyFile.path))
-  .pipe(
-    browserSync.reload({
-      stream: true,
-    }),
-  );
+    .src(envOptions.conyFile.src)
+    .pipe(gulp.dest(envOptions.conyFile.path))
+    .pipe(
+      browserSync.reload({
+        stream: true,
+      })
+    );
 }
 
 function layoutHTML() {
@@ -34,31 +34,31 @@ function layoutHTML() {
     .pipe(
       browserSync.reload({
         stream: true,
-      }),
+      })
     );
 }
 
 function sass() {
-// PostCSS AutoPrefixer
-  const plugins = [
-    autoprefixer(),
-  ];
+  // PostCSS AutoPrefixer
+  const plugins = [autoprefixer()];
   return gulp
     .src(envOptions.style.src)
     .pipe($.sourcemaps.init())
-    .pipe($.sass({
+    .pipe(
+      $.sass({
         outputStyle: envOptions.style.outputStyle,
         includePaths: envOptions.style.includePaths,
         // includePaths: ['../node_modules/bootstrap/scss']
         // includePaths: ['../node_modules/']
-    }).on('error', $.sass.logError))
+      }).on('error', $.sass.logError)
+    )
     .pipe($.postcss(plugins))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(envOptions.style.path))
     .pipe(
       browserSync.reload({
         stream: true,
-      }),
+      })
     );
 }
 
@@ -66,9 +66,11 @@ function babel() {
   return gulp
     .src(envOptions.javascript.src)
     .pipe($.sourcemaps.init())
-    .pipe($.babel({
-      presets: ['@babel/env'],
-    }))
+    .pipe(
+      $.babel({
+        presets: ['@babel/env'],
+      })
+    )
     .pipe($.uglify())
     .pipe($.concat(envOptions.javascript.concat))
     .pipe($.sourcemaps.write('.'))
@@ -76,7 +78,7 @@ function babel() {
     .pipe(
       browserSync.reload({
         stream: true,
-      }),
+      })
     );
 }
 
@@ -86,7 +88,6 @@ function vendorsJs() {
     .pipe($.concat(envOptions.vendors.concat))
     .pipe(gulp.dest(envOptions.vendors.path));
 }
-
 
 function browser() {
   browserSync.init({
@@ -98,7 +99,8 @@ function browser() {
 }
 
 function clean() {
-  return gulp.src(envOptions.clean.src, {
+  return gulp
+    .src(envOptions.clean.src, {
       read: false,
       allowEmpty: true,
     })
@@ -106,8 +108,7 @@ function clean() {
 }
 
 function deploy() {
-  return gulp.src(envOptions.deploySrc)
-    .pipe($.ghPages());
+  return gulp.src(envOptions.deploySrc).pipe($.ghPages());
 }
 
 function watch() {
@@ -122,6 +123,21 @@ exports.deploy = deploy;
 
 exports.clean = clean;
 
-exports.build = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs);
+exports.build = gulp.series(
+  clean,
+  copyFile,
+  layoutHTML,
+  sass,
+  babel,
+  vendorsJs
+);
 
-exports.default = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs, gulp.parallel(browser, watch));
+exports.default = gulp.series(
+  clean,
+  copyFile,
+  layoutHTML,
+  sass,
+  babel,
+  vendorsJs,
+  gulp.parallel(browser, watch)
+);
