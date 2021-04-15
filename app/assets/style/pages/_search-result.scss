@@ -121,7 +121,8 @@
   display: flex;
   align-items: center;
   @include tablet-up {
-    overflow-x: auto;
+    // @extend .u-row-horizon;//media不能用extend
+    @include row-horizon;
   }
 
   &__btn {
@@ -141,6 +142,7 @@
 
   &__sortMenu {
     width: 50%;
+
     @include tablet-up {
       width: 100%;
     }
@@ -157,6 +159,17 @@
         display: block;
       }
     }
+
+    .dropdown-toggle::after {
+      display: none;
+    }
+  }
+}
+
+#js-filterModal {
+  display: none;
+  @include pc-up {
+    display: block;
   }
 }
 
@@ -301,9 +314,13 @@
   }
 
   &__item {
+    height: 163px;
     border-bottom: 3px solid $color-primary-light;
+    padding: 5px 0;
+    line-height: 1.5;
 
     @include tablet-up {
+      height: auto;
       padding-bottom: 17px;
       margin-bottom: 16px;
       border-bottom: 1.5px solid $color-primary-light;
@@ -318,6 +335,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      color: $color-secondary-dark;
       @include font-raleway;
       font-weight: bold;
       @include pc-up {
@@ -390,11 +408,12 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 0.5rem;
+      padding: 0 0.5rem;
       background-color: transparent;
       @include tablet-up {
         width: 65%;
         flex-direction: row;
+        padding: 0.5rem;
       }
       @include pc-up {
         padding: 1rem;
@@ -402,12 +421,39 @@
     }
 
     &__title {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.3rem;
       font-size: $h5-font-size;
       @include pc-up {
         font-size: $h3-font-size;
         margin-bottom: 1rem;
       }
     }
+  }
+}
+
+.c-paginationBar {
+  padding: 13px;
+  background-color: $color-primary-light;
+  border-radius: 8px;
+  // .page-item {
+  // }
+  .page-link {
+    margin: 0 6px;
+    color: $color-secondary-dark;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .page-item.active .page-link {
+    color: $color-secondary-dark;
+    background-color: #fff;
+    border-color: #fff;
+  }
+  &__pageItemPrevious {
+    margin-right: auto;
+  }
+  &__pageItemNext {
+    margin-left: auto;
   }
 }
