@@ -310,15 +310,14 @@
     margin-left: 0;
     margin-right: 0;
   }
-  &__list {
-  }
+  // &__list {
+  // }
 
   &__item {
     height: 163px;
     border-bottom: 3px solid $color-primary-light;
     padding: 5px 0;
     line-height: 1.5;
-
     @include tablet-up {
       height: auto;
       padding-bottom: 17px;
@@ -398,7 +397,7 @@
       }
       @include pc-up {
         > img {
-          height: 175px;
+          height: 179px;
         }
       }
     }
@@ -416,13 +415,17 @@
         padding: 0.5rem;
       }
       @include pc-up {
-        padding: 1rem;
+        padding: 0.8rem 1rem 1.2rem;
       }
     }
 
     &__title {
       margin-bottom: 0.3rem;
       font-size: $h5-font-size;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
       @include pc-up {
         font-size: $h3-font-size;
         margin-bottom: 1rem;

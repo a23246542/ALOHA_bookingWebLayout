@@ -1,97 +1,4 @@
 $(document).ready(function () {
-  const swiperBanner = new Swiper('#c-banner .c-banner__swiper-container', {
-    slidersPerView: 1,
-    loop: true,
-    navigation: {
-      prevEl: '#c-banner .js-swiperButtonPrev',
-      nextEl: '#c-banner .js-swiperButtonNext',
-    },
-    autoplay: {
-      delay: 3000,
-    },
-  });
-
-  const swiper_Choices = new Swiper('#js-topChoices .swiper-container', {
-    // slidesPerView: 'auto',
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    loopFillGroupWithBlank: true, // @@todo
-    navigation: {
-      nextEl: '#js-topChoices .swiper-button-next',
-    },
-    breakpoints: {
-      500: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-    },
-  });
-
-  const swiper__inspiration = new Swiper('.js-inspiration .swiper-container', {
-    // slidesPerView: 1,
-    slidesPerView: 'auto',
-    spaceBetween: 32,
-    loop: true,
-    // loopFillGroupWithBlank: true,
-    // @@slidesPerGroup
-  });
-  // var swiper__detailBanner = new Swiper('.section__detailBanner .swiper-container', {
-  //     slidesPerView: 1,
-  //     slidesPerGroup: 1,
-  //     spaceBetween: 0,
-  //     loop: false,
-  //     loopFillGroupWithBlank: true,
-  //     pagination: {
-  //         el: '.swiper-pagination',
-  //         clickable: true,
-  //     },
-  //     navigation: {
-  //         nextEl: '.swiper-button-next',
-  //         prevEl: '.swiper-button-prev',
-  //     },
-  // });
-  const swiper__detailBanner = new Swiper('#js-detail__swiper', {
-    // slidesPerView: 'auto',
-    slidesPerView: 1,
-    loop: true,
-    loopFillGroupWithBlank: true, // @@todo
-    navigation: {
-      prevEl: '#js-detail__swiper .c-swiper__navButtonPrev',
-      nextEl: '#js-detail__swiper .c-swiper__navButtonNext',
-    },
-  });
-
-  // $('.js-btn').click(function () {
-  //   $(this).find('.js-btn__info').toggleClass('invisible');
-  //   if ($(this).find('.js-btn__more').text() != 'expand_less') {
-  //     $(this).find('.js-btn__more').text('expand_less');
-  //   } else {
-  //     $(this).find('.js-btn__more').text('expand_more');
-  //   }
-  // });
-
-  // $(window).resize(function () {
-  //     if ($(window).width() < 576) {
-  //         $('.js-myBooking__item').addClass(' bg-secondary rounded--deepen');
-  //     } else {
-  //         $('.js-myBooking__item').removeClass('bg-secondary rounded--deepen');
-  //     }
-
-  //     if ($(window).width() < 992) {
-  //         $('.js-calendar__mobileDropdown').addClass('w-100');
-  //         $('.js-calendar__mobileTable').addClass('table-sm');
-  //     } else {
-  //         $('.js-calendar__mobileDropdown').removeClass('w-100');
-  //         $('.js-calendar__mobileTable').removeClass('table-sm');
-  //     }
-  // });
-
   const searchBarCheckIn = $('#js-searchBarCheckIn');
   searchBarCheckIn.daterangepicker();
   searchBarCheckIn.click(() => {
@@ -175,4 +82,81 @@ $(document).ready(function () {
     win.addEventListener(event, fn, false);
     doc.addEventListener('DOMContentLoaded', fn, false);
   })(document, window);
+
+  const searchResultList = document.querySelectorAll(
+    '.c-searchResult__item .js-roomCardTitle'
+  );
+  searchResultList.forEach((item) => {
+    item.addEventListener('click', () => {
+      location.href = 'detail.html';
+    });
+  });
+
+  const swiperBanner = new Swiper('#c-banner .c-banner__swiper-container', {
+    slidersPerView: 1,
+    loop: true,
+    navigation: {
+      prevEl: '#c-banner .js-swiperButtonPrev',
+      nextEl: '#c-banner .js-swiperButtonNext',
+    },
+    autoplay: {
+      delay: 3000,
+    },
+  });
+
+  const swiper_Choices = new Swiper('#js-topChoices .swiper-container', {
+    // slidesPerView: 'auto',
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    loopFillGroupWithBlank: true, // @@todo
+    navigation: {
+      nextEl: '#js-topChoices .swiper-button-next',
+    },
+    breakpoints: {
+      500: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  const swiper__inspiration = new Swiper('.js-inspiration .swiper-container', {
+    // slidesPerView: 1,
+    slidesPerView: 'auto',
+    spaceBetween: 32,
+    loop: true,
+    // loopFillGroupWithBlank: true,
+    // @@slidesPerGroup
+  });
+  // var swiper__detailBanner = new Swiper('.section__detailBanner .swiper-container', {
+  //     slidesPerView: 1,
+  //     slidesPerGroup: 1,
+  //     spaceBetween: 0,
+  //     loop: false,
+  //     loopFillGroupWithBlank: true,
+  //     pagination: {
+  //         el: '.swiper-pagination',
+  //         clickable: true,
+  //     },
+  //     navigation: {
+  //         nextEl: '.swiper-button-next',
+  //         prevEl: '.swiper-button-prev',
+  //     },
+  // });
+  const swiper__detailBanner = new Swiper('#js-detail__swiper', {
+    // slidesPerView: 'auto',
+    slidesPerView: 1,
+    loop: true,
+    loopFillGroupWithBlank: true, // @@todo
+    navigation: {
+      prevEl: '#js-detail__swiper .c-swiper__navButtonPrev',
+      nextEl: '#js-detail__swiper .c-swiper__navButtonNext',
+    },
+  });
 });
