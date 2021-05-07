@@ -182,16 +182,16 @@ current: index
 
 
   <!-- Top Choices -->
-  <section class="c-topChoices js-topChoices mb-5 mb-lg-7">
+  <section class="c-topChoices js-topChoices mb-5 mb-lg-7" id="js-topChoices">
     <div class="container">
-      <h2 class="mb-3 d-md-block d-none">Top Choices</h2>
+      <h2 class="title mb-3 d-md-block d-none">Top Choices</h2>
       <h3 class="mb-3 d-md-none">Top Choices</h3>
       <div class="row">
         <!-- 地點選擇清單 -->
         <div class="col-12 col-sm-9 col-lg-6 mb-3">
           <ul class="nav nav-justified flex-nowrap">
             <li class="nav-item c-topChoices__nav-item">
-              <a class="nav-link h4 active" id="nav-home-tab" data-toggle="tab" href="#nav-Bali"> Bali<sup>128</sup></a>
+              <a class="nav-link h4 active" data-toggle="tab" href="#nav-Bali"> Bali<sup>128</sup></a>
             </li>
             <li class="nav-item c-topChoices__nav-item">
               <a class="nav-link h4" data-toggle="tab" href="#nav-Bali">Okinawa<sup>67</sup></a>
@@ -204,7 +204,7 @@ current: index
       </div>
       <div class="tab-content">
         <div class="tab-pane active" id="nav-Bali">
-          <div class="swiper-container" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="900">
+          <div class="swiper-container c-topChoices__swiper-container" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="900">
             <ul class="swiper-wrapper list-unstyled">
               <!-- @@好像有點卡 -->
               <!-- ##todo aos缺點 slide一個一個加 pc跟m時間沒辦法錯開 -->
@@ -239,7 +239,7 @@ current: index
                       <span class="text-secondary">4.0</span>
                       <small class="text-muted">・500 reviews</small>
                     </p>
-                    <p class="mb-1" class="text-secondary">TWD 3,380</p>
+                    <p class="mb-1 text-secondary">TWD 3,380</p>
                   </div>
                 </div>
               </li>
@@ -278,23 +278,20 @@ current: index
                 </div>
               </li>
             </ul>
-            <!-- Add Arrows -->
-            <!-- todo:位置再往外，swiper-container會覆蓋 -->
-            <!-- todo 被隱藏住了 -->
-            <button class="custom__swiper-button-prev swiper-button-prev btn btn-secondary btn-sm rounded-circle d-none">
+            <!-- <button class="custom__swiper-button-next swiper-button-next btn btn-secondary btn-sm rounded-circle"> -->
+            <button class="c-topChoices__swiper-button-next swiper-button-next btn btn-secondary btn-sm rounded-circle">
+              <span class="material-icons">
+                chevron_right
+              </span>
             </button>
-            <button class="custom__swiper-button-next swiper-button-next btn btn-secondary btn-sm rounded-circle"> </button>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- card & 助教怎麼判斷-->
-
   <!-- Popular Destinations -->
   <section class="c-destinations container mb-5 mb-lg-7">
-    <h2 class="mb-3 d-md-block d-none">Popular Destinations</h2>
+    <h2 class="title mb-3 d-md-block d-none">Popular Destinations</h2>
     <h3 class="mb-3 d-md-none">Popular Destinations</h3>
     <div class="row" data-aos="fade-right" data-aos-duration="1400">
       <div class="col-12 col-md-6 col-lg-4 mb-1 mb-md-3">
@@ -379,15 +376,15 @@ current: index
 
   <!-- Get Inspiration -->
   <section class="c-inspiration js-inspiration container mb-5 mb-lg-7">
-    <div class="d-md-block d-none">
-      <h2 class="d-flex justify-content-between align-items-center mb-3"> Get Inspiration
-        <button class="btn btn-outline-primary px-2">SEE MORE</button>
+    <div class="d-none d-md-flex d-flex justify-content-between align-items-center mb-3">
+      <h2 class="title"> Get Inspiration
       </h2>
+      <button class="btn btn-outline-primary px-2">SEE MORE</button>
     </div>
-    <div class="d-md-none">
-      <h3 class="d-flex justify-content-between align-items-center mb-3"> Get Inspiration
-        <button class="btn btn-outline-primary px-2">SEE MORE</button>
+    <div class="d-md-none d-flex justify-content-between align-items-center mb-3">
+      <h3 class="title"> Get Inspiration
       </h3>
+      <button class="btn btn-outline-primary px-2">SEE MORE</button>
     </div>
     <!-- swiper 輪播 -->
     <!-- @@好維護就是讓class都可見嗎vs第一個swiper -->

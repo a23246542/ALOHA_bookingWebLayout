@@ -11,29 +11,19 @@ $(document).ready(function () {
     },
   });
 
-  const swiper_Choices = new Swiper('.js-topChoices .swiper-container', {
+  const swiper_Choices = new Swiper('#js-topChoices .swiper-container', {
     // slidesPerView: 'auto',
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     loopFillGroupWithBlank: true, // @@todo
-    // pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    // },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '#js-topChoices .swiper-button-next',
     },
     breakpoints: {
-      // 767: {
-      // 768: {
       500: {
         slidesPerView: 2,
       },
-      // 1199: {
-      //     slidesPerView: 3,
-      // },
       992: {
         slidesPerView: 3,
       },
@@ -46,7 +36,7 @@ $(document).ready(function () {
   const swiper__inspiration = new Swiper('.js-inspiration .swiper-container', {
     // slidesPerView: 1,
     slidesPerView: 'auto',
-    spaceBetween: 30,
+    spaceBetween: 32,
     loop: true,
     // loopFillGroupWithBlank: true,
     // @@slidesPerGroup
@@ -115,7 +105,6 @@ $(document).ready(function () {
 
   const pageTitle = $('title').text();
   const footerEl = $('#js-footer');
-  console.log(pageTitle);
   switch (pageTitle) {
     case 'ALOHA':
       // $('.js-nav').addClass('fixed-top');

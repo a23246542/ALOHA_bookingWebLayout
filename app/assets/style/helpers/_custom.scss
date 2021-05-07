@@ -22,12 +22,13 @@
   /*改swiper 按鈕*/
   &__swiper-button-next {
     // position: relative;//%%不能亂加 absolute不見
+    position: absolute;
     width: 40px;
     height: 40px;
     // right: 0;
     top: 30%;
     transform: translateX(25%); //## translate百分比 &超出會被蓋掉
-    // z-index: 100;//無效
+    z-index: 10;
     background-color: $color-primary-light;
     &::after {
       font-size: 16px;
