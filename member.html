@@ -46,104 +46,97 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <!-- ##重複載入卡頓 -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- Animate -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css"
     />
-    <!-- @@錯需用絕對路禁 但node_module在外層.... -->
     <link rel="stylesheet" type="text/css" href="./assets/style/all.css" />
   </head>
 
   <body>
-    <header class="fixed-top">
-      <nav class="navbar navbar-expand-sm navbar-light bg-white py-2">
-        <div class="container">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand py-0" href="index.html">
-            <h1 class="l_logo mb-0">ALOHA</h1>
-          </a>
-          <!-- 手機顯示 Login -->
-          <div class="navbar-nav d-md-none">
-            <!-- 未登入 -->
-            <a
-              class="js-nav__login nav-link text-dark font-weight-bold"
-              data-toggle="modal"
-              data-target="#mobileLogin"
-            >
-              <span class="login__userName">Login</span>
-            </a>
-            <!-- 已登入todo -->
-            <!-- <button class="js-nav__hasLogin  nav-link btn btn-link login__navImage ml-5 d-none">
-                  </button> -->
-          </div>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- ##ml-auto -->
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown mr-3">
-                <!-- ##mr-5 -->
-                <a
-                  class="nav-link dropdown-toggle d-flex align-items-center"
-                  href="#"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-sm navbar-light bg-white py-2">
+              <div class="container">
+                <button
+                  class="navbar-toggler pl-0 border-0"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
                   aria-expanded="false"
+                  aria-label="Toggle navigation"
                 >
-                  <span class="material-icons text-dark"> language </span>
+                  <span class="material-icons">menu</span>
+                </button>
+                <a class="navbar-brand py-0" href="index.html">
+                  <h1 class="l_logo mb-0">ALOHA</h1>
                 </a>
-                <!-- ##md-right -->
-                <div
-                  class="dropdown-menu dropdown-menu-md-right"
-                  aria-labelledby="language"
-                >
-                  <a href="#" class="dropdown-item">繁體中文</a>
-                  <a href="#" class="dropdown-item">日本語</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown c-profileMenu">
+                <!-- 手機顯示 Login -->
                 <a
-                  class="nav-link dropdown-toggle d-flex align-items-center"
-                  href="javascript:;"
-                  id="navbarProfileDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+                  class="d-md-none js-nav__login nav-link p-0 text-dark font-weight-bold"
+                  href="login.html"
                 >
-                  <img
-                    src="assets/images/profile.jpg"
-                    class="rounded-circle c-profileMenu__avatar mr-1"
-                    alt="userPhoto"
-                  />
-                  David Lin
+                  <span class="login__userName">Login</span>
                 </a>
                 <div
-                  class="dropdown-menu dropdown-menu-md-right"
-                  aria-labelledby="navbarProfileDropdown"
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
                 >
-                  <a class="dropdown-item" href="index.html">Sign out</a>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown mr-3 pt-1">
+                      <a
+                        class="nav-link dropdown-toggle d-flex align-items-center"
+                        href="#"
+                        id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <span class="material-icons text-dark"> language </span>
+                      </a>
+                      <div
+                        class="dropdown-menu dropdown-menu-md-right pt-0 border-0"
+                        aria-labelledby="language"
+                      >
+                        <a href="#" class="dropdown-item">繁體中文</a>
+                        <a href="#" class="dropdown-item">日本語</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown c-profileMenu">
+                      <a
+                        class="nav-link dropdown-toggle d-flex align-items-center"
+                        href="javascript:;"
+                        id="navbarProfileDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="assets/images/profile.jpg"
+                          class="rounded-circle c-profileMenu__avatar mr-1"
+                          alt="userPhoto"
+                        />
+                        David Lin
+                      </a>
+                      <div
+                        class="dropdown-menu dropdown-menu-md-right"
+                        aria-labelledby="navbarProfileDropdown"
+                      >
+                        <a class="dropdown-item" href="index.html">Sign out</a>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <!-- <a class="nav-link text-dark font-weight-bold" href="#"
-                  >Sign up</a
-                > -->
-              </li>
-            </ul>
+              </div>
+            </nav>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
 
     
@@ -396,7 +389,66 @@
               role="tabpanel"
               aria-labelledby="pills-completed-tab"
             >
-              completed
+              <ul class="c-cardList">
+                <li>
+                  <div class="card c-roomCard rounded--deepen">
+                    <div
+                      class="row no-gutters flex-column flex-md-row align-items-md-center"
+                    >
+                      <div class="col-12 col-md-5">
+                        <div class="c-roomCard__imgWrap">
+                          <img
+                            src="./assets/images/Chatuchack2.jpg"
+                            alt="hotelPhoto"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-7">
+                        <div
+                          class="card-body c-roomCard__body d-md-flex justify-content-md-between"
+                        >
+                          <ul class="mb-2 mb-md-0">
+                            <li class="d-flex c-roomCard__body__item mb-0">
+                              <span class="material-icons">hotel</span>
+                              <div class="pl-2">
+                                <h5 class="c-roomCard__body__title">
+                                  Chatuchack Hotel
+                                </h5>
+                                <p class="c-roomCard__body__text">
+                                  Standard Double Room
+                                </p>
+                              </div>
+                            </li>
+                            <li class="d-flex c-roomCard__body__item mb-0">
+                              <span class="material-icons">date_range</span>
+                              <div class="pl-2">
+                                <h5 class="c-roomCard__body__title">
+                                  10 Mar 2020 - 12 Mar 2020
+                                </h5>
+                                <p class="c-roomCard__body__text">
+                                  3 nights・2 adults
+                                </p>
+                              </div>
+                            </li>
+                            <li class="d-flex c-roomCard__body__item">
+                              <span class="material-icons">attach_money</span>
+                              <div class="pl-2">
+                                <h5 class="c-roomCard__body__title">
+                                  TWD 10,600
+                                </h5>
+                                <p class="c-roomCard__body__text">
+                                  includes taxes and charges
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                          <a href="detail.html" class="h6">VIEW DETAILS</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
