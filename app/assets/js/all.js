@@ -105,11 +105,11 @@ $(document).ready(function () {
   });
 
   const swiper_Choices = new Swiper('#js-topChoices .swiper-container', {
-    // slidesPerView: 'auto',
-    slidesPerView: 1,
+    slidesPerView: 'auto',
+    // slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    loopFillGroupWithBlank: true, // @@todo
+    // loopFillGroupWithBlank: true, // @@todo
     navigation: {
       nextEl: '#js-topChoices .swiper-button-next',
     },

@@ -152,32 +152,41 @@
 }
 
 // todo BS4版本(跨瀏覽器)
-// .custom-checkbox{
-//   .custom-control-input:checked ~ .custom-control-label{
+.custom-checkbox {
+  .custom-control-input ~ .custom-control-label::after {
+    background-color: #f1f0f8;
+    border: 2px solid #6f6e6e;
+    border-radius: 2px;
+    cursor: pointer;
+  }
 
-//     &::before{
-//       width: 24px;
-//       height: 10px;
-//       border-radius: 10%;
-//       display: inline-block;
-//       transform: translateY(0px);
-//       padding: 0px 0 20px 4px;
-//       margin-right: 4px;
+  .custom-control-input:checked ~ .custom-control-label::after {
+    border: none;
+    background-color: transparent;
+  }
+  // .custom-control-input:checked ~ .custom-control-label {
+  // &::before{
+  //   width: 24px;
+  //   height: 10px;
+  //   border-radius: 10%;
+  //   display: inline-block;
+  //   transform: translateY(0px);
+  //   padding: 0px 0 20px 4px;
+  //   margin-right: 4px;
 
-//     }
-//     &::after{
-//       content: "\2714";
-//       border: 2px solid map-get($theme-colors , dark );
-//       border-radius: 10%;
-//       display: inline-block;
+  // }
+  // &::after{
+  //   content: "\2714";
+  //   border: 2px solid map-get($theme-colors , dark );
+  //   border-radius: 10%;
+  //   display: inline-block;
 
-//       width: 24px;
-//       height: 10px;
-//       transform: translateY(0px);
-//       padding: 0px 0 20px 4px;
-//       margin-right: 4px;
-//       color:transparent;//##先隱藏
-//     }
-
-//   }
-// }
+  //   width: 24px;
+  //   height: 10px;
+  //   transform: translateY(0px);
+  //   padding: 0px 0 20px 4px;
+  //   margin-right: 4px;
+  //   color:transparent;//##先隱藏
+  // }
+  // }
+}

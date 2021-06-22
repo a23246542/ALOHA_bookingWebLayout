@@ -46,89 +46,80 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <!-- ##重複載入卡頓 -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- Animate -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css"
     />
-    <!-- @@錯需用絕對路禁 但node_module在外層.... -->
     <link rel="stylesheet" type="text/css" href="./assets/style/all.css" />
   </head>
 
   <body>
-    <header class="fixed-top">
-      <nav class="navbar navbar-expand-sm navbar-light bg-white py-2">
-        <div class="container">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand py-0" href="index.html">
-            <h1 class="l_logo mb-0">ALOHA</h1>
-          </a>
-          <!-- 手機顯示 Login -->
-          <div class="navbar-nav d-md-none">
-            <!-- 未登入 -->
-            <a
-              class="js-nav__login nav-link text-dark font-weight-bold"
-              data-toggle="modal"
-              data-target="#mobileLogin"
-            >
-              <span class="login__userName">Login</span>
-            </a>
-            <!-- 已登入todo -->
-            <!-- <button class="js-nav__hasLogin  nav-link btn btn-link login__navImage ml-5 d-none">
-                  </button> -->
-          </div>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- ##ml-auto -->
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <!-- ##mr-5 -->
-                <a
-                  class="nav-link dropdown-toggle d-flex align-items-center"
-                  href="#"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span class="material-icons text-dark"> language </span>
-                </a>
-                <!-- ##md-right -->
-                <div
-                  class="dropdown-menu dropdown-menu-md-right"
-                  aria-labelledby="language"
-                >
-                  <a href="#" class="dropdown-item">繁體中文</a>
-                  <a href="#" class="dropdown-item">日本語</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark font-weight-bold" href="#"
-                  >Sign up</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-dark font-weight-bold d-none d-md-block"
-                  href="login.html"
-                  >Login</a
-                >
-              </li>
-            </ul>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-sm navbar-light py-2">
+              <button
+                class="navbar-toggler pl-0 border-0"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="material-icons">menu</span>
+              </button>
+              <a class="navbar-brand py-0" href="index.html">
+                <h1 class="l_logo mb-0">ALOHA</h1>
+              </a>
+              <!-- 手機顯示 Login -->
+              <a
+                class="d-md-none js-nav__login nav-link p-0 text-dark font-weight-bold"
+                href="login.html"
+              >
+                <span class="login__userName">Login</span>
+              </a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto pt-1">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle d-flex align-items-center"
+                      href="#"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <span class="material-icons text-dark"> language </span>
+                    </a>
+                    <div
+                      class="dropdown-menu dropdown-menu-md-right pt-0 border-0"
+                      aria-labelledby="language"
+                    >
+                      <a href="#" class="dropdown-item">繁體中文</a>
+                      <a href="#" class="dropdown-item">日本語</a>
+                    </div>
+                  </li>
+                  <li class="nav-item border-0">
+                    <a class="nav-link text-dark font-weight-bold" href="#"
+                      >Sign up</a
+                    >
+                  </li>
+                  <li class="nav-item d-none d-md-block">
+                    <a
+                      class="nav-link text-dark font-weight-bold"
+                      href="login.html"
+                      >Login</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
 
     <%- contents %>

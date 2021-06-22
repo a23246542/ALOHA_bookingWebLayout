@@ -72,7 +72,7 @@
 }
 
 @mixin row-horizon {
-  overflow-x: scroll;
+  overflow-x: overlay;
   overflow-y: hidden;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;

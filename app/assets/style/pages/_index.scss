@@ -1,5 +1,4 @@
 /* 區塊命名 */
-// @@裡面客製修改元件該如何命
 
 .c-banner {
   // margin-top: 72px;//@@不會破
@@ -7,11 +6,7 @@
   background-image: url('../images/index-banner.jpg');
   background-size: cover;
   background-position: 50% 50%;
-  // .slide1 {
-  //     // background-image: url("../../images/index-banner.jpg");
-  //     // background-image: url("../images/index-banner.jpg"); //%%dist為主
-  //     // %%要文字不是圖
-  // }
+  letter-spacing: 2px;
 
   &__swiper-container {
     position: relative;

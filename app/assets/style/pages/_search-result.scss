@@ -230,7 +230,7 @@
         height: 186px;
       }
       @include pc-up {
-        height: 175px;
+        height: 180px;
       }
     }
   }
@@ -320,13 +320,16 @@
     line-height: 1.5;
     @include tablet-up {
       height: auto;
+      padding-top: 0;
       padding-bottom: 17px;
       margin-bottom: 16px;
       border-bottom: 1.5px solid $color-primary-light;
     }
     @include pc-up {
+      padding-top: 0;
       padding-bottom: 25px;
-      margin-bottom: 24px;
+      margin-bottom: 25px;
+      // margin-bottom: 24px;
     }
 
     &__price {
@@ -383,9 +386,17 @@
     flex-direction: row;
     background-color: transparent;
     border-radius: 0;
+    transition: all 0.35s;
+    &:hover {
+      box-shadow: 0rem 0.1rem 0.3rem 0.15rem rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+    }
     @include tablet-up {
       border-radius: 8px;
       overflow: hidden;
+    }
+    @include pc-up {
+      height: 180px;
     }
     &__imgWrap {
       width: 30%;
@@ -397,7 +408,7 @@
       }
       @include pc-up {
         > img {
-          height: 179px;
+          height: 180px;
         }
       }
     }

@@ -6,11 +6,16 @@ body {
   min-width: 320px;
 }
 
-.navbar {
-  height: 56px;
-  @include tablet-up {
-    height: 72px;
+.header {
+  .navbar-nav .nav-item:not(:last-child) {
+    border-bottom: 1px solid $color-primary-light;
+    @include tablet-up {
+      border: none;
+    }
   }
+}
+.navbar {
+  padding: 0;
 }
 
 main,
@@ -18,14 +23,12 @@ main,
   //header m:56px tablet:72px pc:72px
   //footer m:102px tablet:67px pc:72px
   min-height: calc(100vh - 102px);
-  padding-top: 56px;
   @include tablet-up {
     min-height: calc(100vh - 67px);
-    padding-top: 72px;
   }
   @include pc-up {
     min-height: calc(100vh - 72px);
-    padding-top: 72px;
+    // padding-top: 72px;
   }
 }
 

@@ -1,8 +1,13 @@
 .p-detail {
+  position: relative;
 }
 
 .c__mobileAlbum {
   height: 247px;
+  padding-top: 42px;
+  @include tablet-up {
+    padding-top: 0;
+  }
 }
 
 .c-album {
@@ -60,8 +65,8 @@
 }
 
 .c-editDetailBar {
-  position: fixed;
-  top: 72px;
+  position: absolute;
+  top: 0px; //64px;
   left: 0;
   right: 0;
   margin: auto;
@@ -217,7 +222,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 41.6666%;
+    width: 33.3333%;
+    @include tablet-up {
+      width: 50%;
+    }
 
     &__inputGroup {
       width: 150px;
@@ -231,10 +239,6 @@
       background-color: transparent;
       color: #00000099;
       border: 0;
-    }
-
-    @include tablet-up {
-      width: 50%;
     }
   }
 
