@@ -9807,6 +9807,10 @@ small {
 .u-mr-auto {
   margin-right: auto !important; }
 
+@media (min-width: 768px) {
+  .u-border-md-1 {
+    border: 1px solid rgba(0, 0, 0, 0.15) !important; } }
+
 .rounded--deepen {
   border-radius: 8px; }
 
