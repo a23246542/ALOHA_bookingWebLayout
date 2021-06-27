@@ -52,6 +52,12 @@
   margin-right: auto !important;
 }
 
+.u-border-md-1 {
+  @include tablet-up {
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
 // 圓角
 .rounded--deepen {
   border-radius: 8px;
